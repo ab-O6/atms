@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "backend/pom.xml": {
-    "mtime": 1790286184.0146923,
-    "seen": 1790286553.7154932,
-    "ast_hash": "616ee0119e9cca400b5b653ef748fb22",
+    "mtime": 1790291381.949008,
+    "seen": 1790291899.0790331,
+    "ast_hash": "1bd7ba3e20e745532652889a8e1dfdfb",
     "semantic_hash": ""
   },
   "frontend/package.json": {
@@ -258,9 +258,9 @@
     "semantic_hash": ""
   },
   ".specify/memory/constitution.md": {
-    "mtime": 1790283088.4542012,
-    "seen": 1790284448.518495,
-    "ast_hash": "90013ab679a940998cc09986d8f24e01",
+    "mtime": 1790291370.2209096,
+    "seen": 1790291899.079096,
+    "ast_hash": "79a3429a35c1eb09350e59c935ed9ff0",
     "semantic_hash": ""
   },
   ".specify/templates/checklist-template.md": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md": {
-    "mtime": 1790286480.4168377,
-    "seen": 1790286553.715561,
-    "ast_hash": "d0e2dd264485b5a11a4a7910e07e6e40",
+    "mtime": 1790286896.1675496,
+    "seen": 1790291899.079107,
+    "ast_hash": "7264a2e8560e3caa727cd04f16be5bb9",
     "semantic_hash": ""
   },
   ".specstory/history/2026-09-24_20-52-04Z-speckit-analyze.md": {
@@ -372,9 +372,9 @@
     "semantic_hash": ""
   },
   "backend/src/main/resources/application.yml": {
-    "mtime": 1790285021.200113,
-    "seen": 1790285114.2073689,
-    "ast_hash": "4c1bbb7cc9ac29996ec9193ed598e0d0",
+    "mtime": 1790289437.9922895,
+    "seen": 1790291899.079113,
+    "ast_hash": "567e9248d5d963ba4a45287f191139fe",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
@@ -558,9 +558,9 @@
     "semantic_hash": ""
   },
   "backend/src/main/resources/db/changelog/db.changelog-master.yaml": {
-    "mtime": 1790284775.1695902,
-    "seen": 1790284848.3375518,
-    "ast_hash": "e7e51b5ecb436fdf59db4ed1f1ead8d0",
+    "mtime": 1790289753.0677714,
+    "seen": 1790291899.079116,
+    "ast_hash": "2188d874787c0f39c3dd2713d66ccb8a",
     "semantic_hash": ""
   },
   "backend/src/main/resources/openapi/openapi.yaml": {
@@ -678,15 +678,15 @@
     "semantic_hash": ""
   },
   "backend/src/main/java/com/atms/ticket/infrastructure/persistence/TicketEntity.java": {
-    "mtime": 1790284997.1802611,
-    "seen": 1790285114.207325,
-    "ast_hash": "4c8671f2618dc6de67c31b930ae59482",
+    "mtime": 1790290727.033026,
+    "seen": 1790291899.0790641,
+    "ast_hash": "6988c39b6b01c3c1635fe0547a688445",
     "semantic_hash": ""
   },
   "backend/src/main/java/com/atms/ticket/infrastructure/persistence/TicketRepository.java": {
-    "mtime": 1790285523.4744565,
-    "seen": 1790285591.289939,
-    "ast_hash": "9966d23b68c0c1d81759d8dbfe7279cc",
+    "mtime": 1790290793.974634,
+    "seen": 1790291899.079065,
+    "ast_hash": "27c970b20a34bea297c4dac42820ef36",
     "semantic_hash": ""
   },
   "frontend/src/api/tickets.ts": {
@@ -714,9 +714,9 @@
     "semantic_hash": ""
   },
   "backend/src/test/java/com/atms/ticket/integration/TicketListSearchIntegrationTest.java": {
-    "mtime": 1790286108.8078387,
-    "seen": 1790286553.715522,
-    "ast_hash": "86b9e5a5ee413a9b4f72ef367ac247c6",
+    "mtime": 1790291799.3719609,
+    "seen": 1790291899.079068,
+    "ast_hash": "3c12b2f4fbb563297a78528fda37e300",
     "semantic_hash": ""
   },
   "backend/src/test/resources/application-test.yml": {
@@ -768,15 +768,39 @@
     "semantic_hash": ""
   },
   "backend/src/test/java/com/atms/ticket/integration/TicketStateMachineIntegrationTest.java": {
-    "mtime": 1790286516.3952322,
-    "seen": 1790286553.715523,
-    "ast_hash": "a47c4bd46ba28038e2f24bf95a069dbe",
+    "mtime": 1790291761.0094943,
+    "seen": 1790291899.079069,
+    "ast_hash": "34530dffc89710463ef5291001c39060",
     "semantic_hash": ""
   },
   "scripts/backend-integration-test.sh": {
     "mtime": 1790286133.9656575,
     "seen": 1790286553.715533,
     "ast_hash": "8968d3456bb74828419d4a44b058a737",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/atms/ticket/application/TransitionServiceTest.java": {
+    "mtime": 1790291890.4414058,
+    "seen": 1790291899.079067,
+    "ast_hash": "44dc145c605e56d255f80120ab105a04",
+    "semantic_hash": ""
+  },
+  ".specstory/history/2026-09-24_23-06-51Z-code-review-command.md": {
+    "mtime": 1790291224.1786692,
+    "seen": 1790291899.0791092,
+    "ast_hash": "224c7bbd384984822ea2579079c3bc56",
+    "semantic_hash": ""
+  },
+  ".specstory/history/2026-09-24_23-13-19Z-code-review-request.md": {
+    "mtime": 1790291742.7036998,
+    "seen": 1790291899.07911,
+    "ast_hash": "723f9707b97da30cdc23ecb96cbe7a01",
+    "semantic_hash": ""
+  },
+  ".specstory/history/2026-09-24_23-13-19Z-review-code.md": {
+    "mtime": 1790291603.2061348,
+    "seen": 1790291899.07911,
+    "ast_hash": "a41b9aa82d6f698f612a863d8ac9fd23",
     "semantic_hash": ""
   }
 }

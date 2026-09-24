@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "backend/pom.xml": {
-    "mtime": 1790285554.1244183,
-    "seen": 1790285591.2899158,
-    "ast_hash": "85e35cb6d0e267cc66373e9d3f943073",
+    "mtime": 1790286184.0146923,
+    "seen": 1790286553.7154932,
+    "ast_hash": "616ee0119e9cca400b5b653ef748fb22",
     "semantic_hash": ""
   },
   "frontend/package.json": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md": {
-    "mtime": 1790285464.587607,
-    "seen": 1790285591.289978,
-    "ast_hash": "dee9bbddb6a15d283e4f7bca8fcadc6a",
+    "mtime": 1790286480.4168377,
+    "seen": 1790286553.715561,
+    "ast_hash": "d0e2dd264485b5a11a4a7910e07e6e40",
     "semantic_hash": ""
   },
   ".specstory/history/2026-09-24_20-52-04Z-speckit-analyze.md": {
@@ -438,9 +438,9 @@
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/quickstart.md": {
-    "mtime": 1790281076.8399062,
-    "seen": 1790284448.518513,
-    "ast_hash": "dd8dc1e7f5addd097f3f01719b319343",
+    "mtime": 1790286112.1652603,
+    "seen": 1790286553.7155771,
+    "ast_hash": "1528baeb91438c41f7ce2404fe0fe53b",
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/rag-api-contract.md": {
@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/tasks.md": {
-    "mtime": 1790285588.7946308,
-    "seen": 1790285591.29,
-    "ast_hash": "9966ef0bf1100bf45ceaa2db622bbb61",
+    "mtime": 1790286548.628766,
+    "seen": 1790286553.715582,
+    "ast_hash": "4453552b79cd61b749fc4635c780c272",
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/technology-requirements.md": {
@@ -486,9 +486,9 @@
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/test-strategy.md": {
-    "mtime": 1790283968.1155107,
-    "seen": 1790284448.518518,
-    "ast_hash": "74c6acc266fd43616fe3d51ed8d6b4b2",
+    "mtime": 1790286222.0573583,
+    "seen": 1790286553.715584,
+    "ast_hash": "f40d03d861224b53150549a68145c88c",
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/ui-flow.md": {
@@ -510,9 +510,9 @@
     "semantic_hash": ""
   },
   "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java": {
-    "mtime": 1790285014.4466572,
-    "seen": 1790285114.207307,
-    "ast_hash": "27cbbc4b282c8af873f71e7c3eca0052",
+    "mtime": 1790286504.6443505,
+    "seen": 1790286553.7154958,
+    "ast_hash": "02af11e36f32bab36c588c6bd1999445",
     "semantic_hash": ""
   },
   "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java": {
@@ -534,9 +534,9 @@
     "semantic_hash": ""
   },
   "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java": {
-    "mtime": 1790284783.6050963,
-    "seen": 1790284848.337512,
-    "ast_hash": "df355dd593e8aa530733d802e4a3edb3",
+    "mtime": 1790286108.00036,
+    "seen": 1790286553.715521,
+    "ast_hash": "e74405ff995ac0e4556e1ce99efecde2",
     "semantic_hash": ""
   },
   "frontend/src/api/client.ts": {
@@ -576,9 +576,9 @@
     "semantic_hash": ""
   },
   "backend/src/main/java/com/atms/ticket/api/TicketController.java": {
-    "mtime": 1790285526.1666157,
-    "seen": 1790285591.289922,
-    "ast_hash": "afc9f03f15d650469f80ead4441e9c4a",
+    "mtime": 1790286507.7932231,
+    "seen": 1790286553.715498,
+    "ast_hash": "985cc4e766663d372cef23b4eb98d03d",
     "semantic_hash": ""
   },
   "backend/src/main/java/com/atms/ticket/api/dto/AddCommentRequest.java": {
@@ -690,9 +690,9 @@
     "semantic_hash": ""
   },
   "frontend/src/api/tickets.ts": {
-    "mtime": 1790285530.2150383,
-    "seen": 1790285591.2899442,
-    "ast_hash": "2ddd070f9ca0f9cb07a9b1919975035f",
+    "mtime": 1790286517.9692318,
+    "seen": 1790286553.7155259,
+    "ast_hash": "0fc25075fabfe94ecda167353797ea3c",
     "semantic_hash": ""
   },
   "frontend/src/features/tickets/CreateTicketPage.tsx": {
@@ -702,9 +702,9 @@
     "semantic_hash": ""
   },
   "frontend/src/features/tickets/TicketDetailPage.tsx": {
-    "mtime": 1790285033.7782414,
-    "seen": 1790285114.2073312,
-    "ast_hash": "19e48e03e2cad732efbf1d344e3b03f2",
+    "mtime": 1790286528.4519813,
+    "seen": 1790286553.715528,
+    "ast_hash": "5ebbc3519119c4ff8afbd523d6cd20bb",
     "semantic_hash": ""
   },
   "frontend/src/features/tickets/TicketListPage.tsx": {
@@ -714,15 +714,69 @@
     "semantic_hash": ""
   },
   "backend/src/test/java/com/atms/ticket/integration/TicketListSearchIntegrationTest.java": {
-    "mtime": 1790285569.9105368,
-    "seen": 1790285591.289941,
-    "ast_hash": "ab2d07af36a37109f846f6f06dc1c39d",
+    "mtime": 1790286108.8078387,
+    "seen": 1790286553.715522,
+    "ast_hash": "86b9e5a5ee413a9b4f72ef367ac247c6",
     "semantic_hash": ""
   },
   "backend/src/test/resources/application-test.yml": {
     "mtime": 1790285518.9991841,
     "seen": 1790285591.2899861,
     "ast_hash": "93c1ab72a3210c9dfc279c5acf2e723f",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/dto/TransitionStatusRequest.java": {
+    "mtime": 1790286498.043519,
+    "seen": 1790286553.7155032,
+    "ast_hash": "f13064c100c578aadc4ce09d8e7aba5c",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/dto/UpdateResolutionNotesRequest.java": {
+    "mtime": 1790286498.3494875,
+    "seen": 1790286553.7155042,
+    "ast_hash": "d1683a640b72edc780a2966b072afd40",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/InvalidTicketTransitionException.java": {
+    "mtime": 1790286497.791514,
+    "seen": 1790286553.715508,
+    "ast_hash": "fa26439a71b83376626554fd36c0a419",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/ResolutionNotesNotEditableException.java": {
+    "mtime": 1790286497.7914789,
+    "seen": 1790286553.715509,
+    "ast_hash": "4bdf6713be53991ce87bc961c3e83857",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/ResolutionNotesRequiredException.java": {
+    "mtime": 1790286497.7915435,
+    "seen": 1790286553.715509,
+    "ast_hash": "f4a18ec2ff4ff44699b9364298ff96e4",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/ResolutionNotesService.java": {
+    "mtime": 1790286498.0434299,
+    "seen": 1790286553.7155101,
+    "ast_hash": "5b404d2a95c0791606c08ece3c804c7c",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/TransitionService.java": {
+    "mtime": 1790286546.9009457,
+    "seen": 1790286553.715515,
+    "ast_hash": "fd5dc60198d65c36579f7e452e700cfc",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/atms/ticket/integration/TicketStateMachineIntegrationTest.java": {
+    "mtime": 1790286516.3952322,
+    "seen": 1790286553.715523,
+    "ast_hash": "a47c4bd46ba28038e2f24bf95a069dbe",
+    "semantic_hash": ""
+  },
+  "scripts/backend-integration-test.sh": {
+    "mtime": 1790286133.9656575,
+    "seen": 1790286553.715533,
+    "ast_hash": "8968d3456bb74828419d4a44b058a737",
     "semantic_hash": ""
   }
 }

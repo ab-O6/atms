@@ -86,6 +86,22 @@ class TicketListSearchIntegrationTest {
     }
 
     @Test
+    void combinedKeywordAndStatusFilter() throws Exception {
+        String openMatch = createTicket("Alpha widget", "desc", "", null);
+        String openOther = createTicket("Beta gadget", "desc", "", null);
+        String progressMatch = createTicket("Alpha gadget", "desc", "", null);
+
+        TicketEntity inProgress = ticketRepository.findByDisplayId(progressMatch).orElseThrow();
+        inProgress.setStatus(TicketStatus.IN_PROGRESS);
+        ticketRepository.save(inProgress);
+
+        assertDisplayIds(getList("?q=alpha&status=OPEN"), openMatch);
+        assertDisplayIds(getList("?q=alpha&status=IN_PROGRESS"), progressMatch);
+        assertThat(getList("?q=alpha&status=OPEN").findValuesAsText("displayId")).doesNotContain(progressMatch);
+        assertThat(getList("?q=beta&status=OPEN").findValuesAsText("displayId")).contains(openOther);
+    }
+
+    @Test
     void statusFilterAndEmptyResults() throws Exception {
         String openId = createTicket("Open ticket", "desc", "", null);
         String otherId = createTicket("Other ticket", "desc", "", null);

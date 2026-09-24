@@ -7,13 +7,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.atms.AtmsApplication;
 import com.atms.support.PostgresTestcontainerExtension;
+import com.atms.ticket.domain.TicketStatus;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.BeforeEach;
+import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -43,9 +47,19 @@ class TicketStateMachineIntegrationTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @BeforeEach
-    void clean() throws Exception {
-        // isolation via fresh tickets per test; no global clean required
+    private static final Set<String> ALLOWED_TRANSITIONS = Set.of(
+            "OPEN,IN_PROGRESS",
+            "OPEN,CANCELLED",
+            "IN_PROGRESS,RESOLVED",
+            "IN_PROGRESS,CANCELLED",
+            "RESOLVED,CLOSED");
+
+    static Stream<Arguments> forbiddenTransitionMatrix() {
+        return Arrays.stream(TicketStatus.values())
+                .flatMap(from -> Arrays.stream(TicketStatus.values())
+                        .filter(to -> from != to)
+                        .filter(to -> !ALLOWED_TRANSITIONS.contains(from.name() + "," + to.name()))
+                        .map(to -> Arguments.of(from.name(), to.name())));
     }
 
     @Test
@@ -79,21 +93,21 @@ class TicketStateMachineIntegrationTest {
     void resolveWithoutNotes_returns409() throws Exception {
         String displayId = createTicket();
         transition(displayId, "IN_PROGRESS", null).andExpect(status().isOk());
-        transition(displayId, "RESOLVED", null).andExpect(status().isConflict());
-        transition(displayId, "RESOLVED", "   ").andExpect(status().isConflict());
+        transition(displayId, "RESOLVED", null)
+                .andExpect(status().isConflict())
+                .andExpect(jsonPath("$.type").value("ticket/resolution-notes-required"));
+        transition(displayId, "RESOLVED", "   ")
+                .andExpect(status().isConflict())
+                .andExpect(jsonPath("$.type").value("ticket/resolution-notes-required"));
     }
 
     @ParameterizedTest
-    @CsvSource({
-        "CLOSED,OPEN",
-        "RESOLVED,OPEN",
-        "CANCELLED,OPEN",
-        "OPEN,RESOLVED",
-        "RESOLVED,CANCELLED"
-    })
+    @MethodSource("forbiddenTransitionMatrix")
     void forbiddenTransitions_return409(String fromStatus, String toStatus) throws Exception {
         String displayId = createTicketInStatus(fromStatus);
-        transition(displayId, toStatus, notesFor(toStatus)).andExpect(status().isConflict());
+        transition(displayId, toStatus, notesFor(toStatus))
+                .andExpect(status().isConflict())
+                .andExpect(jsonPath("$.type").value("ticket/invalid-transition"));
     }
 
     @Test
