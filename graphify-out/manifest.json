@@ -90,15 +90,15 @@
     "semantic_hash": ""
   },
   "frontend/package.json": {
-    "mtime": 1790284355.3593225,
-    "seen": 1790284448.518477,
-    "ast_hash": "b855cbe5363b10f260d10c2ace52aca8",
+    "mtime": 1790285038.3018415,
+    "seen": 1790285114.207327,
+    "ast_hash": "be9261f4c44089e5b0a7743e2b621fd2",
     "semantic_hash": ""
   },
   "frontend/src/App.tsx": {
-    "mtime": 1790284358.6339097,
-    "seen": 1790284448.5184782,
-    "ast_hash": "0f7eba4dc9626f32f0f44005c75b8340",
+    "mtime": 1790285034.818858,
+    "seen": 1790285114.207328,
+    "ast_hash": "bf3280fad6b8df2d7dae093ae74217bb",
     "semantic_hash": ""
   },
   "frontend/src/main.tsx": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md": {
-    "mtime": 1790284740.4832625,
-    "seen": 1790284848.3375459,
-    "ast_hash": "5c3d13c063d5ebe59e132a1fcf90577c",
+    "mtime": 1790284985.6857896,
+    "seen": 1790285114.207365,
+    "ast_hash": "5477481b704b02c3da7ce46cabe25657",
     "semantic_hash": ""
   },
   ".specstory/history/2026-09-24_20-52-04Z-speckit-analyze.md": {
@@ -372,9 +372,9 @@
     "semantic_hash": ""
   },
   "backend/src/main/resources/application.yml": {
-    "mtime": 1790284793.5465689,
-    "seen": 1790284848.3375502,
-    "ast_hash": "8dbd1d587c60f913c134f09027f4b67d",
+    "mtime": 1790285021.200113,
+    "seen": 1790285114.2073689,
+    "ast_hash": "4c1bbb7cc9ac29996ec9193ed598e0d0",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/tasks.md": {
-    "mtime": 1790284823.3350792,
-    "seen": 1790284848.337566,
-    "ast_hash": "9ee893fedfc2480f77364cf0c9160e96",
+    "mtime": 1790285111.760815,
+    "seen": 1790285114.207386,
+    "ast_hash": "59f202b03599e9851608b2b7afad5292",
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/technology-requirements.md": {
@@ -510,9 +510,9 @@
     "semantic_hash": ""
   },
   "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java": {
-    "mtime": 1790284780.7194517,
-    "seen": 1790284848.3375092,
-    "ast_hash": "6c81e41a6b1f3727c2d7a2e6c14d2ac6",
+    "mtime": 1790285014.4466572,
+    "seen": 1790285114.207307,
+    "ast_hash": "27cbbc4b282c8af873f71e7c3eca0052",
     "semantic_hash": ""
   },
   "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java": {
@@ -567,6 +567,150 @@
     "mtime": 1790284771.744294,
     "seen": 1790284848.3375518,
     "ast_hash": "73f109beaa3262f348a69fcd1c745437",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/shared/web/WebConfig.java": {
+    "mtime": 1790285021.2003763,
+    "seen": 1790285114.20731,
+    "ast_hash": "5c344478a4088869cb093dbf45c59cbc",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/TicketController.java": {
+    "mtime": 1790285013.447766,
+    "seen": 1790285114.2073112,
+    "ast_hash": "49d8dd5b934f56105401f68b8d5ef0c4",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/dto/AddCommentRequest.java": {
+    "mtime": 1790285004.7482712,
+    "seen": 1790285114.2073119,
+    "ast_hash": "32aca96e7be34002a7fcc7c2ca55c691",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/dto/CommentResponse.java": {
+    "mtime": 1790285005.0176148,
+    "seen": 1790285114.2073119,
+    "ast_hash": "917aef21d160c3cfd6fe895c58dffa08",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/dto/CreateTicketRequest.java": {
+    "mtime": 1790285003.8851218,
+    "seen": 1790285114.2073128,
+    "ast_hash": "5b87f0ad813e42d7c313ad8f04d1a18e",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/dto/TicketResponse.java": {
+    "mtime": 1790285006.052163,
+    "seen": 1790285114.207314,
+    "ast_hash": "da810e5f696d21a80f327bb0b983cbf1",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/dto/TicketSummaryResponse.java": {
+    "mtime": 1790285005.5455973,
+    "seen": 1790285114.207314,
+    "ast_hash": "00a23741c4ba2f22ebf762680ac93955",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/dto/UpdateTicketRequest.java": {
+    "mtime": 1790285004.2926881,
+    "seen": 1790285114.207315,
+    "ast_hash": "777b630e8487b7e65ca2fdfbfbec4b8b",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/api/mapper/TicketMapper.java": {
+    "mtime": 1790285007.1457806,
+    "seen": 1790285114.207315,
+    "ast_hash": "e2a19926e992a59778cbc38b6b8408b7",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/CommentService.java": {
+    "mtime": 1790285010.7081313,
+    "seen": 1790285114.207316,
+    "ast_hash": "22c837edb5fecfa8fc07ac3661410eaa",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/DisplayIdGenerator.java": {
+    "mtime": 1790285000.216347,
+    "seen": 1790285114.2073169,
+    "ast_hash": "19a3fa049d4e13d88aa1c91fab2d832b",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/TicketNotFoundException.java": {
+    "mtime": 1790285000.6214292,
+    "seen": 1790285114.207319,
+    "ast_hash": "b579c694e8263fcb84311f9ba34d0410",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/TicketService.java": {
+    "mtime": 1790285009.4886577,
+    "seen": 1790285114.207319,
+    "ast_hash": "1cca09d73eff4aab6161a405a98a1f18",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/TicketSnapshotMapper.java": {
+    "mtime": 1790285003.7693107,
+    "seen": 1790285114.2073212,
+    "ast_hash": "35f193afa03b01dccf4c1e9d4d595f2e",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/domain/Priority.java": {
+    "mtime": 1790284996.347992,
+    "seen": 1790285114.2073212,
+    "ast_hash": "864604dba19c4d4e3f59d9689ae70615",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/domain/TicketStatus.java": {
+    "mtime": 1790284996.3479877,
+    "seen": 1790285114.2073221,
+    "ast_hash": "27c7afd6f57b5cd4cca6141101a37488",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/infrastructure/persistence/CommentEntity.java": {
+    "mtime": 1790284998.4219306,
+    "seen": 1790285114.2073238,
+    "ast_hash": "df6c3bc51234f4254459fb184d74481b",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/infrastructure/persistence/CommentRepository.java": {
+    "mtime": 1790284999.4709744,
+    "seen": 1790285114.2073238,
+    "ast_hash": "45d961ec704da0c4160517209fef7575",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/infrastructure/persistence/TicketEntity.java": {
+    "mtime": 1790284997.1802611,
+    "seen": 1790285114.207325,
+    "ast_hash": "4c8671f2618dc6de67c31b930ae59482",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/infrastructure/persistence/TicketRepository.java": {
+    "mtime": 1790284999.057089,
+    "seen": 1790285114.207325,
+    "ast_hash": "b83afb91d1fbb336c92b2d85398c1b29",
+    "semantic_hash": ""
+  },
+  "frontend/src/api/tickets.ts": {
+    "mtime": 1790285022.6492355,
+    "seen": 1790285114.20733,
+    "ast_hash": "7cc81ca2b29eaaa0bcc420cd94235907",
+    "semantic_hash": ""
+  },
+  "frontend/src/features/tickets/CreateTicketPage.tsx": {
+    "mtime": 1790285027.583949,
+    "seen": 1790285114.20733,
+    "ast_hash": "ccde3fdc5ea3d69cf5230faf6b58eede",
+    "semantic_hash": ""
+  },
+  "frontend/src/features/tickets/TicketDetailPage.tsx": {
+    "mtime": 1790285033.7782414,
+    "seen": 1790285114.2073312,
+    "ast_hash": "19e48e03e2cad732efbf1d344e3b03f2",
+    "semantic_hash": ""
+  },
+  "frontend/src/features/tickets/TicketListPage.tsx": {
+    "mtime": 1790285024.4415877,
+    "seen": 1790285114.2073321,
+    "ast_hash": "92cc11ecbe6507006c9d31f393de1011",
     "semantic_hash": ""
   }
 }

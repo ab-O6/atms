@@ -1,0 +1,15 @@
+package com.atms.ticket.infrastructure.persistence;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+public interface TicketRepository extends JpaRepository<TicketEntity, UUID> {
+
+    Optional<TicketEntity> findByDisplayId(String displayId);
+
+    @Query("SELECT t FROM TicketEntity t ORDER BY t.updatedAt DESC")
+    List<TicketEntity> findAllOrderByUpdatedAtDesc();
+}

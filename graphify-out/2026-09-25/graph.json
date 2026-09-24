@@ -4,6 +4,19 @@
   "graph": {},
   "nodes": [
     {
+      "id": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "label": "GlobalExceptionHandler",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "globalexceptionhandler",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L16"
+    },
+    {
       "id": "frontend_src_vite_env_d_importmeta",
       "label": "ImportMeta",
       "_callable": true,
@@ -30,6 +43,400 @@
       "source_location": "L3"
     },
     {
+      "id": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig",
+      "label": "OpenApiConfig",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "file_type": "code",
+      "norm_label": "openapiconfig",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L17"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_atmsapplication_atmsapplication",
+      "label": "AtmsApplication",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "code",
+      "norm_label": "atmsapplication",
+      "source_file": "backend/src/main/java/com/atms/AtmsApplication.java",
+      "source_location": "L6"
+    },
+    {
+      "id": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension",
+      "label": "PostgresTestcontainerExtension",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "norm_label": "postgrestestcontainerextension",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L11"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_application_ticketsnapshot_ticketsnapshot",
+      "label": "TicketSnapshot",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "TicketSnapshot",
+      "file_type": "code",
+      "norm_label": "ticketsnapshot",
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketSnapshot.java",
+      "source_location": "L11"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter",
+      "label": "NoOpTicketKnowledgeIndexAdapter",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "TicketSnapshot",
+      "file_type": "code",
+      "norm_label": "noopticketknowledgeindexadapter",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L10"
+    },
+    {
+      "id": "frontend_src_api_client_apierror",
+      "label": "ApiError",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "client.ts",
+      "file_type": "code",
+      "norm_label": "apierror",
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "frontend_src_api_client_problemdetailbody",
+      "label": "ProblemDetailBody",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "client.ts",
+      "file_type": "code",
+      "norm_label": "problemdetailbody",
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L22"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "label": "TicketKnowledgeIndexPort",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "TicketKnowledgeIndexPort",
+      "file_type": "code",
+      "norm_label": "ticketknowledgeindexport",
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java",
+      "source_location": "L8"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_formatfielderror",
+      "label": ".formatFieldError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "getField",
+            "receiver_type": "FieldError",
+            "lang": "java",
+            "line": "L68"
+          },
+          {
+            "callee": "getDefaultMessage",
+            "receiver_type": "FieldError",
+            "lang": "java",
+            "line": "L68"
+          }
+        ]
+      },
+      "norm_label": ".formatfielderror()",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L67"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconflict",
+      "label": ".handleConflict()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "forStatusAndDetail",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L51"
+          },
+          {
+            "callee": "setTitle",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L52"
+          },
+          {
+            "callee": "setType",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L53"
+          },
+          {
+            "callee": "setInstance",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L54"
+          },
+          {
+            "callee": "create",
+            "receiver_type": "URI",
+            "lang": "java",
+            "line": "L54"
+          },
+          {
+            "callee": "getRequestURI",
+            "receiver_type": "HttpServletRequest",
+            "lang": "java",
+            "line": "L54"
+          },
+          {
+            "callee": "status",
+            "receiver_type": "ResponseEntity",
+            "lang": "java",
+            "line": "L55"
+          }
+        ]
+      },
+      "norm_label": ".handleconflict()",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L49"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconstraintviolation",
+      "label": ".handleConstraintViolation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "getConstraintViolations",
+            "receiver_type": "ConstraintViolationException",
+            "lang": "java",
+            "line": "L39"
+          },
+          {
+            "callee": "joining",
+            "receiver_type": "Collectors",
+            "lang": "java",
+            "line": "L41"
+          },
+          {
+            "callee": "forStatusAndDetail",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L42"
+          },
+          {
+            "callee": "setTitle",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L43"
+          },
+          {
+            "callee": "setType",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L44"
+          },
+          {
+            "callee": "setInstance",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L45"
+          },
+          {
+            "callee": "create",
+            "receiver_type": "URI",
+            "lang": "java",
+            "line": "L45"
+          },
+          {
+            "callee": "getRequestURI",
+            "receiver_type": "HttpServletRequest",
+            "lang": "java",
+            "line": "L45"
+          },
+          {
+            "callee": "badRequest",
+            "receiver_type": "ResponseEntity",
+            "lang": "java",
+            "line": "L46"
+          }
+        ]
+      },
+      "norm_label": ".handleconstraintviolation()",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L36"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlenotfound",
+      "label": ".handleNotFound()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "forStatusAndDetail",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L60"
+          },
+          {
+            "callee": "getMessage",
+            "receiver_type": "NoResourceFoundException",
+            "lang": "java",
+            "line": "L60"
+          },
+          {
+            "callee": "setTitle",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L61"
+          },
+          {
+            "callee": "setType",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L62"
+          },
+          {
+            "callee": "setInstance",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L63"
+          },
+          {
+            "callee": "create",
+            "receiver_type": "URI",
+            "lang": "java",
+            "line": "L63"
+          },
+          {
+            "callee": "getRequestURI",
+            "receiver_type": "HttpServletRequest",
+            "lang": "java",
+            "line": "L63"
+          },
+          {
+            "callee": "status",
+            "receiver_type": "ResponseEntity",
+            "lang": "java",
+            "line": "L64"
+          }
+        ]
+      },
+      "norm_label": ".handlenotfound()",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L58"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlevalidation",
+      "label": ".handleValidation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "getBindingResult",
+            "receiver_type": "MethodArgumentNotValidException",
+            "lang": "java",
+            "line": "L26"
+          },
+          {
+            "callee": "joining",
+            "receiver_type": "Collectors",
+            "lang": "java",
+            "line": "L28"
+          },
+          {
+            "callee": "forStatusAndDetail",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L29"
+          },
+          {
+            "callee": "setTitle",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L30"
+          },
+          {
+            "callee": "setType",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L31"
+          },
+          {
+            "callee": "setInstance",
+            "receiver_type": "ProblemDetail",
+            "lang": "java",
+            "line": "L32"
+          },
+          {
+            "callee": "create",
+            "receiver_type": "URI",
+            "lang": "java",
+            "line": "L32"
+          },
+          {
+            "callee": "getRequestURI",
+            "receiver_type": "HttpServletRequest",
+            "lang": "java",
+            "line": "L32"
+          },
+          {
+            "callee": "badRequest",
+            "receiver_type": "ResponseEntity",
+            "lang": "java",
+            "line": "L33"
+          }
+        ]
+      },
+      "norm_label": ".handlevalidation()",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L23"
+    },
+    {
       "id": "frontend_src_app_app",
       "label": "App()",
       "_callable": true,
@@ -40,6 +447,184 @@
       "norm_label": "app()",
       "source_file": "frontend/src/App.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig_atmsopenapi",
+      "label": ".atmsOpenApi()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "exists",
+            "receiver_type": "ClassPathResource",
+            "lang": "java",
+            "line": "L26"
+          },
+          {
+            "callee": "warn",
+            "receiver_type": "Logger",
+            "lang": "java",
+            "line": "L27"
+          },
+          {
+            "callee": "getContentAsString",
+            "receiver_type": "ClassPathResource",
+            "lang": "java",
+            "line": "L30"
+          },
+          {
+            "callee": "getOpenAPI",
+            "receiver_type": "SwaggerParseResult",
+            "lang": "java",
+            "line": "L32"
+          },
+          {
+            "callee": "getMessages",
+            "receiver_type": "SwaggerParseResult",
+            "lang": "java",
+            "line": "L33"
+          }
+        ]
+      },
+      "norm_label": ".atmsopenapi()",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L23"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_atmsapplication_atmsapplication_main",
+      "label": ".main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "run",
+            "receiver_type": "SpringApplication",
+            "lang": "java",
+            "line": "L10"
+          }
+        ]
+      },
+      "norm_label": ".main()",
+      "source_file": "backend/src/main/java/com/atms/AtmsApplication.java",
+      "source_location": "L9"
+    },
+    {
+      "id": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension_beforeall",
+      "label": ".beforeAll()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "isRunning",
+            "receiver_type": "PostgreSQLContainer",
+            "lang": "java",
+            "line": "L24"
+          },
+          {
+            "callee": "start",
+            "receiver_type": "PostgreSQLContainer",
+            "lang": "java",
+            "line": "L25"
+          }
+        ]
+      },
+      "norm_label": ".beforeall()",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L22"
+    },
+    {
+      "id": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension_jdbcurl",
+      "label": ".jdbcUrl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "getJdbcUrl",
+            "receiver_type": "PostgreSQLContainer",
+            "lang": "java",
+            "line": "L30"
+          }
+        ]
+      },
+      "norm_label": ".jdbcurl()",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L29"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter_reindex",
+      "label": ".reindex()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "TicketSnapshot",
+      "file_type": "code",
+      "norm_label": ".reindex()",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L13"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport_reindex",
+      "label": ".reindex()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 63,
+      "community_name": ".reindex",
+      "file_type": "code",
+      "norm_label": ".reindex()",
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java",
+      "source_location": "L15"
+    },
+    {
+      "id": "frontend_src_api_client_apierror_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "client.ts",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L15"
+    },
+    {
+      "id": "frontend_src_api_client_apifetch",
+      "label": "apiFetch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "client.ts",
+      "file_type": "code",
+      "norm_label": "apifetch()",
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L30"
+    },
+    {
+      "id": "frontend_src_api_client_getapibaseurl",
+      "label": "getApiBaseUrl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "client.ts",
+      "file_type": "code",
+      "norm_label": "getapibaseurl()",
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L3"
     },
     {
       "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command",
@@ -102,18 +687,6 @@
       "source_location": "L2839"
     },
     {
-      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_constitution_alignment_issues",
-      "label": "Constitution Alignment Issues",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "2026-09-24 20:52:04Z",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "constitution alignment issues",
-      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
-      "source_location": "L413"
-    },
-    {
       "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_constitution_alignment_issues_1449",
       "label": "Constitution Alignment Issues",
       "_origin": "ast",
@@ -160,18 +733,6 @@
       "norm_label": "coverage summary",
       "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
       "source_location": "L916"
-    },
-    {
-      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_coverage_summary_table",
-      "label": "Coverage Summary Table",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "2026-09-24 20:52:04Z",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "coverage summary table",
-      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
-      "source_location": "L392"
     },
     {
       "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_coverage_summary_table_1428",
@@ -246,18 +807,6 @@
       "source_location": "L2636"
     },
     {
-      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_metrics",
-      "label": "Metrics",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "2026-09-24 20:52:04Z",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "metrics",
-      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
-      "source_location": "L433"
-    },
-    {
       "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_metrics_1464",
       "label": "Metrics",
       "_origin": "ast",
@@ -316,18 +865,6 @@
       "norm_label": "newly checked (9 items)",
       "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
       "source_location": "L2621"
-    },
-    {
-      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_next_actions",
-      "label": "Next Actions",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "2026-09-24 20:52:04Z",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "next actions",
-      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
-      "source_location": "L447"
     },
     {
       "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_next_actions_1478",
@@ -400,18 +937,6 @@
       "norm_label": "`plan.md`",
       "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
       "source_location": "L1681"
-    },
-    {
-      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_specification_analysis_report",
-      "label": "Specification Analysis Report",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "2026-09-24 20:52:04Z",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "specification analysis report",
-      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
-      "source_location": "L366"
     },
     {
       "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_specification_analysis_report_1406",
@@ -532,18 +1057,6 @@
       "norm_label": "`technology-requirements.md`",
       "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
       "source_location": "L1686"
-    },
-    {
-      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_unmapped_tasks",
-      "label": "Unmapped Tasks",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "2026-09-24 20:52:04Z",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "unmapped tasks",
-      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
-      "source_location": "L421"
     },
     {
       "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_unmapped_tasks_1458",
@@ -3842,18 +4355,6 @@
       "source_location": "L62"
     },
     {
-      "id": "specs_001_support_ticket_rag_research_9_module_integration_ticket_rag",
-      "label": "9. Module integration (ticket \u2194 rag)",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Research: 001-support-ticket-rag",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9. module integration (ticket \u2194 rag)",
-      "source_file": "specs/001-support-ticket-rag/research.md",
-      "source_location": "L68"
-    },
-    {
       "id": "specs_001_support_ticket_rag_research_research_001_support_ticket_rag",
       "label": "Research: 001-support-ticket-rag",
       "_origin": "ast",
@@ -4503,6 +5004,78 @@
       "norm_label": "evaluation-strategy.md",
       "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
       "source_location": "L1"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_evaluation_strategy_deterministic_ci_gate",
+      "label": "Deterministic CI (gate)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "plan.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "deterministic ci (gate)",
+      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_evaluation_strategy_evaluation_strategy_rag",
+      "label": "Evaluation Strategy (RAG)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "plan.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "evaluation strategy (rag)",
+      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_evaluation_strategy_goals",
+      "label": "Goals",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "plan.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "goals",
+      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
+      "source_location": "L6"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_evaluation_strategy_hallucination_grounding_review",
+      "label": "Hallucination / grounding review",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "plan.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "hallucination / grounding review",
+      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_evaluation_strategy_probabilistic_eval_non_gating_or_soft_gate",
+      "label": "Probabilistic eval (non-gating or soft gate)",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "plan.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "probabilistic eval (non-gating or soft gate)",
+      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_evaluation_strategy_regression",
+      "label": "Regression",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "plan.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regression",
+      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
+      "source_location": "L38"
     },
     {
       "id": "specs_001_support_ticket_rag_plan",
@@ -6229,76 +6802,125 @@
       "source_location": "L11"
     },
     {
-      "id": "specs_001_support_ticket_rag_evaluation_strategy_deterministic_ci_gate",
-      "label": "Deterministic CI (gate)",
+      "id": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "label": "GlobalExceptionHandler.java",
       "_origin": "ast",
       "community": 43,
-      "community_name": "Evaluation Strategy (RAG)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "deterministic ci (gate)",
-      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
-      "source_location": "L12"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_evaluation_strategy_evaluation_strategy_rag",
-      "label": "Evaluation Strategy (RAG)",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "Evaluation Strategy (RAG)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "evaluation strategy (rag)",
-      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "globalexceptionhandler.java",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
       "source_location": "L1"
     },
     {
-      "id": "specs_001_support_ticket_rag_evaluation_strategy_goals",
-      "label": "Goals",
+      "id": "jakarta_servlet_http_httpservletrequest",
+      "label": "jakarta.servlet.http.HttpServletRequest",
       "_origin": "ast",
       "community": 43,
-      "community_name": "Evaluation Strategy (RAG)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "goals",
-      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
-      "source_location": "L6"
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "jakarta.servlet.http.httpservletrequest",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "specs_001_support_ticket_rag_evaluation_strategy_hallucination_grounding_review",
-      "label": "Hallucination / grounding review",
+      "id": "jakarta_validation_constraintviolationexception",
+      "label": "jakarta.validation.ConstraintViolationException",
       "_origin": "ast",
       "community": 43,
-      "community_name": "Evaluation Strategy (RAG)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "hallucination / grounding review",
-      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
-      "source_location": "L34"
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "jakarta.validation.constraintviolationexception",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "specs_001_support_ticket_rag_evaluation_strategy_probabilistic_eval_non_gating_or_soft_gate",
-      "label": "Probabilistic eval (non-gating or soft gate)",
+      "id": "java_net_uri",
+      "label": "java.net.URI",
       "_origin": "ast",
       "community": 43,
-      "community_name": "Evaluation Strategy (RAG)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "probabilistic eval (non-gating or soft gate)",
-      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
-      "source_location": "L22"
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "java.net.uri",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "specs_001_support_ticket_rag_evaluation_strategy_regression",
-      "label": "Regression",
+      "id": "org_springframework_http_problemdetail",
+      "label": "org.springframework.http.ProblemDetail",
       "_origin": "ast",
       "community": 43,
-      "community_name": "Evaluation Strategy (RAG)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "regression",
-      "source_file": "specs/001-support-ticket-rag/evaluation-strategy.md",
-      "source_location": "L38"
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.http.problemdetail",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_http_responseentity",
+      "label": "org.springframework.http.ResponseEntity",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.http.responseentity",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_validation_fielderror",
+      "label": "org.springframework.validation.FieldError",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.validation.fielderror",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_web_bind_annotation_exceptionhandler",
+      "label": "org.springframework.web.bind.annotation.ExceptionHandler",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.web.bind.annotation.exceptionhandler",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_web_bind_annotation_restcontrolleradvice",
+      "label": "org.springframework.web.bind.annotation.RestControllerAdvice",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.web.bind.annotation.restcontrolleradvice",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_web_bind_methodargumentnotvalidexception",
+      "label": "org.springframework.web.bind.MethodArgumentNotValidException",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.web.bind.methodargumentnotvalidexception",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_web_servlet_resource_noresourcefoundexception",
+      "label": "org.springframework.web.servlet.resource.NoResourceFoundException",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.web.servlet.resource.noresourcefoundexception",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "cursor_skills_speckit_taskstoissues_skill",
@@ -6990,6 +7612,61 @@
       "source_location": "L1"
     },
     {
+      "id": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "label": "OpenApiConfig.java",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "file_type": "code",
+      "norm_label": "openapiconfig.java",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "io_swagger_v3_oas_models_openapi",
+      "label": "io.swagger.v3.oas.models.OpenAPI",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "file_type": "code",
+      "norm_label": "io.swagger.v3.oas.models.openapi",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_slf4j_logger",
+      "label": "org.slf4j.Logger",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "file_type": "code",
+      "norm_label": "org.slf4j.logger",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_context_annotation_bean",
+      "label": "org.springframework.context.annotation.Bean",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.context.annotation.bean",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_context_annotation_configuration",
+      "label": "org.springframework.context.annotation.Configuration",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.context.annotation.configuration",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "specify_templates_tasks_template",
       "label": "tasks-template.md",
       "_origin": "ast",
@@ -7317,16 +7994,482 @@
       "source_location": "L180"
     },
     {
+      "id": "backend_src_main_java_com_atms_atmsapplication",
+      "label": "AtmsApplication.java",
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "code",
+      "norm_label": "atmsapplication.java",
+      "source_file": "backend/src/main/java/com/atms/AtmsApplication.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "org_springframework_boot_autoconfigure_springbootapplication",
+      "label": "org.springframework.boot.autoconfigure.SpringBootApplication",
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "code",
+      "norm_label": "org.springframework.boot.autoconfigure.springbootapplication",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_checklist_gate_read_only",
+      "label": "Checklist gate (read-only)",
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "checklist gate (read-only)",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3518"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_important_follow_up_t004_vs_plan_constitution",
+      "label": "Important follow-up (T004 vs plan/constitution)",
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "important follow-up (t004 vs plan/constitution)",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3541"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_next",
+      "label": "Next",
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "next",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3545"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_phase_1_complete",
+      "label": "Phase 1 complete",
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 1 complete",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3516"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_tasks_marked_done",
+      "label": "Tasks marked done",
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tasks marked done",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3525"
+    },
+    {
+      "id": "backend_src_test_java_com_atms_support_postgrestestcontainerextension",
+      "label": "PostgresTestcontainerExtension.java",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "norm_label": "postgrestestcontainerextension.java",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_java_override",
+      "label": "Override",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_junit_jupiter_api_extension_beforeallcallback",
+      "label": "org.junit.jupiter.api.extension.BeforeAllCallback",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "norm_label": "org.junit.jupiter.api.extension.beforeallcallback",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_junit_jupiter_api_extension_extensioncontext",
+      "label": "org.junit.jupiter.api.extension.ExtensionContext",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "norm_label": "org.junit.jupiter.api.extension.extensioncontext",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_testcontainers_containers_postgresqlcontainer",
+      "label": "org.testcontainers.containers.PostgreSQLContainer",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "norm_label": "org.testcontainers.containers.postgresqlcontainer",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_testcontainers_utility_dockerimagename",
+      "label": "org.testcontainers.utility.DockerImageName",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "PostgresTestcontainerExtension",
+      "file_type": "code",
+      "norm_label": "org.testcontainers.utility.dockerimagename",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_application_ticketsnapshot",
+      "label": "TicketSnapshot.java",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "TicketSnapshot",
+      "file_type": "code",
+      "norm_label": "ticketsnapshot.java",
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketSnapshot.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter",
+      "label": "NoOpTicketKnowledgeIndexAdapter.java",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "TicketSnapshot",
+      "file_type": "code",
+      "norm_label": "noopticketknowledgeindexadapter.java",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_java_override",
+      "label": "Override",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "TicketSnapshot",
+      "file_type": "code",
+      "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_stereotype_component",
+      "label": "org.springframework.stereotype.Component",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "TicketSnapshot",
+      "file_type": "code",
+      "norm_label": "org.springframework.stereotype.component",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_implementation_for_user_story_1",
+      "label": "Implementation for User Story 1",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": ".reindex",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "implementation for user story 1",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_implementation_for_user_story_3",
+      "label": "Implementation for User Story 3",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": ".reindex",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "implementation for user story 3",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L128"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_phase_3_user_story_1_manage_support_tickets_priority_p1_mvp",
+      "label": "Phase 3: User Story 1 - Manage support tickets (Priority: P1) \ud83c\udfaf MVP",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": ".reindex",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 3: user story 1 - manage support tickets (priority: p1) \ud83c\udfaf mvp",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_phase_5_user_story_3_enforce_ticket_status_lifecycle_priority_p2",
+      "label": "Phase 5: User Story 3 - Enforce ticket status lifecycle (Priority: P2)",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": ".reindex",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 5: user story 3 - enforce ticket status lifecycle (priority: p2)",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L116"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_tests_for_user_story_3_write_first_expect_fail",
+      "label": "Tests for User Story 3 (write first, expect FAIL)",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": ".reindex",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests for user story 3 (write first, expect fail)",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L122"
+    },
+    {
+      "id": "frontend_src_api_client",
+      "label": "client.ts",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "client.ts",
+      "file_type": "code",
+      "norm_label": "client.ts",
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_constitution_alignment_issues",
+      "label": "Constitution Alignment Issues",
+      "_origin": "ast",
+      "community": 65,
+      "community_name": "Specification Analysis Report",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "constitution alignment issues",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L413"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_coverage_summary_table",
+      "label": "Coverage Summary Table",
+      "_origin": "ast",
+      "community": 65,
+      "community_name": "Specification Analysis Report",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "coverage summary table",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L392"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_metrics",
+      "label": "Metrics",
+      "_origin": "ast",
+      "community": 65,
+      "community_name": "Specification Analysis Report",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "metrics",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L433"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_next_actions",
+      "label": "Next Actions",
+      "_origin": "ast",
+      "community": 65,
+      "community_name": "Specification Analysis Report",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "next actions",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L447"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_specification_analysis_report",
+      "label": "Specification Analysis Report",
+      "_origin": "ast",
+      "community": 65,
+      "community_name": "Specification Analysis Report",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "specification analysis report",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L366"
+    },
+    {
+      "id": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_unmapped_tasks",
+      "label": "Unmapped Tasks",
+      "_origin": "ast",
+      "community": 65,
+      "community_name": "Specification Analysis Report",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "unmapped tasks",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L421"
+    },
+    {
+      "id": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport",
+      "label": "TicketKnowledgeIndexPort.java",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "TicketKnowledgeIndexPort",
+      "file_type": "code",
+      "norm_label": "ticketknowledgeindexport.java",
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_research_9_module_integration_ticket_rag",
+      "label": "9. Module integration (ticket \u2194 rag)",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "TicketKnowledgeIndexPort",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. module integration (ticket \u2194 rag)",
+      "source_file": "specs/001-support-ticket-rag/research.md",
+      "source_location": "L68"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_phase_2_foundational_blocking_prerequisites",
+      "label": "Phase 2: Foundational (Blocking Prerequisites)",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "TicketKnowledgeIndexPort",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 2: foundational (blocking prerequisites)",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L45"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_phase_7_polish_cross_cutting_concerns",
+      "label": "Phase 7: Polish & Cross-Cutting Concerns",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "TicketKnowledgeIndexPort",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 7: polish & cross-cutting concerns",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L171"
+    },
+    {
       "id": "specs_001_support_ticket_rag_tasks_dependencies_execution_order",
       "label": "Dependencies & Execution Order",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
+      "community": 67,
+      "community_name": "Dependencies & Execution Order",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "dependencies & execution order",
       "source_file": "specs/001-support-ticket-rag/tasks.md",
       "source_location": "L184"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_parallel_opportunities",
+      "label": "Parallel Opportunities",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "Dependencies & Execution Order",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "parallel opportunities",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L200"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_phase_dependencies",
+      "label": "Phase Dependencies",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "Dependencies & Execution Order",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase dependencies",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L186"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_user_story_dependencies",
+      "label": "User Story Dependencies",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "Dependencies & Execution Order",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user story dependencies",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L191"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_implementation_strategy",
+      "label": "Implementation Strategy",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "Implementation Strategy",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "implementation strategy",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L224"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_incremental_delivery",
+      "label": "Incremental Delivery",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "Implementation Strategy",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "incremental delivery",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L233"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_mvp_first_user_story_1_only",
+      "label": "MVP First (User Story 1 Only)",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "Implementation Strategy",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "mvp first (user story 1 only)",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L226"
+    },
+    {
+      "id": "specs_001_support_ticket_rag_tasks_suggested_mvp_scope",
+      "label": "Suggested MVP Scope",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "Implementation Strategy",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "suggested mvp scope",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L238"
     },
     {
       "id": "specs_001_support_ticket_rag_tasks_format_id_p_story_description",
@@ -7341,18 +8484,6 @@
       "source_location": "L15"
     },
     {
-      "id": "specs_001_support_ticket_rag_tasks_implementation_for_user_story_1",
-      "label": "Implementation for User Story 1",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "implementation for user story 1",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L72"
-    },
-    {
       "id": "specs_001_support_ticket_rag_tasks_implementation_for_user_story_2",
       "label": "Implementation for User Story 2",
       "_origin": "ast",
@@ -7365,18 +8496,6 @@
       "source_location": "L105"
     },
     {
-      "id": "specs_001_support_ticket_rag_tasks_implementation_for_user_story_3",
-      "label": "Implementation for User Story 3",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "implementation for user story 3",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L128"
-    },
-    {
       "id": "specs_001_support_ticket_rag_tasks_implementation_for_user_story_4",
       "label": "Implementation for User Story 4",
       "_origin": "ast",
@@ -7387,42 +8506,6 @@
       "norm_label": "implementation for user story 4",
       "source_file": "specs/001-support-ticket-rag/tasks.md",
       "source_location": "L153"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_tasks_implementation_strategy",
-      "label": "Implementation Strategy",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "implementation strategy",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L224"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_tasks_incremental_delivery",
-      "label": "Incremental Delivery",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "incremental delivery",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L233"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_tasks_mvp_first_user_story_1_only",
-      "label": "MVP First (User Story 1 Only)",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "mvp first (user story 1 only)",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L226"
     },
     {
       "id": "specs_001_support_ticket_rag_tasks_notes",
@@ -7449,18 +8532,6 @@
       "source_location": "L212"
     },
     {
-      "id": "specs_001_support_ticket_rag_tasks_parallel_opportunities",
-      "label": "Parallel Opportunities",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "parallel opportunities",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L200"
-    },
-    {
       "id": "specs_001_support_ticket_rag_tasks_path_conventions",
       "label": "Path Conventions",
       "_origin": "ast",
@@ -7485,30 +8556,6 @@
       "source_location": "L29"
     },
     {
-      "id": "specs_001_support_ticket_rag_tasks_phase_2_foundational_blocking_prerequisites",
-      "label": "Phase 2: Foundational (Blocking Prerequisites)",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 2: foundational (blocking prerequisites)",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L45"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_tasks_phase_3_user_story_1_manage_support_tickets_priority_p1_mvp",
-      "label": "Phase 3: User Story 1 - Manage support tickets (Priority: P1) \ud83c\udfaf MVP",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 3: user story 1 - manage support tickets (priority: p1) \ud83c\udfaf mvp",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L66"
-    },
-    {
       "id": "specs_001_support_ticket_rag_tasks_phase_4_user_story_2_find_tickets_by_keyword_and_status_priority_p2",
       "label": "Phase 4: User Story 2 - Find tickets by keyword and status (Priority: P2)",
       "_origin": "ast",
@@ -7521,18 +8568,6 @@
       "source_location": "L93"
     },
     {
-      "id": "specs_001_support_ticket_rag_tasks_phase_5_user_story_3_enforce_ticket_status_lifecycle_priority_p2",
-      "label": "Phase 5: User Story 3 - Enforce ticket status lifecycle (Priority: P2)",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 5: user story 3 - enforce ticket status lifecycle (priority: p2)",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L116"
-    },
-    {
       "id": "specs_001_support_ticket_rag_tasks_phase_6_user_story_4_ask_natural_language_questions_over_ticket_history_priority_p3",
       "label": "Phase 6: User Story 4 - Ask natural-language questions over ticket history (Priority: P3)",
       "_origin": "ast",
@@ -7543,42 +8578,6 @@
       "norm_label": "phase 6: user story 4 - ask natural-language questions over ticket history (priority: p3)",
       "source_file": "specs/001-support-ticket-rag/tasks.md",
       "source_location": "L140"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_tasks_phase_7_polish_cross_cutting_concerns",
-      "label": "Phase 7: Polish & Cross-Cutting Concerns",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 7: polish & cross-cutting concerns",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L171"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_tasks_phase_dependencies",
-      "label": "Phase Dependencies",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase dependencies",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L186"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_tasks_suggested_mvp_scope",
-      "label": "Suggested MVP Scope",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "suggested mvp scope",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L238"
     },
     {
       "id": "specs_001_support_ticket_rag_tasks_tasks_support_ticket_management_with_grounded_q_a",
@@ -7605,18 +8604,6 @@
       "source_location": "L99"
     },
     {
-      "id": "specs_001_support_ticket_rag_tasks_tests_for_user_story_3_write_first_expect_fail",
-      "label": "Tests for User Story 3 (write first, expect FAIL)",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests for user story 3 (write first, expect fail)",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L122"
-    },
-    {
       "id": "specs_001_support_ticket_rag_tasks_tests_for_user_story_4_write_first_expect_fail",
       "label": "Tests for User Story 4 (write first, expect FAIL)",
       "_origin": "ast",
@@ -7627,18 +8614,6 @@
       "norm_label": "tests for user story 4 (write first, expect fail)",
       "source_file": "specs/001-support-ticket-rag/tasks.md",
       "source_location": "L146"
-    },
-    {
-      "id": "specs_001_support_ticket_rag_tasks_user_story_dependencies",
-      "label": "User Story Dependencies",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "Tasks: Support Ticket Management with Grounded Q&A",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "user story dependencies",
-      "source_file": "specs/001-support-ticket-rag/tasks.md",
-      "source_location": "L191"
     },
     {
       "id": "cursor_skills_speckit_analyze_skill",
@@ -8165,9 +9140,287 @@
       "norm_label": "include",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L20"
+    },
+    {
+      "id": "collectors",
+      "label": "collectors",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "collectors",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "httpstatus",
+      "label": "httpstatus",
+      "community": 43,
+      "community_name": "GlobalExceptionHandler.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "httpstatus",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "classpathresource",
+      "label": "classpathresource",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "classpathresource",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ioexception",
+      "label": "ioexception",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ioexception",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "loggerfactory",
+      "label": "loggerfactory",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "loggerfactory",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "openapiv3parser",
+      "label": "openapiv3parser",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "openapiv3parser",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "standardcharsets",
+      "label": "standardcharsets",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "standardcharsets",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "swaggerparseresult",
+      "label": "swaggerparseresult",
+      "community": 59,
+      "community_name": "OpenApiConfig.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "swaggerparseresult",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "springapplication",
+      "label": "springapplication",
+      "community": 60,
+      "community_name": "Phase 1 complete",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "springapplication",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "uuid",
+      "label": "uuid",
+      "community": 62,
+      "community_name": "TicketSnapshot",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "uuid",
+      "source_file": "",
+      "type": "external"
     }
   ],
   "links": [
+    {
+      "source": "backend_src_main_java_com_atms_atmsapplication_atmsapplication",
+      "target": "org_springframework_boot_autoconfigure_springbootapplication",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/AtmsApplication.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig",
+      "target": "org_springframework_context_annotation_configuration",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig_atmsopenapi",
+      "target": "org_springframework_context_annotation_bean",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "target": "org_springframework_web_bind_annotation_restcontrolleradvice",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconflict",
+      "target": "org_springframework_web_bind_annotation_exceptionhandler",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconstraintviolation",
+      "target": "jakarta_validation_constraintviolationexception",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconstraintviolation",
+      "target": "org_springframework_web_bind_annotation_exceptionhandler",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlenotfound",
+      "target": "org_springframework_web_bind_annotation_exceptionhandler",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlenotfound",
+      "target": "org_springframework_web_servlet_resource_noresourcefoundexception",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlevalidation",
+      "target": "org_springframework_web_bind_annotation_exceptionhandler",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlevalidation",
+      "target": "org_springframework_web_bind_methodargumentnotvalidexception",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter",
+      "target": "org_springframework_stereotype_component",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter_reindex",
+      "target": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_java_override",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension_beforeall",
+      "target": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_java_override",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L22",
+      "weight": 1.0
+    },
     {
       "source": "backend_mvnw__entry",
       "target": "backend_mvnw_trim",
@@ -8262,6 +9515,30 @@
       "context": "call",
       "source_file": "backend/mvnw",
       "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_client_apifetch",
+      "target": "frontend_src_api_client_getapibaseurl",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_client_apifetch",
+      "target": "frontend_src_api_client_apierror",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -8805,6 +10082,486 @@
       "weight": 1.0
     },
     {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig",
+      "target": "org_slf4j_logger",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "target": "java_net_uri",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension",
+      "target": "org_testcontainers_utility_dockerimagename",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension",
+      "target": "org_testcontainers_containers_postgresqlcontainer",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconflict",
+      "target": "org_springframework_http_problemdetail",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconstraintviolation",
+      "target": "org_springframework_http_problemdetail",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlenotfound",
+      "target": "org_springframework_http_problemdetail",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlevalidation",
+      "target": "org_springframework_http_problemdetail",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_atmsapplication",
+      "target": "springapplication",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/AtmsApplication.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_atmsapplication",
+      "target": "org_springframework_boot_autoconfigure_springbootapplication",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/AtmsApplication.java",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "org_springframework_context_annotation_bean",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "org_springframework_context_annotation_configuration",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "classpathresource",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "io_swagger_v3_oas_models_openapi",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "openapiv3parser",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "swaggerparseresult",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "ioexception",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "standardcharsets",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "org_slf4j_logger",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "loggerfactory",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "org_springframework_validation_fielderror",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "org_springframework_web_bind_methodargumentnotvalidexception",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "org_springframework_web_bind_annotation_exceptionhandler",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "org_springframework_web_bind_annotation_restcontrolleradvice",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "org_springframework_web_servlet_resource_noresourcefoundexception",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "jakarta_servlet_http_httpservletrequest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "jakarta_validation_constraintviolationexception",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "java_net_uri",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "collectors",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "httpstatus",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "org_springframework_http_problemdetail",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "org_springframework_http_responseentity",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_application_ticketsnapshot",
+      "target": "uuid",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketSnapshot.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketsnapshot_ticketsnapshot",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter",
+      "target": "org_springframework_stereotype_component",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension",
+      "target": "org_junit_jupiter_api_extension_beforeallcallback",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension",
+      "target": "org_junit_jupiter_api_extension_extensioncontext",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension",
+      "target": "org_testcontainers_containers_postgresqlcontainer",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension",
+      "target": "org_testcontainers_utility_dockerimagename",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_package",
       "target": "ref_react",
       "relation": "imports",
@@ -8961,6 +10718,162 @@
       "weight": 1.0
     },
     {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_formatfielderror",
+      "target": "org_springframework_validation_fielderror",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconflict",
+      "target": "jakarta_servlet_http_httpservletrequest",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconstraintviolation",
+      "target": "jakarta_servlet_http_httpservletrequest",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlenotfound",
+      "target": "jakarta_servlet_http_httpservletrequest",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlevalidation",
+      "target": "jakarta_servlet_http_httpservletrequest",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport_reindex",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketsnapshot_ticketsnapshot",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter_reindex",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketsnapshot_ticketsnapshot",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension_beforeall",
+      "target": "org_junit_jupiter_api_extension_extensioncontext",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig_atmsopenapi",
+      "target": "io_swagger_v3_oas_models_openapi",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconflict",
+      "target": "org_springframework_http_responseentity",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconstraintviolation",
+      "target": "org_springframework_http_responseentity",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlenotfound",
+      "target": "org_springframework_http_responseentity",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlevalidation",
+      "target": "org_springframework_http_responseentity",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
       "source": "agents_skills_caveman_readme",
       "target": "agents_skills_caveman_readme_caveman",
       "relation": "contains",
@@ -9079,6 +10992,83 @@
       "confidence_score": 1.0,
       "source_file": "backend/mvnw",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_atmsapplication",
+      "target": "backend_src_main_java_com_atms_atmsapplication_atmsapplication",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/AtmsApplication.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig",
+      "target": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler",
+      "target": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_application_ticketsnapshot",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketsnapshot_ticketsnapshot",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketSnapshot.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter",
+      "target": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension",
+      "target": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -10641,6 +12631,50 @@
       "confidence_score": 1.0,
       "source_file": "frontend/package.json",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_client",
+      "target": "frontend_src_api_client_apierror",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_client",
+      "target": "frontend_src_api_client_problemdetailbody",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_client",
+      "target": "frontend_src_api_client_getapibaseurl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_client",
+      "target": "frontend_src_api_client_apifetch",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -14539,6 +16573,17 @@
     },
     {
       "source": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_2026_09_24_20_52_04z",
+      "target": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_phase_1_complete",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3516",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_2026_09_24_20_52_04z",
       "target": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_specification_analysis_report",
       "relation": "contains",
       "_origin": "ast",
@@ -14590,6 +16635,50 @@
       "confidence_score": 1.0,
       "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
       "source_location": "L944",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_phase_1_complete",
+      "target": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_checklist_gate_read_only",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3518",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_phase_1_complete",
+      "target": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_tasks_marked_done",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3525",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_phase_1_complete",
+      "target": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_important_follow_up_t004_vs_plan_constitution",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3541",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_phase_1_complete",
+      "target": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_next",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3545",
       "weight": 1.0
     },
     {
@@ -15473,6 +17562,160 @@
       "weight": 1.0
     },
     {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "implements",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension",
+      "target": "org_junit_jupiter_api_extension_beforeallcallback",
+      "relation": "implements",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_atmsapplication_atmsapplication",
+      "target": "backend_src_main_java_com_atms_atmsapplication_atmsapplication_main",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/AtmsApplication.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig",
+      "target": "backend_src_main_java_com_atms_shared_config_openapiconfig_openapiconfig_atmsopenapi",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "target": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlevalidation",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "target": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconstraintviolation",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "target": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handleconflict",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "target": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_handlenotfound",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler",
+      "target": "backend_src_main_java_com_atms_shared_error_globalexceptionhandler_globalexceptionhandler_formatfielderror",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport_reindex",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter",
+      "target": "backend_src_main_java_com_atms_ticket_infrastructure_noopticketknowledgeindexadapter_noopticketknowledgeindexadapter_reindex",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension",
+      "target": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension_beforeall",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension",
+      "target": "backend_src_test_java_com_atms_support_postgrestestcontainerextension_postgrestestcontainerextension_jdbcurl",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_client_apierror",
+      "target": "frontend_src_api_client_apierror_constructor",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/client.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
       "source": "agents_skills_caveman_readme",
       "target": "agents_skills_caveman_skill",
       "relation": "references",
@@ -16058,6 +18301,126 @@
       "context": "import",
       "source_file": ".specify/scripts/bash/setup-tasks.sh",
       "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_next",
+      "target": "backend_src_main_java_com_atms_atmsapplication_atmsapplication",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "AtmsApplication",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L3547",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_001_support_ticket_rag_architecture_layering_package_by_feature",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort",
+      "source_file": "specs/001-support-ticket-rag/architecture.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_001_support_ticket_rag_research_9_module_integration_ticket_rag",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort",
+      "source_file": "specs/001-support-ticket-rag/research.md",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_001_support_ticket_rag_tasks_phase_2_foundational_blocking_prerequisites",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_001_support_ticket_rag_tasks_phase_7_polish_cross_cutting_concerns",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_27_49z_speckit_checklist_command_findings",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort",
+      "source_file": ".specstory/history/2026-09-24_20-27-49Z-speckit-checklist-command.md",
+      "source_location": "L1884",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_27_49z_speckit_checklist_command_searchable_knowledge_index_fr_017_fr_019_tr_001_tr_004_tr_013_tr_014",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort",
+      "source_file": ".specstory/history/2026-09-24_20-27-49Z-speckit-checklist-command.md",
+      "source_location": "L1272",
+      "weight": 1.0
+    },
+    {
+      "source": "specstory_history_2026_09_24_20_52_04z_speckit_analysis_command_specification_analysis_report",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort",
+      "source_file": ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md",
+      "source_location": "L375",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_001_support_ticket_rag_tasks_implementation_for_user_story_1",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport_reindex",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort.reindex",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_001_support_ticket_rag_tasks_implementation_for_user_story_3",
+      "target": "backend_src_main_java_com_atms_ticket_application_ticketknowledgeindexport_ticketknowledgeindexport_reindex",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "TicketKnowledgeIndexPort.reindex",
+      "source_file": "specs/001-support-ticket-rag/tasks.md",
+      "source_location": "L132",
       "weight": 1.0
     }
   ],

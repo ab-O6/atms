@@ -71,20 +71,20 @@ description: "Task list for Support Ticket Management with Grounded Q&A"
 
 ### Implementation for User Story 1
 
-- [ ] T020 [P] [US1] Add domain enums `TicketStatus`, `Priority` in `backend/src/main/java/com/atms/ticket/domain/`
-- [ ] T021 [P] [US1] Add JPA entities `TicketEntity`, `CommentEntity` matching [data-model.md](./data-model.md) in `backend/src/main/java/com/atms/ticket/infrastructure/persistence/`
-- [ ] T022 [US1] Add `TicketRepository`, `CommentRepository` in `backend/src/main/java/com/atms/ticket/infrastructure/persistence/`
-- [ ] T023 [US1] Implement `DisplayIdGenerator` using `ticket_display_id_seq` format `TKT-%04d` in `backend/src/main/java/com/atms/ticket/application/DisplayIdGenerator.java`
-- [ ] T024 [US1] Implement `TicketService` (create, getByDisplayId, list without search yet, update mutable fields only—**not** category) in `backend/src/main/java/com/atms/ticket/application/TicketService.java`
-- [ ] T025 [US1] Implement `CommentService` in `backend/src/main/java/com/atms/ticket/application/CommentService.java`
-- [ ] T026 [P] [US1] Add MapStruct mappers in `backend/src/main/java/com/atms/ticket/api/mapper/TicketMapper.java`
-- [ ] T027 [P] [US1] Add request/response DTOs with Bean Validation (`CreateTicketRequest` required title/description/priority/assignee; optional category; `UpdateTicketRequest` excludes category) in `backend/src/main/java/com/atms/ticket/api/dto/`
-- [ ] T028 [US1] Implement `TicketController` for `POST/GET /api/tickets`, `GET/PATCH /api/tickets/{displayId}`, `POST .../comments` per `contracts/openapi.yaml` in `backend/src/main/java/com/atms/ticket/api/TicketController.java`
-- [ ] T029 [US1] Invoke `TicketKnowledgeIndexPort.reindex` after ticket/comment writes in `TicketService`/`CommentService` (no-op until US4)
-- [ ] T030 [P] [US1] Add `frontend/src/features/tickets/TicketListPage.tsx` with list and navigation to detail
-- [ ] T031 [P] [US1] Add `frontend/src/features/tickets/TicketDetailPage.tsx` with view/update and comment form
-- [ ] T032 [P] [US1] Add `frontend/src/features/tickets/CreateTicketPage.tsx` with optional category field
-- [ ] T033 [US1] Wire ticket API methods in `frontend/src/api/tickets.ts` and surface validation/ProblemDetail errors in UI per [ui-flow.md](./ui-flow.md)
+- [x] T020 [P] [US1] Add domain enums `TicketStatus`, `Priority` in `backend/src/main/java/com/atms/ticket/domain/`
+- [x] T021 [P] [US1] Add JPA entities `TicketEntity`, `CommentEntity` matching [data-model.md](./data-model.md) in `backend/src/main/java/com/atms/ticket/infrastructure/persistence/`
+- [x] T022 [US1] Add `TicketRepository`, `CommentRepository` in `backend/src/main/java/com/atms/ticket/infrastructure/persistence/`
+- [x] T023 [US1] Implement `DisplayIdGenerator` using `ticket_display_id_seq` format `TKT-%04d` in `backend/src/main/java/com/atms/ticket/application/DisplayIdGenerator.java`
+- [x] T024 [US1] Implement `TicketService` (create, getByDisplayId, list without search yet, update mutable fields only—**not** category) in `backend/src/main/java/com/atms/ticket/application/TicketService.java`
+- [x] T025 [US1] Implement `CommentService` in `backend/src/main/java/com/atms/ticket/application/CommentService.java`
+- [x] T026 [P] [US1] Add MapStruct mappers in `backend/src/main/java/com/atms/ticket/api/mapper/TicketMapper.java`
+- [x] T027 [P] [US1] Add request/response DTOs with Bean Validation (`CreateTicketRequest` required title/description/priority/assignee; optional category; `UpdateTicketRequest` excludes category) in `backend/src/main/java/com/atms/ticket/api/dto/`
+- [x] T028 [US1] Implement `TicketController` for `POST/GET /api/tickets`, `GET/PATCH /api/tickets/{displayId}`, `POST .../comments` per `contracts/openapi.yaml` in `backend/src/main/java/com/atms/ticket/api/TicketController.java`
+- [x] T029 [US1] Invoke `TicketKnowledgeIndexPort.reindex` after ticket/comment writes in `TicketService`/`CommentService` (no-op until US4)
+- [x] T030 [P] [US1] Add `frontend/src/features/tickets/TicketListPage.tsx` with list and navigation to detail
+- [x] T031 [P] [US1] Add `frontend/src/features/tickets/TicketDetailPage.tsx` with view/update and comment form
+- [x] T032 [P] [US1] Add `frontend/src/features/tickets/CreateTicketPage.tsx` with optional category field
+- [x] T033 [US1] Wire ticket API methods in `frontend/src/api/tickets.ts` and surface validation/ProblemDetail errors in UI per [ui-flow.md](./ui-flow.md)
 
 **Checkpoint**: MVP ticket flows work via UI and curl; display ids visible; category immutable after create
 

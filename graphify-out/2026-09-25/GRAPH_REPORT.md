@@ -1,13 +1,13 @@
 # Graph Report - atms  (2026-09-25)
 
 ## Corpus Check
-- 77 files · ~81,051 words
+- 85 files · ~84,878 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 17 file(s) not represented in the graph (top: .mdc 9, (none) 4, .toml 1)
 
 ## Summary
-- 668 nodes · 711 edges · 59 communities (47 shown, 12 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.5)
+- 736 nodes · 820 edges · 69 communities (57 shown, 12 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 15 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
@@ -59,7 +59,7 @@
 - Review spec vs implementation
 - Shared context (read first)
 - speckit-constitution/SKILL.md
-- Evaluation Strategy (RAG)
+- GlobalExceptionHandler.java
 - speckit-taskstoissues/SKILL.md
 - [CHECKLIST TYPE] Checklist: [FEATURE NAME]
 - 2026-09-24 18:39:48Z
@@ -70,6 +70,16 @@
 - 2026-09-24_19-43-10Z-users-abhinavrai-downloads-assessments.md
 - 2026-09-24_20-52-04Z-speckit-analyze.md
 - com.atms:atms-backend
+- OpenApiConfig.java
+- Phase 1 complete
+- PostgresTestcontainerExtension
+- TicketSnapshot
+- .reindex
+- client.ts
+- Specification Analysis Report
+- TicketKnowledgeIndexPort
+- Dependencies & Execution Order
+- Implementation Strategy
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 17 edges
@@ -77,32 +87,32 @@
 3. `Specification Analysis Report` - 15 edges
 4. `Tasks: Support Ticket Management with Grounded Q&A` - 14 edges
 5. `Tasks: [FEATURE NAME]` - 13 edges
-6. `Implementation Readiness Checklist: Support Ticket Management with Grounded Q&A` - 11 edges
-7. `create-new-feature.sh script` - 10 edges
-8. `Research: 001-support-ticket-rag` - 10 edges
-9. `2026-09-24 20:52:04Z` - 9 edges
-10. `Specification Analysis Report` - 9 edges
+6. `TicketKnowledgeIndexPort` - 11 edges
+7. `Implementation Readiness Checklist: Support Ticket Management with Grounded Q&A` - 11 edges
+8. `create-new-feature.sh script` - 10 edges
+9. `2026-09-24 20:52:04Z` - 10 edges
+10. `Research: 001-support-ticket-rag` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `check-prerequisites.sh script` --calls--> `check_dir()`  [EXTRACTED]
-  .specify/scripts/bash/check-prerequisites.sh → .specify/scripts/bash/common.sh
-- `check-prerequisites.sh script` --calls--> `check_file()`  [EXTRACTED]
-  .specify/scripts/bash/check-prerequisites.sh → .specify/scripts/bash/common.sh
-- `check-prerequisites.sh script` --calls--> `get_feature_paths()`  [EXTRACTED]
-  .specify/scripts/bash/check-prerequisites.sh → .specify/scripts/bash/common.sh
-- `check-prerequisites.sh script` --calls--> `has_jq()`  [EXTRACTED]
-  .specify/scripts/bash/check-prerequisites.sh → .specify/scripts/bash/common.sh
-- `check-prerequisites.sh script` --calls--> `json_escape()`  [EXTRACTED]
-  .specify/scripts/bash/check-prerequisites.sh → .specify/scripts/bash/common.sh
+- `Layering (package-by-feature)` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
+  specs/001-support-ticket-rag/architecture.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
+- `Findings` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
+  .specstory/history/2026-09-24_20-27-49Z-speckit-checklist-command.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
+- `Searchable knowledge & index (FR-017–FR-019, TR-001–TR-004, TR-013–TR-014)` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
+  .specstory/history/2026-09-24_20-27-49Z-speckit-checklist-command.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
+- `9. Module integration (ticket ↔ rag)` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
+  specs/001-support-ticket-rag/research.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
+- `Phase 2: Foundational (Blocking Prerequisites)` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
+  specs/001-support-ticket-rag/tasks.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (59 total, 12 thin omitted)
+## Communities (69 total, 12 thin omitted)
 
 ### Community 0 - "2026-09-24 20:52:04Z"
-Cohesion: 0.04
-Nodes (44): 2026-09-24 20:52:04Z, Clarifications reflected, Clarify complete, Completion report, Constitution Alignment Issues, Constitution Alignment Issues, Constitution Alignment Issues, Constitution Alignment Issues (+36 more)
+Cohesion: 0.05
+Nodes (38): 2026-09-24 20:52:04Z, Clarifications reflected, Clarify complete, Completion report, Constitution Alignment Issues, Constitution Alignment Issues, Constitution Alignment Issues, Coverage summary (+30 more)
 
 ### Community 1 - "Product Requirements Document"
 Cohesion: 0.05
@@ -113,8 +123,8 @@ Cohesion: 0.13
 Nodes (29): check-prerequisites.sh script, check_dir(), check_file(), find_specify_root(), format_speckit_command(), get_current_branch(), get_feature_paths(), get_invoke_separator() (+21 more)
 
 ### Community 3 - "plan.md"
-Cohesion: 0.11
-Nodes (18): AI endpoint, API Contract (Tickets), DTO highlights, Error types (stable `type` slugs), Resources, Content Quality, Feature Readiness, Notes (+10 more)
+Cohesion: 0.09
+Nodes (24): AI endpoint, API Contract (Tickets), DTO highlights, Error types (stable `type` slugs), Resources, Content Quality, Feature Readiness, Notes (+16 more)
 
 ### Community 4 - "Per-requirement record"
 Cohesion: 0.06
@@ -129,8 +139,8 @@ Cohesion: 0.07
 Nodes (26): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 1, Implementation for User Story 2, Implementation for User Story 3, Implementation Strategy, Incremental Delivery, MVP First (User Story 1 Only) (+18 more)
 
 ### Community 7 - "Tasks: Support Ticket Management with Grounded Q&A"
-Cohesion: 0.07
-Nodes (27): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 1, Implementation for User Story 2, Implementation for User Story 3, Implementation for User Story 4, Implementation Strategy, Incremental Delivery (+19 more)
+Cohesion: 0.17
+Nodes (12): Format: `[ID] [P?] [Story] Description`, Implementation for User Story 2, Implementation for User Story 4, Notes, Parallel Example: User Story 4, Path Conventions, Phase 1: Setup (Shared Infrastructure), Phase 4: User Story 2 - Find tickets by keyword and status (Priority: P2) (+4 more)
 
 ### Community 8 - "speckit-analyze/SKILL.md"
 Cohesion: 0.08
@@ -201,8 +211,8 @@ Cohesion: 0.20
 Nodes (10): Comment, Data Model: 001-support-ticket-rag, Entity-relationship overview, Enumerations, Liquibase, Priority, Ticket, TicketStatus (+2 more)
 
 ### Community 25 - "Research: 001-support-ticket-rag"
-Cohesion: 0.20
-Nodes (10): 1. Embedding model and chat model, 2. Chunking strategy for ticket knowledge, 3. Canonical knowledge document, 4. Re-index reliability, 5. Knowledge-bearing mutation triggers, 6. Retrieval and grounding guard, 7. Display ticket id generation, 8. Integration testing approach (+2 more)
+Cohesion: 0.22
+Nodes (9): 1. Embedding model and chat model, 2. Chunking strategy for ticket knowledge, 3. Canonical knowledge document, 4. Re-index reliability, 5. Knowledge-bearing mutation triggers, 6. Retrieval and grounding guard, 7. Display ticket id generation, 8. Integration testing approach (+1 more)
 
 ### Community 26 - "Implementation Plan: [FEATURE]"
 Cohesion: 0.22
@@ -272,9 +282,9 @@ Nodes (5): Evidence and citations, Orient before judging, Output discipline, Sha
 Cohesion: 0.33
 Nodes (5): Outline, Post-Execution Checks, Pre-Execution Checks, Scope Guard, User Input
 
-### Community 43 - "Evaluation Strategy (RAG)"
-Cohesion: 0.33
-Nodes (6): Deterministic CI (gate), Evaluation Strategy (RAG), Goals, Hallucination / grounding review, Probabilistic eval (non-gating or soft gate), Regression
+### Community 43 - "GlobalExceptionHandler.java"
+Cohesion: 0.23
+Nodes (13): GlobalExceptionHandler, collectors, httpstatus, jakarta.servlet.http.HttpServletRequest, jakarta.validation.ConstraintViolationException, java.net.URI, org.springframework.http.ProblemDetail, org.springframework.http.ResponseEntity (+5 more)
 
 ### Community 44 - "speckit-taskstoissues/SKILL.md"
 Cohesion: 0.40
@@ -288,24 +298,64 @@ Nodes (4): [Category 1], [Category 2], [CHECKLIST TYPE] Checklist: [FEATURE NAME
 Cohesion: 0.50
 Nodes (3): 2026-09-24 18:39:48Z, Constitution updated, How your principles were organized
 
+### Community 59 - "OpenApiConfig.java"
+Cohesion: 0.21
+Nodes (11): OpenApiConfig, classpathresource, io.swagger.v3.oas.models.OpenAPI, ioexception, loggerfactory, openapiv3parser, org.slf4j.Logger, org.springframework.context.annotation.Bean (+3 more)
+
+### Community 60 - "Phase 1 complete"
+Cohesion: 0.22
+Nodes (8): AtmsApplication, org.springframework.boot.autoconfigure.SpringBootApplication, Checklist gate (read-only), Important follow-up (T004 vs plan/constitution), Next, Phase 1 complete, Tasks marked done, springapplication
+
+### Community 61 - "PostgresTestcontainerExtension"
+Cohesion: 0.33
+Nodes (6): Override, PostgresTestcontainerExtension, org.junit.jupiter.api.extension.BeforeAllCallback, org.junit.jupiter.api.extension.ExtensionContext, org.testcontainers.containers.PostgreSQLContainer, org.testcontainers.utility.DockerImageName
+
+### Community 62 - "TicketSnapshot"
+Cohesion: 0.32
+Nodes (5): TicketSnapshot, Override, NoOpTicketKnowledgeIndexAdapter, org.springframework.stereotype.Component, uuid
+
+### Community 63 - ".reindex"
+Cohesion: 0.33
+Nodes (5): Implementation for User Story 1, Implementation for User Story 3, Phase 3: User Story 1 - Manage support tickets (Priority: P1) 🎯 MVP, Phase 5: User Story 3 - Enforce ticket status lifecycle (Priority: P2), Tests for User Story 3 (write first, expect FAIL)
+
+### Community 64 - "client.ts"
+Cohesion: 0.47
+Nodes (4): ApiError, apiFetch(), getApiBaseUrl(), ProblemDetailBody
+
+### Community 65 - "Specification Analysis Report"
+Cohesion: 0.33
+Nodes (6): Constitution Alignment Issues, Coverage Summary Table, Metrics, Next Actions, Specification Analysis Report, Unmapped Tasks
+
+### Community 66 - "TicketKnowledgeIndexPort"
+Cohesion: 0.40
+Nodes (4): TicketKnowledgeIndexPort, 9. Module integration (ticket ↔ rag), Phase 2: Foundational (Blocking Prerequisites), Phase 7: Polish & Cross-Cutting Concerns
+
+### Community 67 - "Dependencies & Execution Order"
+Cohesion: 0.50
+Nodes (4): Dependencies & Execution Order, Parallel Opportunities, Phase Dependencies, User Story Dependencies
+
+### Community 68 - "Implementation Strategy"
+Cohesion: 0.50
+Nodes (4): Implementation Strategy, Incremental Delivery, MVP First (User Story 1 Only), Suggested MVP Scope
+
 ## Knowledge Gaps
-- **461 isolated node(s):** `common.sh script`, `com.atms:atms-backend`, `name`, `private`, `version` (+456 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 486 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **457 isolated node(s):** `common.sh script`, `com.atms:atms-backend`, `name`, `private`, `version` (+452 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 498 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Tasks: Support Ticket Management with Grounded Q&A` connect `Tasks: Support Ticket Management with Grounded Q&A` to `plan.md`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `Feature Specification: Support Ticket Management with Grounded Q&A` connect `Feature Specification: Support Ticket Management with Grounded Q&A` to `plan.md`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `Implementation Readiness Checklist: Support Ticket Management with Grounded Q&A` connect `Implementation Readiness Checklist: Support Ticket Management with Grounded Q&A` to `plan.md`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `TicketKnowledgeIndexPort` connect `TicketKnowledgeIndexPort` to `Specification Analysis Report`, `Per-requirement record`, `Architecture: 001-support-ticket-rag`, `TicketSnapshot`, `.reindex`?**
+  _High betweenness centrality (0.090) - this node is a cross-community bridge._
+- **Why does `Tasks: Support Ticket Management with Grounded Q&A` connect `Tasks: Support Ticket Management with Grounded Q&A` to `TicketKnowledgeIndexPort`, `Dependencies & Execution Order`, `plan.md`, `Implementation Strategy`, `.reindex`?**
+  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+- **Why does `2026-09-24 20:52:04Z` connect `2026-09-24 20:52:04Z` to `Specification Analysis Report`, `Phase 1 complete`, `Specification Analysis Report`?**
+  _High betweenness centrality (0.061) - this node is a cross-community bridge._
 - **What connects `common.sh script`, `com.atms:atms-backend`, `name` to the rest of the system?**
-  _461 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _457 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `2026-09-24 20:52:04Z` be split into smaller, more focused modules?**
-  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Product Requirements Document` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `common.sh` be split into smaller, more focused modules?**

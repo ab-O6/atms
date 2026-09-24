@@ -11,6 +11,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import com.atms.ticket.application.TicketNotFoundException;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 @RestControllerAdvice
@@ -53,6 +54,15 @@ public class GlobalExceptionHandler {
         problem.setType(CONFLICT_TYPE);
         problem.setInstance(URI.create(request.getRequestURI()));
         return ResponseEntity.status(HttpStatus.CONFLICT).body(problem);
+    }
+
+    @ExceptionHandler(TicketNotFoundException.class)
+    public ResponseEntity<ProblemDetail> handleTicketNotFound(TicketNotFoundException ex, HttpServletRequest request) {
+        ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
+        problem.setTitle("Not found");
+        problem.setType(NOT_FOUND_TYPE);
+        problem.setInstance(URI.create(request.getRequestURI()));
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(problem);
     }
 
     @ExceptionHandler(NoResourceFoundException.class)

@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "backend/pom.xml": {
-    "mtime": 1790284355.3549135,
-    "seen": 1790284448.518477,
-    "ast_hash": "7b273612ad8b30968f5160581fdce034",
+    "mtime": 1790284832.4491453,
+    "seen": 1790284848.337506,
+    "ast_hash": "713b2d45f9abed9364c1b4e10d37f2a0",
     "semantic_hash": ""
   },
   "frontend/package.json": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   ".specstory/history/2026-09-24_20-52-04Z-speckit-analysis-command.md": {
-    "mtime": 1790284307.580333,
-    "seen": 1790284448.518503,
-    "ast_hash": "a64f6c346cfdaa6c3ef3279b82f172aa",
+    "mtime": 1790284740.4832625,
+    "seen": 1790284848.3375459,
+    "ast_hash": "5c3d13c063d5ebe59e132a1fcf90577c",
     "semantic_hash": ""
   },
   ".specstory/history/2026-09-24_20-52-04Z-speckit-analyze.md": {
@@ -372,9 +372,9 @@
     "semantic_hash": ""
   },
   "backend/src/main/resources/application.yml": {
-    "mtime": 1790284360.1387312,
-    "seen": 1790284448.518506,
-    "ast_hash": "144894be32b2573e1d2fe561cab17239",
+    "mtime": 1790284793.5465689,
+    "seen": 1790284848.3375502,
+    "ast_hash": "8dbd1d587c60f913c134f09027f4b67d",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/tasks.md": {
-    "mtime": 1790284445.2175586,
-    "seen": 1790284448.518516,
-    "ast_hash": "6ff0635fc760024705e1ec9ebc3aff59",
+    "mtime": 1790284823.3350792,
+    "seen": 1790284848.337566,
+    "ast_hash": "9ee893fedfc2480f77364cf0c9160e96",
     "semantic_hash": ""
   },
   "specs/001-support-ticket-rag/technology-requirements.md": {
@@ -495,6 +495,78 @@
     "mtime": 1790281061.2888184,
     "seen": 1790284448.518518,
     "ast_hash": "e6c27af8bc08f2e823af2fe88efd73ae",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/AtmsApplication.java": {
+    "mtime": 1790284775.3082788,
+    "seen": 1790284848.337507,
+    "ast_hash": "03f190d01f7f252d14902d701a0abbcd",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/shared/config/OpenApiConfig.java": {
+    "mtime": 1790284782.2090864,
+    "seen": 1790284848.3375082,
+    "ast_hash": "15ecc8376b46079fc2ad4d36f155d61e",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java": {
+    "mtime": 1790284780.7194517,
+    "seen": 1790284848.3375092,
+    "ast_hash": "6c81e41a6b1f3727c2d7a2e6c14d2ac6",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java": {
+    "mtime": 1790284776.8896482,
+    "seen": 1790284848.3375099,
+    "ast_hash": "4f8ad79610a1496be4235b73ada4c2a3",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/application/TicketSnapshot.java": {
+    "mtime": 1790284776.140493,
+    "seen": 1790284848.3375108,
+    "ast_hash": "aeecc7b06d1a5fcfed8e992aab5c45b0",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java": {
+    "mtime": 1790284777.7158327,
+    "seen": 1790284848.337512,
+    "ast_hash": "5238df5689a5944cdc28e5fe8f884873",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java": {
+    "mtime": 1790284783.6050963,
+    "seen": 1790284848.337512,
+    "ast_hash": "df355dd593e8aa530733d802e4a3edb3",
+    "semantic_hash": ""
+  },
+  "frontend/src/api/client.ts": {
+    "mtime": 1790284786.2033906,
+    "seen": 1790284848.337515,
+    "ast_hash": "9343a16601cbf889a5919a90754e72c9",
+    "semantic_hash": ""
+  },
+  "backend/src/main/resources/db/changelog/001-extensions-and-sequences.yaml": {
+    "mtime": 1790284771.6781106,
+    "seen": 1790284848.3375502,
+    "ast_hash": "c22c109aee23f5496d7b380ac8495a0f",
+    "semantic_hash": ""
+  },
+  "backend/src/main/resources/db/changelog/002-ticket-comment.yaml": {
+    "mtime": 1790284771.915934,
+    "seen": 1790284848.337551,
+    "ast_hash": "d782aea5932eb5dc7aa7389a73fc6880",
+    "semantic_hash": ""
+  },
+  "backend/src/main/resources/db/changelog/db.changelog-master.yaml": {
+    "mtime": 1790284775.1695902,
+    "seen": 1790284848.3375518,
+    "ast_hash": "e7e51b5ecb436fdf59db4ed1f1ead8d0",
+    "semantic_hash": ""
+  },
+  "backend/src/main/resources/openapi/openapi.yaml": {
+    "mtime": 1790284771.744294,
+    "seen": 1790284848.3375518,
+    "ast_hash": "73f109beaa3262f348a69fcd1c745437",
     "semantic_hash": ""
   }
 }
