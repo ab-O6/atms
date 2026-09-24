@@ -1,50 +1,127 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: 1.0.0 → 1.1.0
+- Modified principles: II. Modular Architecture & Lombok DI (MapStruct added)
+- Added sections: API & Contract Documentation
+- Removed sections: none
+- Deferred TODOs: none
+-->
+
+# ATMS Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Framework-First Backend
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+The backend MUST target Java 25 with idiomatic Spring Boot 4.1.x and a compatible
+Spring AI release. Prefer declarative configuration (properties, auto-configuration,
+starter modules) and framework conventions; avoid custom wiring that fights Spring
+unless a spec-approved exception documents why.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+**Rationale**: Aligning with the framework reduces defect surface and keeps upgrades
+tractable.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### II. Modular Architecture, Lombok & MapStruct
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+Code MUST follow clean modular boundaries and SOLID. Use Lombok to eliminate
+boilerplate (getters, setters, constructors). Depend on Spring beans via
+constructor injection using Lombok-generated required-args constructors. Required
+dependency fields MUST be `final`.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Object mapping between layers (entity, domain, DTO, API models) MUST use MapStruct
+with compile-time generated mappers; avoid hand-written mapping logic except where
+a spec-approved exception documents why MapStruct is insufficient.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+**Rationale**: Constructor injection and immutability make dependencies explicit;
+MapStruct keeps mappings type-safe, reviewable, and free of reflection-heavy
+utilities.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### III. Test-First Business Rules & State Authority
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Test-Driven Development is mandatory for business rules and the ticket state
+machine: specify behavior in tests before implementation. Frontend and backend MUST
+each validate their own inputs; ONLY the backend MAY perform ticket state
+transitions.
+
+**Rationale**: Split validation limits bad data early; centralizing transitions
+preserves a single source of truth for ticket lifecycle.
+
+### IV. Grounded RAG & Vector Index Hygiene
+
+RAG answers MUST use only retrieved ticket context. Responses MUST cite ticket IDs.
+When no relevant tickets meet retrieval criteria, the system MUST explicitly state
+that no relevant tickets were found. Retrieval `top-k` and similarity threshold MUST
+be configurable. Ticket knowledge MUST be re-indexed after mutations that affect
+searchable content.
+
+**Rationale**: Grounding and citations prevent hallucinated ticket facts; re-indexing
+keeps vector search consistent with persistence.
+
+### V. Spec-Before-Code, Security & Official Sources
+
+No feature implementation MAY begin until specification, plan, and tasks are
+reviewed and accepted per project workflow. Secrets MUST NEVER be committed to the
+repository. When resolving framework or API behavior, prefer official documentation
+over anecdotal sources.
+
+**Rationale**: Review gates reduce rework; secret hygiene and authoritative references
+protect the system and team velocity.
+
+## Technology Stack
+
+| Layer | Requirement |
+|-------|-------------|
+| Persistence | PostgreSQL with PGVector for relational data and vector search |
+| Backend | Java 25, Spring Boot 4.1.x, Spring AI, MapStruct (versions compatible per dependency BOM) |
+| Frontend | React with TypeScript; `strict` mode enabled in compiler options |
+
+Stack choices in this section MUST NOT be swapped without a constitution amendment.
+
+## API & Contract Documentation
+
+1. **HTTP APIs**: Every request handler (REST controller endpoint) MUST be
+   documented in the project OpenAPI specification. Documentation MUST describe the
+   operation, request parameters and body schema, response schemas, and relevant
+   error responses so the contract is complete without reading implementation code.
+2. **Service interfaces**: Every method on a public application or domain interface
+   MUST document its contract: purpose, preconditions, each parameter (name, role,
+   and data requirements), return type semantics, and documented exceptions or error
+   outcomes. Use standard Java documentation (`@param`, `@return`, `@throws`) or
+   equivalent project-approved format consistently.
+3. **Single source of truth**: OpenAPI MUST stay aligned with implemented handlers;
+   PRs that add or change endpoints MUST update the spec in the same change set.
+
+**Rationale**: Explicit contracts enable frontend integration, agent tooling, and
+safe refactors across module boundaries.
+
+## Development Workflow & Quality Gates
+
+1. **Specification path**: Feature work flows through reviewed `spec.md`, `plan.md`,
+   and `tasks.md` (or equivalent Spec Kit artifacts) before code changes.
+2. **Testing**: Business rules and state-machine transitions MUST have automated
+   tests; red-green-refactor is the default loop.
+3. **RAG configuration**: Operators MUST be able to tune retrieval `top-k` and
+   similarity threshold without code changes (configuration or admin surface as
+   defined in spec).
+4. **Compliance check**: Pull requests MUST note constitution-relevant decisions
+   (state transitions, RAG behavior, indexing triggers, API/OpenAPI changes,
+   new or changed interface contracts) in review description.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes ad-hoc team habits for the ATMS project. Amendments
+require:
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+1. A documented proposal describing principle changes and migration impact.
+2. Update to `.specify/memory/constitution.md` with semantic version bump:
+   - **MAJOR**: Removal or incompatible redefinition of a principle.
+   - **MINOR**: New principle or materially expanded obligation.
+   - **PATCH**: Clarifications and non-semantic wording fixes.
+3. `LAST_AMENDED_DATE` set to the amendment date (ISO `YYYY-MM-DD`).
+
+All contributors and automated agents MUST treat this file as binding for
+architecture and quality decisions. Spec Kit commands (`/speckit-specify`,
+`/speckit-plan`, `/speckit-tasks`, `/speckit-implement`) MUST align deliverables
+with these principles.
+
+**Version**: 1.1.0 | **Ratified**: 2026-09-25 | **Last Amended**: 2026-09-25
