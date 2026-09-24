@@ -1,0 +1,36 @@
+---
+description: Accurate docs aligned to spec and code; required topics; ADRs; no fiction
+globs: "{docs/**,.specify/**,README.md,**/openapi*.{yaml,yml,json}}"
+alwaysApply: false
+---
+
+# Documentation
+
+Docs MUST match **reviewed spec** and **shipped behavior**. Update docs in the same change set when behavior or contracts change. If code and doc disagree, fix the wrong one—do not leave drift.
+
+## Required coverage (keep current)
+
+| Area | What to capture |
+|------|-----------------|
+| **Architecture** | Major modules, boundaries, data flow (ticket CRUD, transitions, RAG path). |
+| **Data model** | Entities, relationships, PGVector storage, metadata on chunks. |
+| **API contracts** | OpenAPI as source for HTTP; link to `api-standards.mdc` error shapes. |
+| **State machine** | Ticket states, allowed/forbidden transitions, who may trigger (backend only). |
+| **RAG ingestion** | What events re-index, sync vs async, failure handling. |
+| **Chunking** | Strategy, size/overlap, what fields enter embeddable text. |
+| **Embedding model** | Model id, version, dimension, why chosen. |
+| **Retrieval** | Externalized `top-k`, threshold, filters; empty-result behavior. |
+| **Evaluation** | Deterministic tests vs probabilistic RAG eval (suites, thresholds, flake policy). |
+| **UI flow** | Primary screens, loading/empty/error, citation display for grounded answers. |
+| **Testing strategy** | What must be automated before merge (FSM matrix, grounding, API contract). |
+
+## Decisions and trade-offs
+
+- Record non-obvious choices in **ADRs** or `docs/decisions/` (context, options, decision, consequences). Include rejected alternatives when instructive.
+- Prefer official framework docs when describing integration behavior.
+
+## Honesty bar
+
+- **Never document** endpoints, config keys, env vars, or features that are **not implemented and verified** (tests, manual checklist, or staging proof).
+- Mark planned work clearly as **planned** in spec/tasks—not in user-facing or operator docs as if live.
+- Remove or update stale sections; no copy-paste placeholders left as fact.

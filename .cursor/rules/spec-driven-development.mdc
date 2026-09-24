@@ -1,0 +1,32 @@
+---
+description: Spec Kit workflow gates; spec/plan truth; bounded tasks; validate AI output
+alwaysApply: true
+---
+
+# Spec-driven development
+
+Follow this order for feature work:
+
+**Requirement → Specification → Clarification → Plan/Tasks → Implementation → Testing → Review → Fix**
+
+Use Spec Kit artifacts (`spec.md`, `plan.md`, `tasks.md` under the feature path) and `.specify/memory/constitution.md` where they apply.
+
+## Sources of truth
+
+- **Approved specification** and **approved plan/tasks** define scope and acceptance. Code and docs must conform; if reality diverges, update spec/plan in review or stop and clarify—do not silently extend scope.
+- **No implementation** before spec/plan/tasks are reviewed per project workflow (constitution Principle V).
+
+## Execution
+
+- Implement **only the current bounded task** from `tasks.md` (one checkbox / one PR slice). Do not pull forward later tasks or “helpful” extras.
+- **Never invent** missing requirements, APIs, states, or config. **Surface ambiguity** with concrete questions; use clarification step to encode answers back into `spec.md`.
+- Out-of-scope ideas go to spec backlog or new task—not into the current change set.
+
+## AI discipline
+
+- Treat all model output (plans, code, tests, docs) as **proposals** until validated against spec, tests, and review.
+- **Record meaningful AI mistakes** discovered during development (wrong assumption, hallucinated API, missed transition) in PR description, task notes, or `docs/decisions/` when they affect future work—brief cause and fix, not blame theater.
+
+## Quality loop
+
+- **Testing** and **review** are mandatory steps, not optional polish. **Fix** failures before marking tasks done; do not weaken tests to match wrong implementation.

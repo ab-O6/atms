@@ -1,0 +1,30 @@
+---
+description: React, TypeScript strict, API client, UI states, backend authority
+globs: "**/*.{tsx,ts}"
+alwaysApply: false
+---
+
+# Frontend
+
+**React** + **TypeScript** with **`strict`** enabled. Functional components only; one clear responsibility per component—split when JSX, data fetching, or form logic tangles.
+
+## API layer
+
+- **Centralize HTTP** in a small API module (client + typed functions per resource). No scattered `fetch` in leaf components.
+- Types mirror backend DTOs and OpenAPI; regenerate or update when contract changes.
+- Parse **`application/problem+json`** (`ProblemDetail`) errors; show **`detail`** (and field errors when present) to users—never raw status codes or generic “Something went wrong” when backend sent a message.
+
+## UI states
+
+- Every async view handles **loading**, **empty**, and **error** explicitly. No indefinite spinners; empty states explain what to do next.
+- Optimistic UI only where spec allows; reconcile with server response or roll back.
+
+## Validation and domain rules
+
+- **Client validation** improves UX (required fields, format)—**backend remains authoritative**. Never rely on frontend-only checks for security or ticket **state transitions**; call API and surface **409** / problem responses.
+- Do not duplicate transition matrices in UI beyond what spec needs for disabling controls; illegal transitions still must fail safely on server.
+
+## Dependencies and structure
+
+- Prefer React built-ins and existing stack; **no new dependency** without clear gap (bundle size, maintenance).
+- Avoid premature abstractions (generic data hooks for one screen, wrapper components that only pass props). Extract when second real use appears.

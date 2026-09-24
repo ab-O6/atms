@@ -1,0 +1,34 @@
+---
+description: Grounded RAG with Spring AI, PGVector, ticket-only knowledge, index hygiene
+globs: "**/rag/**"
+alwaysApply: false
+---
+
+# RAG and vector store
+
+**Spring AI** for retrieval and generation; **PGVector** (PostgreSQL) for embeddings storage. Align with constitution Principle IV.
+
+## Configuration
+
+- **`top-k`** and **similarity threshold** MUST be **externalized** (e.g. `application.yml`, env, operator-tunable surface)—no hard-coded magic numbers in code paths.
+- Document default values and safe ranges in spec or ops docs when changed.
+
+## Grounding rules
+
+- **Support-domain knowledge** for answers = **retrieved ticket chunks only**. No model parametric “memory”, no web search, no unrelated corpora mixed into support prompts.
+- **Empty or below-threshold retrieval** → **deterministic no-answer** response (fixed template/mapper path). Explicitly state that **no relevant tickets** were found—never fabricate tickets or facts.
+- Every **grounded** answer MUST return **source ticket ID(s)** the user can verify. Prompt and response schema enforce citations; **never invent** IDs or sources not present in retrieval results.
+
+## Index lifecycle
+
+- After ticket **mutations that change searchable knowledge** (content, status affecting visibility, merge/split, etc.), **refresh or replace** that ticket’s embeddings in the index—define triggers in spec; implement synchronously or async with documented consistency window.
+- **Preserve ticket metadata** on stored chunks (at minimum ticket ID; include fields needed for filtering, ACL, and citation). Do not drop metadata to save bytes without documented tradeoff.
+
+## Engineering decisions
+
+- **Chunking strategy**, **embedding model**, and **retrieval pipeline** (filters, rerank, threshold behavior) MUST be **documented and justified** (ADR, plan section, or module README)—what changed, why, and impact on recall/precision.
+- Log retrieval diagnostics server-side (scores, k, threshold hits) for debugging; do not expose raw embeddings or internal scores to clients unless spec requires.
+
+## Testing
+
+- Deterministic tests for indexing triggers, metadata mapping, empty-retrieval response, and citation payload shape live in the main suite; probabilistic quality eval stays separate per `testing.mdc`.

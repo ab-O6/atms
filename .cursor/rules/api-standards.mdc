@@ -1,0 +1,41 @@
+---
+description: REST API contracts, DTOs, HTTP semantics, ProblemDetail errors
+globs: "**/*Controller.java"
+alwaysApply: false
+---
+
+# API standards
+
+Public HTTP API under **`/api/**`**. Resource-oriented paths, nouns not verbs; use HTTP methods for actions. Version in path or header only when product requires it—stay consistent across endpoints.
+
+## Request and response
+
+- **Explicit DTOs** for every request body and response body (records or immutable types). Controllers return DTOs or `ResponseEntity<Dto>`—never **`@Entity`** or lazy-loaded graphs.
+- **Jakarta Bean Validation** on inputs (`@Valid`, constraints on DTOs and `@RequestParam`/`@PathVariable` where applicable). Validation failures → **400** with field-level detail in ProblemDetail extensions (e.g. `errors[]` with `field`, `message`).
+- Keep OpenAPI (springdoc) in sync with DTOs and status codes; breaking changes need explicit review.
+
+## HTTP status codes
+
+| Situation | Status |
+|-----------|--------|
+| Success with body | **200** (GET/PUT/PATCH), **201** + `Location` when creating |
+| Success, no body | **204** |
+| Validation / bad input | **400** |
+| Missing or invalid auth | **401** |
+| Authenticated, not allowed | **403** |
+| Missing resource | **404** |
+| State conflict (e.g. illegal transition) | **409** |
+| Unexpected server fault | **500** (generic detail only) |
+
+Use **409** for business rule conflicts, not **400**, when input is syntactically valid but operation is rejected.
+
+## Errors (RFC 9457)
+
+- All error responses use **`ProblemDetail`** (`application/problem+json`). Stable **`type`** URI or slug per error class; human-readable **`title`** and **`detail`** safe for UI display.
+- Map domain exceptions in **`@ControllerAdvice`**—never leak stack traces, SQL, or class names. Log full cause server-side only.
+- Frontend needs actionable messages: clear `detail`, optional machine-readable `code` extension; same shape for every endpoint.
+
+## Boundaries
+
+- Services throw domain exceptions; controllers do not catch-and-swallow into generic 200.
+- Do not serialize internal types (entities, `Optional` leaks, Hibernate proxies). Map in service or dedicated mapper layer before response.

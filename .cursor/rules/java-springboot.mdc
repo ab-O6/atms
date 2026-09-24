@@ -1,0 +1,36 @@
+---
+description: Java 25 and Spring Boot stack conventions
+globs: "**/*.java"
+alwaysApply: false
+---
+
+# Java / Spring Boot
+
+Target **Java 25**, **Spring Boot**, **Spring Data JPA**, **PostgreSQL**. Prefer framework defaults; add layers only when they remove real duplication or clarify boundaries.
+
+## Design
+
+- Apply **SOLID** at class and package level; one reason to change per type.
+- **Constructor injection** only (`@RequiredArgsConstructor` or explicit constructors). No field `@Autowired`.
+- No extra abstraction layers (generic bases, pointless interfaces, “helper” services) unless multiple implementations or a clear cross-cutting need exists.
+
+## API and DTOs
+
+- Use **Java records** for immutable request/response DTOs and projections when shape is fixed.
+- Validate at the edge with **Bean Validation** (`@Valid`, constraint annotations on DTOs/params). Do not duplicate the same rules ad hoc in controllers.
+- Return errors as **RFC 9457** `ProblemDetail` (Spring `ProblemDetail` / `ErrorResponse` + `@ControllerAdvice`). Include `type`, `title`, `status`, `detail`; add `instance` and extension fields when useful. Map domain failures to stable problem types, not stack traces or ad-hoc JSON maps.
+
+## Persistence
+
+- **Liquibase** owns schema changes (`db/changelog`). No `ddl-auto` updates in production paths. One logical change per changeset; idempotent where Liquibase supports it.
+- Repositories: Spring Data JPA interfaces; keep queries in repository or small `@Query` methods—avoid “repository + DAO + adapter” for the same table.
+- Use PostgreSQL types and indexes intentionally; avoid N+1 (fetch joins or `@EntityGraph` when needed).
+
+## Transactions
+
+- **`@Transactional` on service layer** (application services), not controllers or repositories.
+- Default read-only for queries; `readOnly = false` only for writes. Propagation and rollback only when a real nested-boundary requirement exists—document why.
+
+## Controllers
+
+- Thin controllers: map HTTP ↔ DTO ↔ service call. No business rules or transaction boundaries in `@RestController` classes.

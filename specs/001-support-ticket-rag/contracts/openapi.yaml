@@ -1,0 +1,340 @@
+openapi: 3.1.0
+info:
+  title: ATMS Support Ticket API
+  version: 0.1.0
+  description: Ticket management and grounded ask (001-support-ticket-rag)
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/tickets:
+    get:
+      operationId: listTickets
+      parameters:
+        - name: status
+          in: query
+          schema:
+            $ref: '#/components/schemas/TicketStatus'
+        - name: q
+          in: query
+          description: Keyword search (title, description, displayId) case-insensitive substring
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TicketSummary'
+    post:
+      operationId: createTicket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTicketRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TicketResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+  /api/tickets/{displayId}:
+    get:
+      operationId: getTicket
+      parameters:
+        - $ref: '#/components/parameters/DisplayId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TicketResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    patch:
+      operationId: updateTicket
+      parameters:
+        - $ref: '#/components/parameters/DisplayId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateTicketRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TicketResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/tickets/{displayId}/comments:
+    post:
+      operationId: addComment
+      parameters:
+        - $ref: '#/components/parameters/DisplayId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddCommentRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommentResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/tickets/{displayId}/status:
+    patch:
+      operationId: transitionStatus
+      parameters:
+        - $ref: '#/components/parameters/DisplayId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransitionStatusRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TicketResponse'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/tickets/{displayId}/resolution-notes:
+    patch:
+      operationId: updateResolutionNotes
+      parameters:
+        - $ref: '#/components/parameters/DisplayId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateResolutionNotesRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TicketResponse'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/ai/ask:
+    post:
+      operationId: ask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AskRequest'
+      responses:
+        '200':
+          description: Grounded answer or no-match
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AskResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+components:
+  parameters:
+    DisplayId:
+      name: displayId
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: '^TKT-\d{4,}$'
+        example: TKT-1001
+  schemas:
+    Priority:
+      type: string
+      enum: [LOW, MEDIUM, HIGH, CRITICAL]
+    TicketStatus:
+      type: string
+      enum: [OPEN, IN_PROGRESS, RESOLVED, CLOSED, CANCELLED]
+    CreateTicketRequest:
+      type: object
+      required: [title, description, priority, assignee]
+      properties:
+        title:
+          type: string
+          maxLength: 200
+        description:
+          type: string
+        priority:
+          $ref: '#/components/schemas/Priority'
+        assignee:
+          type: string
+          maxLength: 120
+        category:
+          type: string
+          maxLength: 80
+    UpdateTicketRequest:
+      type: object
+      properties:
+        title:
+          type: string
+          maxLength: 200
+        description:
+          type: string
+        priority:
+          $ref: '#/components/schemas/Priority'
+        assignee:
+          type: string
+          maxLength: 120
+    TransitionStatusRequest:
+      type: object
+      required: [status]
+      properties:
+        status:
+          $ref: '#/components/schemas/TicketStatus'
+        resolutionNotes:
+          type: string
+          description: Required when status is RESOLVED
+    UpdateResolutionNotesRequest:
+      type: object
+      required: [resolutionNotes]
+      properties:
+        resolutionNotes:
+          type: string
+          minLength: 1
+    AddCommentRequest:
+      type: object
+      required: [body, author]
+      properties:
+        body:
+          type: string
+          minLength: 1
+        author:
+          type: string
+          maxLength: 120
+    TicketSummary:
+      type: object
+      properties:
+        displayId:
+          type: string
+        title:
+          type: string
+        status:
+          $ref: '#/components/schemas/TicketStatus'
+        priority:
+          $ref: '#/components/schemas/Priority'
+        assignee:
+          type: string
+        updatedAt:
+          type: string
+          format: date-time
+    CommentResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        body:
+          type: string
+        author:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    TicketResponse:
+      allOf:
+        - $ref: '#/components/schemas/TicketSummary'
+        - type: object
+          properties:
+            description:
+              type: string
+            category:
+              type: string
+            resolutionNotes:
+              type: string
+              nullable: true
+            createdAt:
+              type: string
+              format: date-time
+            comments:
+              type: array
+              items:
+                $ref: '#/components/schemas/CommentResponse'
+    AskRequest:
+      type: object
+      required: [question]
+      properties:
+        question:
+          type: string
+          minLength: 1
+          maxLength: 2000
+    AskResponse:
+      type: object
+      required: [answer, sources, noMatch]
+      properties:
+        answer:
+          type: string
+        sources:
+          type: array
+          items:
+            type: string
+            example: TKT-1001
+        noMatch:
+          type: boolean
+    ProblemDetail:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
+        instance:
+          type: string
+  responses:
+    ValidationError:
+      description: Validation failed
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/ProblemDetail'
+    NotFound:
+      description: Not found
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/ProblemDetail'
+    Conflict:
+      description: Business rule conflict
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/ProblemDetail'

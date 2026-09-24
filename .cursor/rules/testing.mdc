@@ -1,0 +1,25 @@
+---
+description: Testing standards (JUnit 5, behavior-first, ticket FSM, RAG eval split)
+globs: "**/src/test/**"
+alwaysApply: false
+---
+
+# Testing
+
+**JUnit 5** default. **Mockito** only for slow, remote, or non-deterministic dependencies—not to avoid constructing real domain objects or to assert internal call order.
+
+## What to test
+
+- Test **observable behavior** (inputs, outputs, side effects, thrown exceptions). Avoid testing private methods, field values, or “was this mock called N times” unless that call is the contract.
+- **Ticket state machine**: table or parameterized tests for **every allowed transition** and **every rejected transition** (invalid source state, wrong role, missing preconditions). Backend owns transitions—do not duplicate transition logic in frontend tests; frontend tests cover validation UX only.
+- Business rules: deterministic, fast, no network. Prefer slice or integration tests at service/repository boundary when rules touch persistence.
+
+## RAG vs business
+
+- Keep **deterministic business tests** (ticket lifecycle, validation, indexing triggers) in the main test suite—no randomness, no live LLM calls.
+- **Probabilistic RAG evaluation** (retrieval quality, answer grounding, citation coverage) lives in a **separate** suite or job with explicit thresholds, fixtures, and documented flake policy. Do not mix flaky retrieval scores into CI gates for core business logic.
+
+## Integrity
+
+- Failing test means broken behavior or wrong spec—**fix code or update spec with review**, never weaken assertions, widen tolerances, or delete cases just to green CI.
+- No `@Disabled` without issue link and removal plan. No sleeping threads for timing; use controllable clocks or awaits with timeouts in integration tests only.
