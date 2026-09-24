@@ -29,11 +29,11 @@ Fixture corpus: 10–20 synthetic tickets with known themes (payment, shipment).
 | Citation accuracy | 100% on eval set when retrieval correct | Manual or LLM-judge with human review |
 | Hallucination rate | 0% ticket ids not in corpus | Automated id check |
 
-Run in separate Maven profile `rag-eval` with real embedding model (optional Ollama in CI) or recorded embeddings.
+Run in separate Maven profile `rag-eval` with real embedding model (optional Ollama locally) or recorded embeddings. **v1**: profile is **optional** and **not** a required CI merge gate (**SC-010**); default CI uses deterministic integration + chunker/builder unit tests.
 
 ## Hallucination / grounding review
 
-Use `.cursor/commands/review-rag-output.md` workflow on sample asks; record one documented mistake in `docs/ai-mistakes.md` (path TBD in implementation).
+Use `.cursor/commands/review-rag-output.md` workflow on sample asks; record one documented mistake in **`docs/decisions/ai-mistakes.md`** (spec **SC-009**, TR-017).
 
 ## Regression
 

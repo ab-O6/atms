@@ -262,8 +262,21 @@ _**User**_
 
 _**Agent (auto-smart)**_
 
+<think><details><summary>Thought Process</summary>
+Running the review-spec command.
+
+Read-only mode. Reading the shared stack context first. Then searching implementation and tests for the RAG support ticket feature.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+Review-spec read-only: loading stack context and mapping requirements to code and tests.
+
+
+_**Agent (auto-smart)**_
+
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2** • Read file: </summary>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/.cursor/commands/_shared-stack-context.md</summary>
 
 </details></tool-use>
 
@@ -274,20 +287,1677 @@ _**Agent (auto-smart)**_
 ```bash
 test -f /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/graphify-out/graph.json && echo exists || echo missing
 ```
+
+```
+missing
+
+```
 </details></tool-use>
 
 _**Agent (auto-smart)**_
 
 <tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **0** directories</summary>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
 
-No results found
+Directory: **`/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms`** (0 files)
 </details></tool-use>
 
 _**Agent (auto-smart)**_
 
 <tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **0** directories</summary>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
 
-No results found
+Directory: **`/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms`** (0 files)
 </details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+No graphify graph, Java source, or tasks.md file was found.
+
+The repository may contain only spec files, with backend and frontend directories still missing.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **575** results in **1** directory</summary>
+
+Directory: **`/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms`** (575 files)
+
+| File |
+|------|
+| `.specstory/history/2026-09-24_20-27-49Z-speckit-checklist-command.md` |
+| `.specstory/statistics.json` |
+| `specs/001-support-ticket-rag/checklists/implementation-readiness.md` |
+| `specs/001-support-ticket-rag/quickstart.md` |
+| `specs/001-support-ticket-rag/contracts/openapi.yaml` |
+| `specs/001-support-ticket-rag/test-strategy.md` |
+| `specs/001-support-ticket-rag/ui-flow.md` |
+| `specs/001-support-ticket-rag/evaluation-strategy.md` |
+| `specs/001-support-ticket-rag/api-contract.md` |
+| `specs/001-support-ticket-rag/rag-api-contract.md` |
+| `specs/001-support-ticket-rag/rag-ingestion.md` |
+| `specs/001-support-ticket-rag/state-machine.md` |
+| `specs/001-support-ticket-rag/architecture.md` |
+| `specs/001-support-ticket-rag/data-model.md` |
+| `specs/001-support-ticket-rag/research.md` |
+| `specs/001-support-ticket-rag/plan.md` |
+| `.specstory/history/2026-09-24_19-43-10Z-support-ticket-rag-prd.md` |
+| `specs/001-support-ticket-rag/spec.md` |
+| `specs/001-support-ticket-rag/technology-requirements.md` |
+| `specs/001-support-ticket-rag/checklists/requirements.md` |
+| `.specify/feature.json` |
+| `.specstory/history/2026-09-24_19-43-10Z-users-abhinavrai-downloads-assessments.md` |
+| `.cursor/commands/review-rag-output.md` |
+| `.cursor/commands/generate-tests.md` |
+| `.cursor/commands/review-spec.md` |
+| `.cursor/commands/review-code.md` |
+| `.cursor/commands/_shared-stack-context.md` |
+| `.specstory/history/2026-09-24_19-34-32Z-create-these-cursor-commands.md` |
+| `.git/objects/1b/9b92e02ea8aa148589a6e3429a8ec668938d02` |
+| `.git/objects/f3/bd524ff1658b613e549ff68a8e44b118686fa1` |
+| `.gitignore` |
+| `.cursor/rules/spec-driven-development.mdc` |
+| `.specstory/history/2026-09-24_19-24-25Z-java-spring-boot-cursor.md` |
+| `.cursor/rules/documentation.mdc` |
+| `.cursor/rules/frontend.mdc` |
+| `.cursor/rules/rag-vector-store.mdc` |
+| `.cursor/rules/api-standards.mdc` |
+| `.cursor/rules/testing.mdc` |
+| `.cursor/rules/java-springboot.mdc` |
+| `AGENTS.md` |
+| `.opencode/AGENTS.md` |
+| `.github/copilot-instructions.md` |
+| `.clinerules/caveman.md` |
+| `.windsurf/rules/caveman.md` |
+| `.cursor/rules/caveman.mdc` |
+| `.git/logs/refs/heads/main` |
+| `.git/logs/HEAD` |
+| `.git/refs/heads/main` |
+| `.git/objects/f0/e98abdc1f66219d27821369a2b8d86c2ec0d57` |
+| `.git/COMMIT_EDITMSG` |
+| `.git/objects/e0/0da0e0974e153ff8db0f41bcbbd04f531487a8` |
+| `.specstory/history/2026-09-24_18-39-48Z-speckit-constitution-principles.md` |
+| `.specstory/history/2026-09-24_18-39-48Z-speckit-constitution-principles-java.md` |
+| `.specify/memory/constitution.md` |
+| `.git/config` |
+| `.git/ORIG_HEAD` |
+| `.git/objects/71/cb8d69c4d2d6b0120af375649c0179a692a934` |
+| `.git/objects/4f/5970e2ff6b058781ead09f7a18ca98cb8236d1` |
+| `.git/objects/0a/5ceebf159b0cc603b0e8c78d3255582d47e892` |
+| `.git/objects/22/36f6d615243b910b99f8592f65905df639378a` |
+| `.git/objects/45/e96f290b6e0149d89b1de9853fdd4efba44d29` |
+| `.git/objects/2c/eb1215ae3565cb80f1fc0c310bd72138ac5428` |
+| `.git/objects/7e/cb9ba774b12052d616ba18a7533013cb710161` |
+| `.git/objects/f6/70a232c1b6249b63bfdce83b9d8d802c417969` |
+| `.git/objects/0d/7d65226821f8c9ab4e6e57efd282cf9f92459c` |
+| `.git/objects/6f/ac2275e08ff99451fafbcbee4d1022d82a0b22` |
+| `.git/objects/95/3908e7300307564e995f6189d5fc88a6d926bc` |
+| `.git/cursor/crepe/bb08d4fac2cd3ce59944766155f601357f54df8b/metadata.json` |
+| `.git/HEAD` |
+| `.git/hooks/push-to-checkout.sample` |
+| `.git/hooks/update.sample` |
+| `.git/hooks/pre-push.sample` |
+| `.git/hooks/pre-applypatch.sample` |
+| `.git/hooks/pre-merge-commit.sample` |
+| `.git/hooks/post-update.sample` |
+| `.git/hooks/prepare-commit-msg.sample` |
+| `.git/hooks/pre-receive.sample` |
+| `.git/hooks/fsmonitor-watchman.sample` |
+| `.git/hooks/applypatch-msg.sample` |
+| `.git/hooks/pre-commit.sample` |
+| `.git/hooks/sendemail-validate.sample` |
+| `.git/hooks/pre-rebase.sample` |
+| `.git/hooks/commit-msg.sample` |
+| `.git/description` |
+| `.git/info/exclude` |
+| `.vscode/settings.json` |
+| `.specstory/.project.json` |
+| `.specstory/cli/config.toml` |
+| `.specstory/.gitignore` |
+| `.cursorindexingignore` |
+| `.cursor/rules/graphify.mdc` |
+| `skills-lock.json` |
+| `.agents/skills/caveman/README.md` |
+| `.agents/skills/caveman/SKILL.md` |
+| `.specify/memory/.constitution-template.json` |
+| `.specify/init-options.json` |
+| `.specify/workflows/workflow-registry.json` |
+| `.specify/integrations/speckit.manifest.json` |
+| `.specify/.gitignore` |
+| `.specify/templates/plan-template.md` |
+| `.specify/templates/spec-template.md` |
+| `.specify/templates/tasks-template.md` |
+| `.specify/templates/checklist-template.md` |
+| `.specify/templates/constitution-template.md` |
+| `.specify/scripts/bash/create-new-feature.sh` |
+| `.specify/scripts/bash/resolve-template.sh` |
+| `.specify/scripts/bash/check-prerequisites.sh` |
+| `.specify/scripts/bash/setup-tasks.sh` |
+| `.specify/scripts/bash/setup-plan.sh` |
+| `.specify/scripts/bash/common.sh` |
+| `.specify/integration.json` |
+| `.specify/integrations/cursor-agent.manifest.json` |
+| `.cursor/skills/speckit-taskstoissues/SKILL.md` |
+| `.cursor/skills/speckit-tasks/SKILL.md` |
+| `.cursor/skills/speckit-specify/SKILL.md` |
+| `.cursor/skills/speckit-checklist/SKILL.md` |
+| `.cursor/skills/speckit-plan/SKILL.md` |
+| `.cursor/skills/speckit-converge/SKILL.md` |
+| `.cursor/skills/speckit-implement/SKILL.md` |
+| `.cursor/skills/speckit-constitution/SKILL.md` |
+| `.cursor/skills/speckit-clarify/SKILL.md` |
+| `.cursor/skills/speckit-analyze/SKILL.md` |
+| `.specify/workflows/speckit/workflow.yml` |
+| `.venv/bin/activate` |
+| `.venv/bin/activate.fish` |
+| `.venv/bin/Activate.ps1` |
+| `.venv/bin/activate.csh` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/RECORD` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/INSTALLER` |
+| `.venv/bin/pip3.13` |
+| `.venv/bin/pip3` |
+| `.venv/bin/pip` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/METADATA` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/WHEEL` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/truststore/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/tomli/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/rich/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/requests/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/pygments/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/msgpack/COPYING` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/distro/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/certifi/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/LICENSE.txt` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/licenses/AUTHORS.txt` |
+| `.venv/lib/python3.13/site-packages/pip-26.1.dist-info/entry_points.txt` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/wait.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/util.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/url.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/timeout.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/ssltransport.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/ssl_match_hostname.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/ssl_.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/retry.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/response.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/request.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/proxy.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/connection.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/util/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/http2/probe.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/http2/connection.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/http2/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/contrib/emscripten/response.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/contrib/emscripten/request.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/contrib/emscripten/fetch.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/contrib/emscripten/emscripten_fetch_worker.js` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/contrib/emscripten/connection.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/contrib/emscripten/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/contrib/socks.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/contrib/pyopenssl.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/response.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/py.typed` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/poolmanager.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/filepost.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/fields.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/exceptions.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/connectionpool.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/connection.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/_version.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/_request_methods.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/_collections.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/_base_connection.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/urllib3/LICENSE.txt` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/truststore/_windows.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/truststore/_ssl_constants.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/truststore/_openssl.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/truststore/_macos.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/truststore/_api.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/truststore/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/truststore/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli_w/py.typed` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli_w/_writer.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli_w/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli_w/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli/py.typed` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli/_types.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli/_re.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli/_parser.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/tomli/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/tree.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/traceback.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/themes.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/theme.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/text.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/terminal_theme.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/table.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/syntax.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/styled.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/style.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/status.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/spinner.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/segment.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/screen.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/scope.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/rule.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/repr.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/region.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/protocol.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/prompt.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/progress_bar.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/progress.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/pretty.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/panel.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/palette.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/pager.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/padding.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/measure.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/markup.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/logging.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/live_render.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/live.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/layout.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/jupyter.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/json.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/highlighter.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/filesize.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/file_proxy.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/errors.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/emoji.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/diagnose.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/default_styles.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/control.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/containers.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/constrain.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/console.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/columns.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/color_triplet.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/color.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/cells.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/box.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/bar.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/ansi.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/align.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/abc.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_wrap.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_windows_renderer.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_windows.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_win32_console.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_timer.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_stack.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_spinners.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_ratio.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_pick.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_palettes.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_null_file.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_loop.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_log_render.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_inspect.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_fileno.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_extension.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_export_format.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_emoji_replace.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_emoji_codes.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/_cell_widths.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/__main__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/rich/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/resolvers/resolution.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/resolvers/exceptions.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/resolvers/criterion.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/resolvers/abstract.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/resolvers/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/structs.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/reporters.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/providers.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/resolvelib/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/utils.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/structures.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/status_codes.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/sessions.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/packages.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/models.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/hooks.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/help.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/exceptions.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/cookies.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/compat.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/certs.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/auth.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/api.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/adapters.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/_internal_utils.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/__version__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/requests/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_in_process/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/_impl.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pyproject_hooks/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/styles/_mapping.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/styles/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/lexers/python.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/lexers/_mapping.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/lexers/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/formatters/_mapping.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/formatters/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/filters/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/util.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/unistring.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/token.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/style.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/sphinxext.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/scanner.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/regexopt.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/plugin.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/modeline.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/lexer.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/formatter.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/filter.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/console.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/__main__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pygments/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/windows.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/version.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/unix.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/macos.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/api.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/android.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/__main__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/platformdirs/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pkg_resources/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/pkg_resources/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/licenses/_spdx.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/licenses/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/version.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/utils.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/tags.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/specifiers.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/requirements.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/pylock.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/metadata.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/markers.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/errors.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/direct_url.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/dependency_groups.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/_tokenizer.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/_structures.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/_parser.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/_musllinux.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/_manylinux.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/_elffile.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/LICENSE.BSD` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/LICENSE.APACHE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/packaging/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/msgpack/fallback.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/msgpack/ext.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/msgpack/exceptions.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/msgpack/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/msgpack/COPYING` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/uts46data.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/package_data.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/intranges.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/idnadata.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/core.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/compat.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/codec.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/idna/LICENSE.md` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distro/distro.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distro/__main__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distro/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distro/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distlib/util.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distlib/scripts.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distlib/resources.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distlib/compat.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distlib/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/distlib/LICENSE.txt` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/certifi/core.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/certifi/cacert.pem` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/certifi/__main__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/certifi/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/certifi/LICENSE` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/caches/redis_cache.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/caches/file_cache.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/caches/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/wrapper.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/serialize.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/heuristics.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/filewrapper.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/controller.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/cache.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/adapter.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/_cmd.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/cachecontrol/LICENSE.txt` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/vendor.txt` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_vendor/README.rst` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/vcs/versioncontrol.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/vcs/subversion.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/vcs/mercurial.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/vcs/git.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/vcs/bazaar.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/vcs/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/wheel.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/virtualenv.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/urls.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/unpacking.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/temp_dir.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/subprocess.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/retry.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/pylock.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/packaging.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/misc.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/logging.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/hashes.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/glibc.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/filetypes.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/filesystem.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/entrypoints.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/egg_link.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/direct_url_helpers.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/deprecation.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/datetime.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/compatibility_tags.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/compat.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/appdirs.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/_log.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/utils/_jaraco_text.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/resolvelib/resolver.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/resolvelib/requirements.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/resolvelib/reporter.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/resolvelib/provider.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/resolvelib/factory.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/resolvelib/candidates.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/resolvelib/base.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/legacy/resolver.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/resolution/base.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/req/req_uninstall.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/req/req_set.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/req/req_install.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/req/req_file.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/req/req_dependency_group.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/req/pep723.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/req/constructors.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/req/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/install/wheel.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/install/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/build/wheel_editable.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/build/wheel.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/build/metadata_editable.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/build/metadata.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/build/build_tracker.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/prepare.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/freeze.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/operations/check.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/network/xmlrpc.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/network/utils.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/network/session.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/network/lazy_wheel.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/network/download.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/network/cache.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/network/auth.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/network/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/wheel.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/target_python.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/selection_prefs.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/search_scope.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/scheme.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/release_control.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/link.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/installation_report.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/index.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/format_control.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/direct_url.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/candidate.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/models/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/metadata/importlib/_envs.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/metadata/importlib/_dists.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/metadata/importlib/_compat.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/metadata/importlib/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/metadata/pkg_resources.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/metadata/base.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/metadata/_json.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/metadata/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/locations/base.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/locations/_sysconfig.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/locations/_distutils.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/locations/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/index/sources.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/index/package_finder.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/index/collector.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/index/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/distributions/wheel.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/distributions/sdist.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/distributions/installed.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/distributions/base.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/distributions/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/wheel.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/uninstall.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/show.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/search.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/lock.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/list.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/install.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/inspect.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/index.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/help.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/hash.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/freeze.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/download.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/debug.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/configuration.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/completion.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/check.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/cache.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/commands/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/status_codes.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/spinners.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/req_command.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/progress_bars.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/parser.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/main_parser.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/main.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/index_command.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/command_context.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/cmdoptions.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/base_command.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/autocompletion.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cli/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/wheel_builder.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/self_outdated_check.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/pyproject.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/main.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/exceptions.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/configuration.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/cache.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/build_env.py` |
+| `.venv/lib/python3.13/site-packages/pip/_internal/__init__.py` |
+| `.venv/lib/python3.13/site-packages/pip/py.typed` |
+| `.venv/lib/python3.13/site-packages/pip/__pip-runner__.py` |
+| `.venv/lib/python3.13/site-packages/pip/__main__.py` |
+| `.venv/lib/python3.13/site-packages/pip/__init__.py` |
+| `.venv/pyvenv.cfg` |
+| `.venv/.gitignore` |
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/spec.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-codebase-memory-mcp-index_status"><details>
+<summary>Tool use: **mcp-codebase-memory-mcp-index_status**</summary>
+{"error":"missing required argument: project","hint":"Pass the project as the \"project\" argument, e.g. {\"project\":\"<name from list_projects>\"}. Run list_projects to see indexed projects."}
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+The repository contains only specifications, rules, and tooling. No backend or frontend implementation exists.
+
+No application build files were found. Requirements will be grouped as Missing or Partial. Spec-first constitution is satisfied.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "glob": "pom.xml",
+  "outputMode": "files_with_matches",
+  "pattern": "."
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "files_with_matches",
+  "pattern": ".",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "glob": "package.json",
+  "outputMode": "files_with_matches",
+  "pattern": "."
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "files_with_matches",
+  "pattern": ".",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/contracts/openapi.yaml</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/technology-requirements.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Checking OpenAPI documentation for the ask endpoint and constitution compliance on the spec side.
+
+Also verifying no src/test directories exist.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/contracts/openapi.yaml",
+  "pattern": "/api/ai/ask"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/contracts/openapi.yaml",
+  "pattern": "/api/ai/ask",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+Glob pattern "**/*" matches every file and is not allowed. Use a more specific glob or no glob.
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/.specify/feature.json</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Grepping for the ask endpoint path may have missed something. I'll read more of the OpenAPI spec.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/contracts/openapi.yaml",
+  "pattern": "ask"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/contracts/openapi.yaml",
+  "pattern": "ask",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/contracts/openapi.yaml</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+The implementation is entirely missing.
+
+The review will compare the specification, requirements, and constitution against the actual codebase. Key findings include the absence of backend, frontend, build files, source directories, and tests. OpenAPI contracts may be partially implemented as design artifacts, but runtime behavior remains missing.
+
+TR-016 is likely implemented if no secrets exist. Constitution V is satisfied because the specification precedes the code. TR-005, TR-006, and TR-017 appear only as documentation in architecture.md, so they are partial. The next step is to inspect that file.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": true,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/architecture.md",
+  "pattern": "chunk|embedding|AI mistake|documented"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/architecture.md",
+  "pattern": "chunk|embedding|AI mistake|documented",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
+
+Directory: **`/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms`** (0 files)
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
+
+Directory: **`/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms`** (0 files)
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Reading architecture.md for chunking and embedding documentation.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/architecture.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": true,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs",
+  "pattern": "ai mistake|hallucin"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs",
+  "pattern": "ai mistake|hallucin",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Preparing a comprehensive review.
+
+Requirements are missing across ticket management, FSM, RAG, and E2E bundles. Only the spec-before-code principle is implemented.
+
+TR-016 is implemented or unable to verify. TR-005 and TR-006 are partially covered by documentation chunks. TR-010-012 is partial because the OpenAPI design artifact lacks a Spring controller. Technology-requirements traceability contains incorrect FR IDs; this is a spec document error, not an implementation issue.
+
+Runtime functional requirements are missing because the OpenAPI file is a contract without generated or served code. Contract-only artifacts will be marked partial. plan.md indicates tasks.md was not created. A consolidated table of roughly twenty-five requirement groups will be compiled.
+
+Code paths show no evidence. The review will be structured as markdown.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+# Spec vs implementation review
+
+**Feature**: `specs/001-support-ticket-rag` ([spec.md](specs/001-support-ticket-rag/spec.md), [technology-requirements.md](specs/001-support-ticket-rag/technology-requirements.md))  
+**Constitution**: [.specify/memory/constitution.md](.specify/memory/constitution.md)
+
+## Repository reality
+
+| Expected (plan) | Found |
+|-----------------|--------|
+| `backend/` + `**/src/main/java/**` | **Absent** — no `pom.xml`, no `.java` files |
+| `frontend/` + TypeScript | **Absent** — no `package.json`, no `.ts`/`.tsx` |
+| Tests (`src/test`, `*.test.ts`) | **Absent** |
+| `tasks.md` | **Absent** |
+| Design-only | `spec.md`, `plan.md`, `contracts/openapi.yaml`, RAG/ticket design docs |
+
+No `graphify-out/graph.json`; no runnable API to exercise. Statuses below judge **runtime behavior and automated tests**, not design docs alone. Where only OpenAPI/design exists, status is **Partial** (contract documented, no server).
+
+---
+
+## Per-requirement record
+
+### Ticket management (FR-001–FR-010, FR-023 ticket UI slice)
+
+| ID | Requirement | Status | Evidence | Gap | Recommended action |
+|----|-------------|--------|----------|-----|-------------------|
+| **R1** | FR-001–FR-005: Create, list, detail, update (title/desc/priority/assignee), comments | **Missing** | not found | No backend, frontend, or DB layer | `/speckit-tasks` then implement `ticket` module per [plan.md](specs/001-support-ticket-rag/plan.md) |
+| **R2** | FR-004a: Optional category at create; empty if omitted; immutable after create | **Missing** | not found | No persistence or API | Model + `CreateTicketRequest` in OpenAPI (`openapi.yaml:198-200`) needs JPA + validation |
+| **R3** | FR-006–FR-007, FR-006a: Keyword search (title, description, display id; case-insensitive substring) and status filter | **Partial** | `specs/001-support-ticket-rag/contracts/openapi.yaml:12-21` | Query params only in contract; no repository/query impl | Implement `listTickets` with `q` + `status`; integration tests for FR-006a exclusions |
+| **R4** | FR-008–FR-010: Durable persistence, server validation, meaningful UI errors | **Missing** | not found | No Liquibase/JPA, no React UI | Bootstrap PostgreSQL + Liquibase; ProblemDetail handler; ticket UI error surfacing |
+| **R5** | FR-015a: Server-generated display ticket id on all user-facing surfaces | **Partial** | `openapi.yaml:175-176,243-244` | Pattern in schema only; no id generator | Implement display-id sequence/service; never expose surrogate in API |
+
+### Status state machine (FR-011–FR-013b, SC-003)
+
+| ID | Requirement | Status | Evidence | Gap | Recommended action |
+|----|-------------|--------|----------|-----|-------------------|
+| **R6** | FR-011–FR-013: Server-only FSM; five allowed transitions; reject all others | **Missing** | not found | No `TransitionService` or tests | TDD FSM per [state-machine.md](specs/001-support-ticket-rag/state-machine.md); map to `PATCH .../status` (`openapi.yaml:105-126`) |
+| **R7** | FR-013a–FR-013b: Resolution notes required on → RESOLVED; editable only in RESOLVED | **Missing** | not found | Endpoints sketched only | Enforce on transition + `PATCH .../resolution-notes` (`openapi.yaml:127-148`) |
+| **R8** | SC-003 / TR-015: Full transition matrix covered by integration tests | **Missing** | not found | No `src/test` | Testcontainers FSM suite per [test-strategy.md](specs/001-support-ticket-rag/test-strategy.md) |
+
+### Grounded Q&A (FR-014–FR-022, FR-025)
+
+| ID | Requirement | Status | Evidence | Gap | Recommended action |
+|----|-------------|--------|----------|-----|-------------------|
+| **R9** | FR-014–FR-016, FR-025: Ask over history; answer + sources; noMatch on HTTP 200 | **Missing** | not found | No `rag` module, Spring AI, or ask handler | Implement `POST /api/ai/ask` per [rag-api-contract.md](specs/001-support-ticket-rag/rag-api-contract.md) |
+| **R10** | FR-015–FR-015b: Sources are display ids only; no surrogate keys | **Missing** | not found | No ask pipeline | Citation guard in [rag-api-contract.md](specs/001-support-ticket-rag/rag-api-contract.md) §Grounding guard |
+| **R11** | FR-020–FR-022: Ticket-only context; explicit no-match; single retrieval→generate; no agent actions | **Missing** | not found | No retrieval or prompt layer | `AskService` with empty-retrieval short-circuit (`architecture.md:45-47`) |
+| **R12** | TR-010–TR-012: Ask API shape | **Partial** | `openapi.yaml:149-308` | Contract only; no controller | Generate or hand-write controller + contract tests |
+
+### Searchable knowledge & index (FR-017–FR-019, TR-001–TR-004, TR-013–TR-014)
+
+| ID | Requirement | Status | Evidence | Gap | Recommended action |
+|----|-------------|--------|----------|-----|-------------------|
+| **R13** | FR-017–FR-018, TR-001–TR-002: Index description, comments, resolution notes + metadata | **Missing** | not found | No ingestion pipeline | [rag-ingestion.md](specs/001-support-ticket-rag/rag-ingestion.md) + PGVector tables |
+| **R14** | FR-019, TR-003–TR-014: Re-index on update/close; no stale answers | **Missing** | not found | No `TicketKnowledgeIndexPort` | Transactional re-index per [architecture.md:33-39](specs/001-support-ticket-rag/architecture.md) |
+| **R15** | TR-004, SC-008: Configurable top-k and similarity threshold | **Partial** | `architecture.md:51-55` | YAML example only; not in app config | Add `atms.rag.*` properties + document defaults |
+| **R16** | TR-005–TR-006: Chunking and embedding choice documented and justified | **Partial** | `rag-ingestion.md:49-53`, `architecture.md:63-65`, `research.md` | Design docs exist; no running pipeline | Keep docs in sync when model chosen; satisfy SC-009 doc slice |
+
+### End-to-end & success criteria
+
+| ID | Requirement | Status | Evidence | Gap | Recommended action |
+|----|-------------|--------|----------|-----|-------------------|
+| **R17** | SC-001, FR-023: Full ticket UI journey + restart survival | **Missing** | not found | No UI or server | [ui-flow.md](specs/001-support-ticket-rag/ui-flow.md) + quickstart |
+| **R18** | SC-002: Search/filter acceptance | **Missing** | not found | Same as R3 | E2E or API integration tests |
+| **R19** | SC-004: Validation + UI errors | **Missing** | not found | Same as R4 | |
+| **R20** | SC-005–SC-007: Grounded answers, no-match, freshness after updates | **Missing** | not found | Same as R9–R14 | RAG eval suite per [evaluation-strategy.md](specs/001-support-ticket-rag/evaluation-strategy.md) |
+| **R21** | SC-009 / TR-017: Documented AI mistake during development | **Missing** | not found | No dev log/ADR of caught mistake | Add `docs/decisions/` or eval note when first RAG bug found |
+| **R22** | FR-026: Satisfy all TR-001–TR-017 in product | **Missing** | not found | No implementation bundle | Track TR checklist alongside tasks |
+
+### Constitution & engineering
+
+| ID | Requirement | Status | Evidence | Gap | Recommended action |
+|----|-------------|--------|----------|-----|-------------------|
+| **R23** | **I** Framework-first: Java 25, Spring Boot 4.1.x, Spring AI | **Missing** | not found | No `backend/pom.xml` | Scaffold per plan structure |
+| **R24** | **II** Modular ticket vs rag; MapStruct/Lombok | **Missing** | not found | No packages | Enforce import boundaries in build/review |
+| **R25** | **III** Test-first FSM; backend-only transitions | **Missing** | not found | No tests | FSM tests before transition impl |
+| **R26** | **IV** Grounded RAG, citations, re-index on mutations | **Missing** | not found | No vector store | Principle IV acceptance tests |
+| **R27** | **V** Spec/plan/tasks reviewed before implementation | **Partial** | `spec.md`, `plan.md`, `checklists/requirements.md` | **`tasks.md` missing**; no code yet | Run `/speckit-tasks`; gate `/speckit-implement` on checklist + tasks review |
+| **R28** | API & OpenAPI as HTTP source of truth | **Partial** | `contracts/openapi.yaml` | Not wired to springdoc or generated client | Add springdoc + frontend client generation |
+| **R29** | TR-016: No secrets in repository | **Implemented** | No app secrets in tree; tooling/config only | Ongoing discipline when adding `application.yml` | Keep keys in env; scan in CI when backend exists |
+| **R30** | Stack: React TS strict, PostgreSQL/PGVector | **Missing** | not found | No frontend/backend | Match [constitution.md](.specify/memory/constitution.md) stack table |
+
+### Spec artifact quality (not runtime; affects implementability)
+
+| ID | Requirement | Status | Evidence | Gap | Recommended action |
+|----|-------------|--------|----------|-----|-------------------|
+| **R31** | TR traceability table references FR-027, FR-031, FR-029, FR-034–FR-035 | **Incorrect** | `technology-requirements.md:74-79` | Spec ends at **FR-026** | Fix traceability rows to real FR/SC IDs |
+
+---
+
+## Summary
+
+### Counts by status
+
+| Status | Count |
+|--------|------:|
+| **Implemented** | 1 (R29) |
+| **Partial** | 7 (R3, R5, R12, R15, R16, R27, R28) |
+| **Missing** | 22 |
+| **Incorrect** | 1 (R31 — spec doc, not code) |
+| **Unable to Verify** | 0 |
+
+### Top gaps (risk / user impact)
+
+1. **No application code** — all user stories (P1–P3) are unimplemented; P1 ticket CRUD blocks everything else.  
+2. **No FSM or tests (R6–R8)** — constitution **III**; wrong transitions would be a core product failure.  
+3. **No RAG stack (R9–R14, R26)** — constitution **IV**; ask feature is entirely absent.  
+4. **No `tasks.md` (R27)** — spec-driven workflow incomplete before implement.  
+5. **TR traceability errors (R31)** — can mis-route work during implementation.
+
+### Suggested task slices (aligned with [plan.md](specs/001-support-ticket-rag/plan.md); no `tasks.md` yet)
+
+1. **Governance**: Fix `technology-requirements.md` traceability; run `/speckit-tasks`; clear [implementation-readiness.md](specs/001-support-ticket-rag/checklists/implementation-readiness.md) blockers.  
+2. **Backend bootstrap**: `backend/` Maven, Spring Boot, Liquibase, PostgreSQL, ProblemDetail, OpenAPI/springdoc.  
+3. **Ticket vertical slice**: Entities, display id, CRUD, comments, list `q` + `status`, validation tests.  
+4. **FSM slice**: `TransitionService`, resolution notes rules, Testcontainers matrix (R8).  
+5. **RAG slice**: Ingestion port, PGVector, configurable top-k/threshold, `POST /api/ai/ask`, grounding guard tests.  
+6. **Frontend slice**: React strict, tickets + ask UI, API client from OpenAPI, SC-001/004 UX.  
+7. **Evidence**: Document one AI mistake (TR-017); RAG eval per evaluation-strategy.
+
+---
+
+**Read-only**: no files modified. Implementation phase has not started; design artifacts (especially `contracts/openapi.yaml`) are ahead of code but do not satisfy functional requirements.
+
+---
+
+_**User**_
+
+/speckit-tasks
+
+---
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Running speckit-tasks.
+
+Following the six-step speckit-tasks workflow. Checking the spec for FSM test requirements. User Story 3 indicates automated tests should cover the full transition matrix.
+
+Constitution III mandates TDD for FSM. The spec requires automated tests for the full transition matrix. I will generate FSM test tasks. Next I will run the setup script and load the design documents.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+Generating `tasks.md` from feature design docs.
+
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: cd /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms &amp;&amp; .specify/scripts/bash/setup-tasks.sh --json</summary>
+```bash
+cd /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms && .specify/scripts/bash/setup-tasks.sh --json
+```
+
+```
+{"FEATURE_DIR":"/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag","AVAILABLE_DOCS":["research.md","data-model.md","contracts/","quickstart.md"],"TASKS_TEMPLATE":"/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/.specify/templates/tasks-template.md","TASKS_TEMPLATE_CONTENT":"---\n\ndescription: \"Task list template for feature implementation\"\n---\n\n# Tasks: [FEATURE NAME]\n\n**Input**: Design documents from `/specs/[###-feature-name]/`\n\n**Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/\n\n**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.\n\n**Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (e.g., US1, US2, US3)\n- Include exact file paths in descriptions\n\n## Path Conventions\n\n- **Single project**: `src/`, `tests/` at repository root\n- **Web app**: `backend/src/`, `frontend/src/`\n- **Mobile**: `api/src/`, `ios/src/` or `android/src/`\n- Paths shown below assume single project - adjust based on plan.md structure\n\n<!--\n  ============================================================================\n  IMPORTANT: The tasks below are SAMPLE TASKS for illustration purposes only.\n\n  The /speckit-tasks command MUST replace these with actual tasks based on:\n  - User stories from spec.md (with their priorities P1, P2, P3...)\n  - Feature requirements from plan.md\n  - Entities from data-model.md\n  - Endpoints from contracts/\n\n  Tasks MUST be organized by user story so each story can be:\n  - Implemented independently\n  - Tested independently\n  - Delivered as an MVP increment\n\n  DO NOT keep these sa
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
+
+Directory: **`/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms`** (0 files)
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/data-model.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/test-strategy.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Reading plan.md for structure, API contract snippets, and spec user stories.
+
+Four user stories identified: ticket management, keyword search, status lifecycle enforcement, and natural-language queries. Phases will cover setup, foundational infrastructure, US1, and US2 search. Test tasks for FSM transitions and RAG will follow the test strategy.
+
+Phases five through seven are now defined: FSM enforcement with tests first, RAG, and polish. US2 is independently testable via API tests even though it depends on US1 tickets. Foundation work includes PostgreSQL Liquibase, Spring Boot structure, a ProblemDetail handler, and a knowledge index port stub. RAG may require pgvector in the foundational layer, but US1–3 do not need vector support. US1 will invoke the index port within the same transaction as ticket writes.
+
+A no-op adapter for the knowledge index port will be used in foundational work, with the real RAG implementation deferred to US4. The tasks file will contain roughly sixty to eighty sequential entries starting at T001. FSM tests will be written first during US3, before any implementation.
+
+Phase 1 tasks are now mapped out: directory structure, Maven and Vite scaffolding, Docker Compose with Postgres and pgvector, environment configuration, and quickstart wiring. Phase 2 foundational tasks include Liquibase extensions, ticket and comment table changelogs, the main application class, and a shared ProblemDetail controller advice.
+
+Phase 2 foundational tasks now include the datasource configuration, OpenAPI documentation, the no-op knowledge index adapter, a display ID sequence changeset, and Testcontainers base configuration.
+
+US1 will not receive automated test tasks. The specification describes it as manual independent testing rather than requiring automated coverage.
+
+Phase 3 implementation will begin with domain enums for Ticket and Comment, followed by JPA entities.
+
+Phase 3 implementation will cover repositories, a display ID generator, service layers, MapStruct mappers, REST controllers, DTO validation, and frontend components including list, detail, create, update, and comment views plus an API client.
+
+Phase 4 will add keyword search across titles, descriptions, and display IDs, plus status filtering in the list endpoint and corresponding frontend UI.
+
+Phase 5 will begin with a parameterized state machine integration test, followed by the transition service, a transition status endpoint, a resolution notes endpoint, and validation wiring.
+
+Phase 6 will start with a RAG ingestion integration test.
+
+Phase 6 RAG tasks now include a retrieval integration test. Implementation covers vector chunk entities, a chunker, canonical document building, Spring AI embeddings, and a top-k threshold. The no-op knowledge index adapter will be replaced with a real RAG adapter. AskService grounding guards, an AskController, and frontend ask components are also planned.
+
+Phase 7 polish will fix technology-requirements traceability, document TR-017 AI mistakes, validate the quickstart, and synchronize OpenAPI specs. The full tasks file will contain roughly fifty-five to seventy sequential IDs.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/plan.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/quickstart.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+I'll write a comprehensive tasks.md file.
+
+Fixing technology-requirements in polse. US1 prevents the ticket module from importing Spring AI; the index port stays no-op in foundational. Counting all tasks for the completion report. Writing the file to specs/001-support-ticket-rag/tasks.md.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Preparing a completion report and counting tasks.
+
+59 tasks total. User stories: US1 (14), US2 (4), US3 (6), US4 (13). Setup (7), foundational (10), polish (5). All tasks use the required format. No extensions.yml for hooks. Done When checkboxes are noted.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+## Completion report
+
+**Generated**: `/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md`
+
+| Metric | Value |
+|--------|------:|
+| **Total tasks** | **59** (T001–T059) |
+| Phase 1 Setup | 7 |
+| Phase 2 Foundational | 10 |
+| **US1** (P1 MVP) | 14 |
+| **US2** (P2 search/filter) | 4 |
+| **US3** (P2 FSM) | 6 (incl. T036 integration tests **first**) |
+| **US4** (P3 RAG/ask) | 13 (incl. T042–T043 **first**) |
+| Polish | 5 |
+
+### Independent test criteria (from tasks)
+
+- **US1**: CRUD + comments + restart persistence + UI validation errors  
+- **US2**: `q` + `status` on title/description/display id (FR-006a)  
+- **US3**: Full FSM matrix + resolution-notes rules (`TicketStateMachineIntegrationTest`)  
+- **US4**: Ingestion/retrieval integration + manual ask smoke (quickstart §5)
+
+### MVP scope
+
+**Phases 1–3** (T001–T031): backend/frontend scaffold, DB, ticket API + UI only.
+
+### Parallel highlights
+
+- Setup: T004–T007  
+- Foundation: T012–T013, T016–T017  
+- US1: enums/entities/mappers/pages (T018–T019, T024–T025, T028–T030)  
+- US4: T042–T043 then ingestion stack
+
+### Format validation
+
+All 59 lines use `- [ ] T###` with file paths; story phases use `[US1]`–`[US4]`; `[P]` only where parallel-safe.
+
+No `.specify/extensions.yml` — no pre/post hooks.
+
+**Next**: `/speckit-implement` on Phase 1, or clear blockers in `checklists/implementation-readiness.md` (e.g. T056 traceability fix can run anytime).
+
+---
+
+_**User**_
+
+/speckit-analyze
+
+---
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Running speckit-analyze.
+
+Checking prerequisites and loading the spec and constitution. The analysis will be read-only.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: cd /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms &amp;&amp; .specify/scripts/bash/check-prerequisites.sh --json --require-spec --require-tasks --include-tasks</summary>
+```bash
+cd /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms && .specify/scripts/bash/check-prerequisites.sh --json --require-spec --require-tasks --include-tasks
+```
+
+```
+{"FEATURE_DIR":"/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag","AVAILABLE_DOCS":["research.md","data-model.md","contracts/","quickstart.md","tasks.md"]}
+
+```
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
+
+Directory: **`/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms`** (0 files)
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/spec.md",
+  "pattern": "^- \\*\\*FR-|^- \\*\\*SC-"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/spec.md",
+  "pattern": "^- \\*\\*FR-|^- \\*\\*SC-",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md",
+  "pattern": "^- \\[ \\] T"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md",
+  "pattern": "^- \\[ \\] T",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Grep failed. The task format may differ.
+
+I'll read the files directly.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/spec.md",
+  "pattern": "FR-0|SC-0|TR-0"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/spec.md",
+  "pattern": "FR-0|SC-0|TR-0",
+  "topFiles": [
+    {
+      "matchCount": 41,
+      "uri": "specs/001-support-ticket-rag/spec.md"
+    }
+  ],
+  "totalFiles": 1,
+  "totalMatches": 41
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md",
+  "pattern": "\\[ \\] T0"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md",
+  "pattern": "\\[ \\] T0",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/.specify/memory/constitution.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/technology-requirements.md",
+  "pattern": "TR-0|FR-02"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/technology-requirements.md",
+  "pattern": "TR-0|FR-02",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+The grep search for tasks.md failed. The file likely uses a different checkbox format.
+
+Reading tasks.md partially and checking technology-requirements traceability.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/technology-requirements.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": true,
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md",
+  "pattern": "frontend|test|MapStruct|javadoc|OpenAPI"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md",
+  "pattern": "frontend|test|MapStruct|javadoc|OpenAPI",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Reading the remaining tasks.md for US4 and polish. Checking the plan against the tasks.
+
+Found inconsistencies between SC-003 and test-strategy. Missing tasks cover service interface javadoc and frontend validation split. FR-026 traceability mapping is incorrect. FR-020 and FR-021 are implicitly covered by T050. FR-008 persistence lacks an explicit restart test task.
+
+SC-004 has no automated test for US1 UI errors. TR-016 lacks a CI secret scan task. US1 no-op reindexing defers FR-017 and FR-019 until US4. T052 wires reindex on US4 transitions while US1 tickets create should trigger it. T049 replaces the adapter. The SC-003 inconsistency is high severity.
+
+T013 is vague versus the constitution requirement to document every handler in OpenAPI. FR-016 and FR-021 are duplicates, and FR-015/015b are duplicates too. Tasks.md correctly places US3 tests before implementation. Missing tasks include FSM TransitionService unit tests, citation validator unit tests, frontend validation coverage, and evaluation strategy or RAG evaluation profile tasks.
+
+MapStruct is covered on all layers by T024. The plan mentions either a shared contracts package or ticket.application for the port. T036 does not explicitly require a full transition matrix like SC-003 demands. Title is missing from RAG but present in keyword search; T046 aligns with rag-ingestion. OPEN→RESOLVED is forbidden in state-machine.md, yet no task explicitly tests it. Setup tasks T001–T007 map to infrastructure, and T055–T059 to polish. FR-023 spanning US1 and US2 is appropriately phased.
+
+Requirements total 32 functional requirements, 9 system constraints, and 17 traceability requirements. Now checking which items lack explicit tasks.
+
+FR-022 lacks an explicit no-tools task. The RAG evaluation profile may be optional for v1.
+
+T048 covers TR-004 configurability. T049 US4 reindexing defers indexing for US1 ticket creation until US4, which is acceptable per SC-005 ordering.
+
+T056 fixes broken traceability in technology-requirements.md. This is a spec artifact issue rather than a constitution violation.
+
+Constitution III mandates test-driven development for business rules and the ticket state machine. US1 business rules such as category immutability currently lack automated tests. This is a medium severity gap unless all business rules are interpreted as requiring tests.
+
+T013 is ambiguous because springdoc typically generates OpenAPI from code rather than importing a static YAML file. The findings table uses stable IDs. Coverage is high for functional requirements, though system constraints SC-001 and SC-004 remain manual-only, and SC-009 is only partially covered by T055 and T057.
+
+The missing OpenAPI update task is a HIGH constitution violation. Checking evaluation-strategy for mandatory tasks.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/tasks.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/test-strategy.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/abhinavrai/Public/Code/Experiments/PythonVirtualEnvironment/atms/specs/001-support-ticket-rag/evaluation-strategy.md</summary>
+
+</details></tool-use>
+
+_**Agent (auto-smart)**_
+
+<think><details><summary>Thought Process</summary>
+Evaluation-strategy notes tests outside tasks: citation ⊆ retrieval spy, no LLM on no-match mock, and re-index after comment ask flow. T043 is partial.
+
+RAG evaluation lacks a task. T057 documents drift between docs/decisions/ai-mistakes.md and docs/ai-mistakes.md. T052 omits comment and ticket creation from real adapter ingestion; T027 already covers writes. T036 does not explicitly require the full transition matrix for parameterized forbidden transitions, creating a medium underspecification risk.
+
+FR-023 includes search in the UI, but the split US1 checkpoint defers it to US2. This phased approach is acceptable.
+
+FR-016 and FR-021 duplicate requirements.
+
+Traceability links are incorrect. T056 plans to fix this high inconsistency.
+
+No task covers constitution service interface javadoc. No task covers constitution frontend validation. No task covers OpenAPI sync per PR. These are medium gaps.
+
+The plan contains no critical constitution violations that block implementation. Fixes can proceed.
+
+US1 lacks automated tests for category immutability. This is a high constitution III violation.
+
+TransitionService unit tests are missing from the test-strategy pyramid. Only integration test T036 exists. This is a partial constitution gap.
+
+The plan references TicketKnowledgeIndexPort in shared.contracts. Tasks use ticket.application only. This is a minor coverage drift.
+
+All tasks map to setup or stories. There are no unmapped tasks.
+
+An abbreviated coverage table will highlight key gaps. Remediation questions will follow.
+
+Re-examining the constitution reveals a valid CRITICAL finding. Constitution III mandates TDD for business rules. Tasks.md excludes automated tests for US1 category immutability and update field restrictions. Only US3 and US4 are required to have tests. This gap is a critical constitution violation.
+
+T013 does not clarify whether handlers must update the static OpenAPI YAML. Implementing handlers without syncing risks divergence. T026 treats the YAML as the source of truth. The constitution requires bidirectional alignment between handlers and the spec. T013 generates the spec from handlers instead. This reverses the typical Spring flow. The ambiguity is high.
+</details></think>
+
+_**Agent (auto-smart)**_
+
+## Specification Analysis Report
+
+**Feature**: `specs/001-support-ticket-rag`  
+**Artifacts**: `spec.md`, `plan.md`, `tasks.md`, `constitution.md` v1.1.0  
+**Mode**: Read-only (no files changed)
+
+### Findings
+
+| ID | Category | Severity | Location(s) | Summary | Recommendation |
+|----|----------|----------|-------------|---------|----------------|
+| C1 | Constitution | **CRITICAL** | constitution.md §III; tasks.md:11, Phase 3 | Constitution **MUST** TDD for **business rules** (not only FSM). `tasks.md` defers US1/US2 to manual smoke—no tests for category immutability, updatable-field rules, or keyword-search exclusions. | Add US1/US2 integration or unit tests (e.g. category PATCH → 400; search must not match comment text) or narrow constitution/spec to “FSM-only TDD” via explicit amendment. |
+| I1 | Inconsistency | **HIGH** | spec.md SC-003; test-strategy.md:18-19; tasks.md T036 | SC-003 requires **full** transition matrix coverage; T036 lists examples but does not require exhaustive forbidden pairs (20 disallowed from 5 states). | Align T036 + test-strategy with SC-003: parameterized matrix of all non-allowed transitions, or relax SC-003 to “representative forbidden set” in spec. |
+| I2 | Inconsistency | **HIGH** | technology-requirements.md:74-79; tasks.md T056 | Traceability cites **FR-027, FR-031, FR-029, FR-034–FR-035**; spec ends at **FR-026**. | Execute T056 before implement; fix TR→FR/SC mapping. |
+| I3 | Inconsistency | **MEDIUM** | evaluation-strategy.md:36; tasks.md T057 | AI mistake doc path **`docs/ai-mistakes.md`** vs **`docs/decisions/ai-mistakes.md`**. | Pick one path; update evaluation-strategy or T057. |
+| I4 | Inconsistency | **MEDIUM** | plan.md:111; tasks.md T014 | Plan allows `KnowledgeIndexPort` in `shared.contracts`; tasks pin `ticket.application` only. | Accept in plan/tasks note or add `shared/contracts` task—avoid two ports. |
+| A1 | Ambiguity | **HIGH** | tasks.md T013; constitution.md §API | T013 “Configure springdoc … alignment” from static `contracts/openapi.yaml` is unclear (import YAML vs annotate controllers vs diff gate). | Specify: controllers + springdoc generate OpenAPI **or** contract tests against `openapi.yaml`; PR rule to update YAML when handlers change. |
+| A2 | Ambiguity | **MEDIUM** | plan.md Performance Goals | “Responsive under team-scale”; “ask latency dominated by LLM—no hard SLA” — not tied to SC/tasks. | OK for v1 if intentional; add NFR note in spec or drop measurability expectation. |
+| D1 | Duplication | **MEDIUM** | spec.md FR-016, FR-021 | Same no-match / no-fabrication requirement stated twice (ask payload vs assistant behavior). | Keep one FR; cross-reference the other (spec hygiene). |
+| D2 | Duplication | **LOW** | spec.md FR-015, FR-015b | Citation + answer shape overlap. | Merge or subordinate 015b under 015. |
+| U1 | Underspec | **HIGH** | evaluation-strategy.md:12-20; tasks.md T042-T043 | Deterministic gates: citation ⊆ retrieval, **no LLM when empty retrieval**, re-ask after comment—not explicit in task text. | Extend T043/T050 acceptance bullets or add T060 eval gate tasks. |
+| U2 | Underspec | **MEDIUM** | evaluation-strategy.md:32; tasks.md | Maven profile **`rag-eval`** probabilistic suite not scheduled. | Add optional Polish task or mark out-of-scope in spec FR-026 scope. |
+| U3 | Underspec | **MEDIUM** | constitution.md §III; tasks.md Phase 3 | Frontend **must validate its own inputs**; tasks emphasize server Bean Validation + UI error display, not client validation. | Add tasks for form validation on create/update/ask per `frontend.mdc`. |
+| U4 | Underspec | **MEDIUM** | constitution.md §API (service interfaces) | Public application interfaces need documented contracts (`@param`/`@return`); no task. | Add cross-cutting task on `TicketService`, `TransitionService`, `AskService`, `TicketKnowledgeIndexPort`. |
+| G1 | Coverage gap | **HIGH** | FR-022; tasks.md T050 | Single retrieval→generate / no agent tools—not explicit in T050 (only grounding guard). | Add acceptance criteria to T050: no tool/MCP calls; one chat completion per ask. |
+| G2 | Coverage gap | **MEDIUM** | SC-001, SC-004; tasks.md | Restart persistence and UI validation success criteria rely on **T059 manual** quickstart only. | Add optional automated smoke (Testcontainers + REST Assured) or document as explicit manual gate. |
+| G3 | Coverage gap | **MEDIUM** | test-strategy.md:10-11; tasks.md | Unit layer for **chunker, canonical builder, citation validator**—only integration tests for US4. | Add [P] unit test tasks for `TicketChunker`, `CanonicalKnowledgeDocumentBuilder`, citation post-processor. |
+| G4 | Coverage gap | **LOW** | TR-016; tasks.md | No CI/secret-scan task (only “no secrets in yaml”). | Add pre-commit or CI secret scan in Polish phase. |
+| F1 | Inconsistency | **MEDIUM** | rag-ingestion.md triggers; tasks.md T052 | T052 names **TransitionService** re-index only; create/comment re-index depends on T027+T049 without explicit US4 checkpoint for **all** triggers in rag-ingestion.md. | Expand T049/T052 description to list all trigger events from rag-ingestion.md. |
+| F2 | Ordering | **LOW** | tasks.md MVP note | MVP Phases 1–3 omits FR-006–007 (search/filter) while FR-023 bundles search in UI—expected phasing but FR-023 not fully met until US2. | Already documented; reference FR-023 partial MVP in checkpoint text. |
+
+*Overflow*: No additional findings beyond 18 rows (under 50 cap).
+
+---
+
+### Coverage summary (selected)
+
+| Requirement Key | Has Task? | Task IDs | Notes |
+|-----------------|-----------|----------|-------|
+| FR-001–FR-005 | Yes | T018–T026, T028–T031 | US1 |
+| FR-004a (category) | Partial | T025, T030 | **No automated test** (C1) |
+| FR-006–FR-007, FR-006a | Yes | T032–T035 | US2 |
+| FR-008–FR-010 | Partial | T010, T025, T031 | SC-001/004 mostly manual |
+| FR-011–FR-013b | Yes | T036–T041 | SC-003 matrix wording (I1) |
+| FR-014–FR-016, FR-020–FR-022 | Partial | T042–T054 | FR-022 thin (G1); eval gates (U1) |
+| FR-015a | Yes | T021, T046, T051 | |
+| FR-017–FR-019 | Yes | T027, T049, T052 | Real indexing from US4 |
+| FR-023–FR-025 | Yes | Phases 3–6 | FR-023 search = US2 |
+| FR-026 (TR bundle) | Partial | T048, T055–T057, T056 | TR table broken (I2) |
+| SC-001 | Partial | T059 | Manual |
+| SC-002 | Yes | T032–T035 | |
+| SC-003 | Partial | T036 | Full matrix (I1) |
+| SC-004 | Partial | T031, T059 | No UI test task |
+| SC-005–SC-007 | Partial | T042–T043, T050 | Probabilistic eval optional (U2) |
+| SC-008 | Yes | T048 | |
+| SC-009 | Partial | T055, T057, T059 | Path drift (I3) |
+
+---
+
+### Constitution alignment issues
+
+1. **C1 (CRITICAL)** — Principle III: business-rule TDD beyond US3 FSM not reflected in `tasks.md`.
+2. **MEDIUM** — Principle III: frontend input validation undertasked (U3).
+3. **MEDIUM** — API & Contract Documentation: OpenAPI workflow ambiguous (A1); service Javadoc not tasked (U4).
+4. **Aligned** — Principles I, II (stack/MapStruct in T002/T024), IV (T048–T051), V (artifacts exist before code).
+
+---
+
+### Unmapped tasks
+
+None material: T001–T007 → infrastructure; T055–T059 → polish / FR-026 / SC-009. All map to setup, stories, or cross-cutting evidence.
+
+---
+
+### Metrics
+
+| Metric | Value |
+|--------|------:|
+| Functional requirements (incl. FR-004a, FR-006a, FR-013a/b, FR-015a/b) | **32** |
+| Success criteria (buildable) | **9** |
+| Tasks | **59** |
+| Coverage % (FR/SC with ≥1 task) | **~97%** (gaps are **depth**: tests, eval, constitution extras) |
+| Ambiguity findings | **2** (A1–A2) |
+| Duplication findings | **2** (D1–D2) |
+| **Critical issues** | **1** (C1) |
+
+---
+
+### Next actions
+
+1. **Resolve C1 before `/speckit-implement`** — add US1 business-rule tests **or** get explicit spec/constitution alignment on TDD scope.
+2. **Fix I2** — run **T056** (or `/speckit-specify` touch-up on `technology-requirements.md`).
+3. **Resolve I1** — SC-003 vs T036/test-strategy matrix scope in one place.
+4. **Clarify A1** — OpenAPI ownership (YAML-first vs springdoc-from-code) in plan or T013.
+5. Then **`/speckit-implement`** Phase 1–2; MVP still Phases 1–3 per tasks.md.
+
+Optional: `/speckit-checklist` append `constitution-compliance.md` for C1, U3, U4, A1.
+
+---
+
+### Remediation
+
+Want concrete edit suggestions for the **top 5** issues (C1, I1, I2, A1, U1)? I will not apply them unless you ask.

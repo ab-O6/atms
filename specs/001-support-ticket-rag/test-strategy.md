@@ -7,14 +7,21 @@
 
 | Layer | Scope | Tools |
 |-------|--------|-------|
-| Unit | FSM rules, chunker, canonical doc builder, citation validator | JUnit 5, no Spring |
-| Integration | Repositories, FSM HTTP, ingestion+retrieval | `@SpringBootTest`, Testcontainers PostgreSQL+pgvector |
-| Frontend | Form validation UX, error display | React Testing Library (optional v1) |
-| RAG eval | Probabilistic quality | Separate Maven profile |
+| Unit | Chunker, canonical doc builder (mandatory v1); FSM rules unit tests optional | JUnit 5, no Spring |
+| Integration | List search HTTP (**SC-002**), FSM HTTP (**SC-003**), ingestion+retrieval (**SC-010**) | `@SpringBootTest`, Testcontainers PostgreSQL+pgvector |
+| Frontend | Form validation UX, error display (**SC-004**) | React Testing Library (optional v1; manual quickstart acceptable) |
+| RAG eval | Probabilistic quality | Separate Maven profile; **optional**, not v1 CI gate (**SC-010**) |
 
-## State machine (mandatory gate)
+## List search (mandatory gate, SC-002)
+
+- Class: `TicketListSearchIntegrationTest` (Testcontainers).
+- Keyword `q`: case-insensitive substring on title, description, display ticket id only (not comments, resolution notes, category).
+- Status filter returns only matching status; empty `q`/filter combinations return empty set when no matches.
+
+## State machine (mandatory gate, SC-003)
 
 - Class: `TicketStateMachineIntegrationTest` (Testcontainers).
+- Optional: pure unit tests on transition rules; **merge gate** is this integration suite (constitution Development Workflow §2).
 - Parameterized: all allowed transitions succeed (HTTP 200/204).
 - Parameterized: forbidden transitions return 409.
 - Case: resolve without notes → 409.

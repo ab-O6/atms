@@ -19,6 +19,11 @@
 - Q: What rules apply to ticket **category** for persistence and RAG metadata, given category is not listed among the updatable fields in the product requirements? → A: **Optional at create**; if omitted, persist **empty category**; **not changeable** after create.
 - Q: Which ticket fields must **keyword search** (ticket list search, not RAG) match against, and what matching rule applies? → A: **Title, description, and display ticket id**; **case-insensitive substring** match.
 - Q: How must grounded ask responses expose cited display ticket ids and a no-relevant-tickets outcome in the response payload? → A: HTTP **success** with **answer** text and structured **sources** (display ticket ids); **no-match**: **empty sources**, **noMatch** true, honest message—no fabricated answer.
+- Q: Should the separate probabilistic **rag-eval** Maven profile be required for v1 “done”, or explicitly out of v1 with only deterministic RAG integration tests gating merge? → A: **v1 deferred**—merge gate is **deterministic** RAG integration tests (ingestion, retrieval, `noMatch`, citations); probabilistic **rag-eval** may be documented and run locally but is **not** a required CI gate for v1.
+- Q: Where should the mandatory “caught AI mistake” write-up for TR-017 / SC-009 live in the repo? → A: **`docs/decisions/ai-mistakes.md`** (create if missing).
+- Q: For v1, must keyword search and status filter on the ticket list have automated backend tests, or is manual quickstart verification enough? → A: **Required** automated backend integration/API tests for `q` and `status` (FR-006a rules, empty results)—SC-002 merge gate.
+- Q: When resolution notes are updated while status is `RESOLVED`, must searchable knowledge re-index in the same database transaction as that write? → A: **Yes**—same transaction, **full re-index** (same rule as description/comment knowledge mutations).
+- Q: For v1, must JUnit unit tests (no Spring) for the ticket chunker and canonical knowledge document builder run in default CI, in addition to RAG integration tests? → A: **Required** in default `./mvnw test` (pure unit tests, no LLM).
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -46,7 +51,7 @@ Support staff search tickets by keyword and filter the list by status to narrow 
 
 **Why this priority**: Discovery supports daily operations before lifecycle and AI-assisted history questions.
 
-**Independent Test**: Create tickets with distinct text and statuses; verify keyword search and status filter return the expected subsets.
+**Independent Test**: Create tickets with distinct text and statuses; verify keyword search and status filter return the expected subsets. **v1** requires **automated backend tests** (API or integration) proving FR-006a matching and status filter behavior, including empty results.
 
 **Acceptance Scenarios**:
 
@@ -92,7 +97,7 @@ Users ask questions in natural language about ticket history. Answers use only r
 
 **Why this priority**: Grounded Q&A depends on accurate tickets, comments, and search knowledge that stays current when tickets change.
 
-**Independent Test**: Prepare ticket history that answers sample questions; submit questions; verify cited ticket IDs, honest no-match responses, and no fabricated answers when nothing relevant is found. Technical ask interface and index behavior per [technology-requirements.md](./technology-requirements.md).
+**Independent Test**: Prepare ticket history that answers sample questions; submit questions; verify cited ticket IDs, honest no-match responses, and no fabricated answers when nothing relevant is found. **v1 acceptance** requires **deterministic** automated integration tests for ingestion, retrieval, `noMatch`, and citation shape, plus **JUnit unit tests** (no Spring) for the canonical knowledge document builder and ticket chunker in default CI; probabilistic **rag-eval** (recall@k, live embeddings) is optional and not a CI merge gate. Technical ask interface and index behavior per [technology-requirements.md](./technology-requirements.md).
 
 **Acceptance Scenarios**:
 
@@ -116,6 +121,7 @@ Users ask questions in natural language about ticket history. Answers use only r
 - Invalid status transition attempted (any path not listed as allowed) → server rejects; UI shows meaningful error where applicable.
 - Transition to `RESOLVED` without non-empty resolution notes → server rejects; UI shows meaningful error.
 - Resolution notes edit attempted when status is not `RESOLVED` → server rejects (except notes supplied as part of the `IN_PROGRESS` → `RESOLVED` transition).
+- Resolution notes updated while `RESOLVED` → **full re-index** in same transaction as write; subsequent ask reflects new notes after commit.
 - Search or filter with no matches → empty result set; no misleading data.
 - Question with no retrievable relevant tickets → HTTP success, **noMatch** true, **empty sources**, honest message; no fabricated answer.
 - Ticket updated or closed → search knowledge is refreshed so answers are not based on stale ticket content.
@@ -161,14 +167,17 @@ Users ask questions in natural language about ticket history. Answers use only r
 - **FR-017**: System MUST make ticket description, comments, and resolution notes available for search when answering history questions.
 - **FR-018**: Searchable ticket knowledge MUST carry identifying and filtering attributes: ticket identifier, status, priority, assignee, and category.
 - **FR-019**: System MUST refresh search knowledge when a ticket is updated or closed so answers are not based on stale content.
+- **FR-019a**: Updates to **resolution notes** while status is `RESOLVED` MUST trigger a **full re-index** in the **same database transaction** as the persistence write (not async or lazy refresh).
 
 **Grounding and guardrails (behavior)**
 
 - **FR-020**: The assistant MUST answer support-specific questions only from retrieved ticket history, not from general knowledge.
-- **FR-021**: When no tickets are relevant, the assistant MUST say so explicitly and MUST NOT produce a fabricated but plausible-sounding answer.
+- **FR-021**: When no tickets are relevant, the assistant MUST say so explicitly and MUST NOT produce a fabricated but plausible-sounding answer (same no-match contract as **FR-016**).
 - **FR-022**: The assistant MUST answer one question with one grounded response and MUST NOT independently create tickets, send notifications, chain tools, or take further actions.
 
 **End-to-end product acceptance (behavioral summary)**
+
+*Normative detail for the items below is in **FR-001–FR-022**; these entries exist for acceptance tracing only.*
 
 - **FR-023**: Users MUST be able to create tickets from the UI; list, view, update (including assignee), and comment; search by keyword; and filter by status.
 - **FR-024**: Valid status transitions MUST succeed; invalid transitions MUST be rejected on the server; persisted data MUST survive restart; server validation and meaningful UI errors MUST work for ticket flows.
@@ -191,16 +200,18 @@ Users ask questions in natural language about ticket history. Answers use only r
 ### Measurable Outcomes
 
 - **SC-001**: A user can create a ticket from the UI, see it in the list, open details, update fields and assignee, and add a comment in one session; after application restart, that ticket data is still available.
-- **SC-002**: Keyword search returns tickets when the query matches title, description, or display ticket id (case-insensitive substring); status filter shows only tickets in the selected status.
+- **SC-002**: Keyword search returns tickets when the query matches title, description, or display ticket id (case-insensitive substring); status filter shows only tickets in the selected status; **automated backend tests** cover list `q`/`status` behavior (including FR-006a exclusions and empty results).
 - **SC-003**: Every allowed status transition succeeds; documented invalid examples (`CLOSED` → `OPEN`, `RESOLVED` → `OPEN`, `CANCELLED` → `OPEN`) and every other disallowed transition is rejected on the server; automated tests cover the full transition matrix.
-- **SC-004**: Invalid server input for ticket operations produces validation failures and the UI shows meaningful errors.
+- **SC-004**: Invalid server input for ticket operations produces validation failures and the UI shows meaningful errors (v1 verified via manual quickstart / API smoke; frontend RTL optional per [test-strategy.md](./test-strategy.md)).
 - **SC-005**: After ticket history is searchable, in-scope natural-language questions receive answers grounded in ticket data with cited **display ticket id(s)** only.
 - **SC-006**: Out-of-scope or no-match questions return HTTP success with **noMatch** true, **empty sources**, and an honest message, with no fabricated answer.
 - **SC-007**: After a ticket is updated or closed, answers to history questions can reflect the latest ticket content (no stale search knowledge).
 - **SC-008**: Operators can tune how many historical matches are considered and how closely content must match, without requiring a code change for each tuning change (per [technology-requirements.md](./technology-requirements.md)).
-- **SC-009**: Documented rationale exists for how ticket text is prepared for search and how search models are chosen; at least one meaningful AI error was caught and documented during development; no secrets appear in the repository (per [technology-requirements.md](./technology-requirements.md)).
+- **SC-009**: Documented rationale exists for how ticket text is prepared for search and how search models are chosen; at least one meaningful AI error was caught and documented during development in **`docs/decisions/ai-mistakes.md`**; no secrets appear in the repository (per [technology-requirements.md](./technology-requirements.md)).
+- **SC-010**: v1 RAG quality gate is **deterministic** automated integration tests (ingestion, retrieval, empty-retrieval `noMatch`, display-id citations) plus **unit tests** for canonical knowledge document builder and ticket chunker in default CI; probabilistic **rag-eval** profile is **not** required in CI for v1 complete.
 
 ## Assumptions
 
 - Specification content is limited to product requirements sections 4 through 8.3.
 - [technology-requirements.md](./technology-requirements.md) captures prescribed technical acceptance from the same sections; planning artifacts (`architecture.md`, `api-contract.md`, `rag-ingestion.md`, etc.) elaborate TR items without changing scope.
+- Probabilistic RAG evaluation (`rag-eval` profile) may be added for tuning and regression but is **out of v1 mandatory acceptance**; see **SC-010**.

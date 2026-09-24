@@ -16,15 +16,15 @@ Deliver a full-stack support ticket system (CRUD, keyword search, status filter,
 
 **Storage**: PostgreSQL 16+ with `pgvector` extension; relational tables for tickets/comments; vector table(s) for chunk embeddings + JSON metadata
 
-**Testing**: JUnit 5, Mockito (narrow), Spring Boot Test, Testcontainers (PostgreSQL + pgvector), separate RAG eval suite per [test-strategy.md](./test-strategy.md)
+**Testing**: JUnit 5, Mockito (narrow), Spring Boot Test, Testcontainers (PostgreSQL + pgvector). Default CI: FSM, list search, RAG ingestion/retrieval integration tests plus chunker/builder unit tests (**SC-002**, **SC-003**, **SC-010**). Probabilistic `rag-eval` profile optional per [test-strategy.md](./test-strategy.md)—not a v1 CI gate.
 
 **Target Platform**: JVM server (local/dev/prod), static SPA served separately or via reverse proxy
 
 **Project Type**: Web application (backend API + React UI)
 
-**Performance Goals**: Interactive ticket UI (list/detail) responsive under team-scale data (thousands of tickets); ask latency dominated by embedding + LLM—document expected ranges in ops notes, no hard SLA in v1
+**Performance Goals**: Interactive ticket UI (list/detail) responsive under team-scale data (thousands of tickets); ask latency dominated by embedding + LLM—document expected latency ranges in [architecture.md](./architecture.md) / [quickstart.md](./quickstart.md) during implementation (**T060**, **T064**); no hard SLA in v1
 
-**Constraints**: No secrets in repo; OpenAPI source of truth for HTTP; RFC 9457 errors; constitution Principles I–V; single retrieval→generate per ask (no agent)
+**Constraints**: No secrets in repo; OpenAPI source of truth for HTTP; RFC 9457 errors; constitution Principles I–IV and Development Workflow gates; single retrieval→generate per ask (no agent)
 
 **Scale/Scope**: Single-team support desk; one PostgreSQL database; no multi-tenant auth in v1 unless added later
 
@@ -32,15 +32,15 @@ Deliver a full-stack support ticket system (CRUD, keyword search, status filter,
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-| Principle | Plan compliance |
-|-----------|-----------------|
-| I Framework-first | Spring Boot 4.1.x, Spring AI, declarative config, starters |
-| II Modular + Lombok + MapStruct | Package-by-feature; constructor injection; MapStruct DTO mapping |
-| III Test-first FSM + server-only transitions | Integration test matrix; transition service is sole authority |
-| IV Grounded RAG + index hygiene | Guard + citations; configurable top-k/threshold; re-index on knowledge mutations |
-| V Spec-before-code | This plan + design artifacts precede implementation |
-| API & OpenAPI | [contracts/openapi.yaml](./contracts/openapi.yaml) + [api-contract.md](./api-contract.md) |
-| Stack table | Java 25, Boot 4.1.x, PostgreSQL/PGVector, React TS strict—matches user input and constitution |
+| Principle / gate | Plan compliance |
+|------------------|-----------------|
+| I Framework-first backend | Spring Boot 4.1.x, Spring AI, declarative config, starters |
+| II Modular architecture, Lombok & MapStruct | Package-by-feature; constructor injection; MapStruct DTO mapping |
+| III Grounded RAG & vector index hygiene | Guard + citations; configurable top-k/threshold; re-index on knowledge mutations |
+| IV Spec-before-code, security & official sources | Spec, plan, tasks reviewed before code; no secrets in repo |
+| Development Workflow §2 (FSM tests) | State-machine integration test matrix; `TransitionService` sole transition authority |
+| API & Contract Documentation | [contracts/openapi.yaml](./contracts/openapi.yaml) + [api-contract.md](./api-contract.md); interface JavaDoc on public application ports |
+| Technology stack (constitution) | Java 25, Boot 4.1.x, PostgreSQL/PGVector, React TS strict |
 
 **Post–Phase 1 re-check**: PASS — data model and contracts preserve FSM, ask response shape, and module boundaries.
 
@@ -65,7 +65,7 @@ specs/001-support-ticket-rag/
 ├── contracts/openapi.yaml
 ├── spec.md
 ├── technology-requirements.md
-└── tasks.md              # /speckit-tasks (not created here)
+└── tasks.md              # implementation task list (/speckit-tasks)
 ```
 
 ### Source Code (repository root)
@@ -130,4 +130,4 @@ No constitution violations requiring justification.
 | Test strategy | [test-strategy.md](./test-strategy.md) | Complete |
 | Quickstart | [quickstart.md](./quickstart.md) | Complete |
 
-**Next**: `/speckit-tasks` to generate `tasks.md`.
+**Next**: `/speckit-implement` per [tasks.md](./tasks.md).

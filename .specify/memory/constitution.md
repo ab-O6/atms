@@ -36,17 +36,7 @@ a spec-approved exception documents why MapStruct is insufficient.
 MapStruct keeps mappings type-safe, reviewable, and free of reflection-heavy
 utilities.
 
-### III. Test-First Business Rules & State Authority
-
-Test-Driven Development is mandatory for business rules and the ticket state
-machine: specify behavior in tests before implementation. Frontend and backend MUST
-each validate their own inputs; ONLY the backend MAY perform ticket state
-transitions.
-
-**Rationale**: Split validation limits bad data early; centralizing transitions
-preserves a single source of truth for ticket lifecycle.
-
-### IV. Grounded RAG & Vector Index Hygiene
+### III. Grounded RAG & Vector Index Hygiene
 
 RAG answers MUST use only retrieved ticket context. Responses MUST cite ticket IDs.
 When no relevant tickets meet retrieval criteria, the system MUST explicitly state
@@ -57,7 +47,7 @@ searchable content.
 **Rationale**: Grounding and citations prevent hallucinated ticket facts; re-indexing
 keeps vector search consistent with persistence.
 
-### V. Spec-Before-Code, Security & Official Sources
+### IV. Spec-Before-Code, Security & Official Sources
 
 No feature implementation MAY begin until specification, plan, and tasks are
 reviewed and accepted per project workflow. Secrets MUST NEVER be committed to the

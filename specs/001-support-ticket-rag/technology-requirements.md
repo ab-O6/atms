@@ -71,9 +71,12 @@ Example request:
 
 | Technology requirement | Behavioral spec |
 | ---------------------- | --------------- |
-| TR-001–TR-003, TR-013–TR-014 | User Story 4; FR-017–FR-020 |
-| TR-004–TR-006 | FR-021–FR-023; Success Criteria SC-007–SC-009 |
-| TR-007–TR-009 | FR-024–FR-026 |
-| TR-010–TR-012 | FR-027, FR-031 |
-| TR-015 | FR-029; SC-003 |
-| TR-016–TR-017 | FR-034–FR-035; SC-009 |
+| TR-001–TR-003, TR-013–TR-014 | User Story 4; FR-017–FR-019, FR-019a; SC-007 |
+| TR-004 | FR-018 (metadata filters); SC-008 |
+| TR-005–TR-006 | SC-009 (`architecture.md` rationale) |
+| TR-007–TR-009 | FR-020–FR-022 |
+| TR-010–TR-012 | FR-014–FR-016, FR-015a, FR-015b; SC-005, SC-006 |
+| TR-015 | FR-011–FR-013, FR-013a, FR-013b; SC-003 |
+| TR-016 | SC-009 (no secrets in repository) |
+| TR-017 | SC-009 (`docs/decisions/ai-mistakes.md`) |
+| RAG eval (optional) | SC-010 — probabilistic `rag-eval` profile **not** required in v1 CI; deterministic integration + chunker/builder unit tests gate merge |
