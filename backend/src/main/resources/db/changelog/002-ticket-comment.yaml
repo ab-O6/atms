@@ -1,0 +1,125 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-ticket-priority-status-enums
+      author: atms
+      changes:
+        - sql:
+            sql: |
+              CREATE TYPE ticket_priority AS ENUM ('LOW', 'MEDIUM', 'HIGH', 'CRITICAL');
+              CREATE TYPE ticket_status AS ENUM ('OPEN', 'IN_PROGRESS', 'RESOLVED', 'CLOSED', 'CANCELLED');
+            dbms: postgresql
+  - changeSet:
+      id: 002-ticket-table
+      author: atms
+      changes:
+        - createTable:
+            tableName: ticket
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  defaultValueComputed: gen_random_uuid()
+              - column:
+                  name: display_id
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: title
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: TEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: priority
+                  type: ticket_priority
+                  constraints:
+                    nullable: false
+              - column:
+                  name: assignee
+                  type: VARCHAR(120)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category
+                  type: VARCHAR(80)
+                  defaultValue: ''
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: ticket_status
+                  defaultValue: OPEN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: resolution_notes
+                  type: TEXT
+              - column:
+                  name: created_at
+                  type: TIMESTAMPTZ
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMPTZ
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+        - createIndex:
+            indexName: idx_ticket_status
+            tableName: ticket
+            columns:
+              - column:
+                  name: status
+  - changeSet:
+      id: 002-comment-table
+      author: atms
+      changes:
+        - createTable:
+            tableName: comment
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  defaultValueComputed: gen_random_uuid()
+              - column:
+                  name: ticket_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: body
+                  type: TEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author
+                  type: VARCHAR(120)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMPTZ
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: comment
+            baseColumnNames: ticket_id
+            referencedTableName: ticket
+            referencedColumnNames: id
+            constraintName: fk_comment_ticket
+            onDelete: CASCADE

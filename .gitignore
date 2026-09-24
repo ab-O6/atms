@@ -1,3 +1,27 @@
-### VS Code 
-.vscode
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.idea/
+.vscode/
 
+# Java / Maven
+backend/target/
+*.class
+*.jar
+.gradle/
+build/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+*.log
+.env
+.env.local
+!.env.example
+!frontend/.env.example
+
+# Docker
+*.log

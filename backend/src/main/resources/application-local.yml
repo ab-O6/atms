@@ -1,0 +1,12 @@
+# Local profile: override datasource and AI provider via environment (no secrets in repo).
+# Example:
+#   export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/atms
+#   export SPRING_AI_OPENAI_API_KEY=...
+spring:
+  config:
+    activate:
+      on-profile: local
+
+logging:
+  level:
+    com.atms: DEBUG

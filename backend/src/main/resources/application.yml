@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: atms
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:disabled}
+      embedding:
+        enabled: false
+      chat:
+        enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/atms
+    username: atms
+    password: atms
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+atms:
+  rag:
+    top-k: 5
+    similarity-threshold: 0.75

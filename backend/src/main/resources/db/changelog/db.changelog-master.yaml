@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: 001-extensions-and-sequences.yaml
+  - include:
+      file: 002-ticket-comment.yaml

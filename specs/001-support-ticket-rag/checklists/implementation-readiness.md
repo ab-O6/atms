@@ -20,8 +20,8 @@
 - [ ] CHK002 Are optional-at-create and immutability rules for **category** documented consistently across spec, data model, and API contract? [Completeness, Spec §FR-004a, Key Entities]
 - [ ] CHK003 Are **resolution notes** capture, edit window, and transition preconditions specified for every status where notes apply or are forbidden? [Completeness, Spec §FR-013a–FR-013b, User Story 3]
 - [ ] CHK004 Are requirements for **searchable ticket knowledge** (fields ingested vs list keyword search) explicitly distinguished so title/category/comment inclusion rules cannot be misread? [Completeness, Spec §FR-006a vs FR-017, TR-001]
-- [ ] CHK005 Are all prescribed **technology requirements** (TR-001–TR-017) mapped to behavioral FRs/SCs without referencing non-existent requirement IDs? [Completeness, Conflict, technology-requirements.md §Traceability]
-- [ ] CHK006 Is **tasks.md** (or equivalent bounded implementation task list) defined and aligned with plan phases before implementation starts per constitution Principle V? [Gap, plan.md §Documentation]
+- [x] CHK005 Are all prescribed **technology requirements** (TR-001–TR-017) mapped to behavioral FRs/SCs without referencing non-existent requirement IDs? [Completeness, Conflict, technology-requirements.md §Traceability]
+- [x] CHK006 Is **tasks.md** (or equivalent bounded implementation task list) defined and aligned with plan phases before implementation starts per constitution Principle V? [Gap, plan.md §Documentation]
 - [ ] CHK007 Are UI flows for ticket CRUD, search/filter, status transitions, resolution notes, and ask cited in requirements with pointers to ui-flow or equivalent? [Completeness, Spec §FR-023–FR-025, Gap]
 
 ## Requirement Clarity
@@ -39,7 +39,7 @@
 - [ ] CHK015 Do allowed transition lists match exactly across spec, state-machine.md, and planned transition service authority? [Consistency, Spec §FR-012, state-machine.md §Allowed transitions]
 - [ ] CHK016 Do ask response shapes (**answer**, **sources**, **noMatch**, HTTP success on no-match) align across spec clarifications, technology requirements, rag-api-contract, and OpenAPI? [Consistency, Spec §FR-015b–FR-016, TR-011–TR-012]
 - [ ] CHK017 Is plan’s **transaction-boundary re-index** statement consistent with ingestion failure rollback and spec persistence guarantees? [Consistency, plan.md §Summary, rag-ingestion.md §Failure handling]
-- [ ] CHK018 Are constitution Principle IV grounding/citation rules reflected in spec FRs without weaker wording (e.g., “cite ticket IDs” vs display ids only)? [Consistency, constitution.md §IV, Spec §FR-015]
+- [x] CHK018 Are constitution Principle IV grounding/citation rules reflected in spec FRs without weaker wording (e.g., “cite ticket IDs” vs display ids only)? [Consistency, constitution.md §IV, Spec §FR-015]
 - [ ] CHK019 Does keyword search field scope in spec conflict with any design doc implying title or comments in embeddable text for list search? [Consistency, Spec §FR-006a, rag-ingestion.md §Canonical document]
 
 ## Acceptance Criteria Quality
@@ -67,7 +67,7 @@
 
 ## Non-Functional Requirements
 
-- [ ] CHK034 Are performance expectations for ticket UI vs ask latency documented with explicit “no hard SLA in v1” boundaries where plan defers targets? [NFR, plan.md §Performance Goals, Gap]
+- [x] CHK034 Are performance expectations for ticket UI vs ask latency documented with explicit “no hard SLA in v1” boundaries where plan defers targets? [NFR, plan.md §Performance Goals, Gap]
 - [ ] CHK035 Are security requirements (no secrets in repo, validation split client/server) complete for v1 single-team scope without auth? [NFR, constitution.md §V, TR-016]
 - [ ] CHK036 Are accessibility or internationalization requirements intentionally excluded or specified for ticket and ask UI? [NFR, Gap, ui-flow.md]
 - [ ] CHK037 Is observability (logging, metrics for RAG failures, embedding errors) required or explicitly out of scope? [NFR, Gap]
@@ -80,10 +80,10 @@
 
 ## Ambiguities & Conflicts
 
-- [ ] CHK041 Does technology-requirements traceability reference FR-027/FR-031/FR-034–FR-035 that do not exist in spec—requiring correction before implement? [Conflict, technology-requirements.md §Traceability]
-- [ ] CHK042 Is “support-specific” vs general-knowledge boundary for ask defined with examples of allowed refusal behavior? [Ambiguity, Spec §FR-020, TR-007]
-- [ ] CHK043 Is OPEN → RESOLVED direct transition explicitly forbidden in requirements to match state-machine “not in spec” note? [Ambiguity, state-machine.md §Explicitly forbidden]
-- [ ] CHK044 Are OpenAPI and narrative API docs declared single source of truth with conflict resolution when they diverge? [Ambiguity, constitution.md §API & Contract Documentation, plan.md §API & OpenAPI]
+- [x] CHK041 Does technology-requirements traceability reference FR-027/FR-031/FR-034–FR-035 that do not exist in spec—requiring correction before implement? [Conflict, technology-requirements.md §Traceability] — **Resolved**: traceability table corrected (tasks T002).
+- [x] CHK042 Is “support-specific” vs general-knowledge boundary for ask defined with examples of allowed refusal behavior? [Ambiguity, Spec §FR-020, TR-007] — **Satisfied**: FR-020/TR-007, User Story 4 illustrative questions, SC-006 no-match, rag-api grounding guard.
+- [x] CHK043 Is OPEN → RESOLVED direct transition explicitly forbidden in requirements to match state-machine “not in spec” note? [Ambiguity, state-machine.md §Explicitly forbidden] — **Satisfied**: not in FR-012 allow-list; FR-013 rejects all other transitions; SC-003 matrix tests.
+- [x] CHK044 Are OpenAPI and narrative API docs declared single source of truth with conflict resolution when they diverge? [Ambiguity, constitution.md §API & Contract Documentation, plan.md §API & OpenAPI] — **Satisfied**: constitution requires OpenAPI/handler alignment in same change set; plan Constitution Check API row.
 
 ## Notes
 

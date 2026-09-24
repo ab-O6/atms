@@ -32,13 +32,13 @@ description: "Task list for Support Ticket Management with Grounded Q&A"
 
 - [x] T001 [P] Align `plan.md` Constitution Check table with `.specify/memory/constitution.md` v1.1 (principles I–IV + workflow gates)
 - [x] T002 [P] Fix FR references in `specs/001-support-ticket-rag/technology-requirements.md` traceability table (spec ends at FR-026; include **SC-010** / rag-eval deferral note)
-- [ ] T003 Create `backend/` and `frontend/` directory tree per [plan.md](./plan.md) Project Structure section
-- [ ] T004 Initialize `backend/pom.xml` with Java 25, Spring Boot 4.1.x BOM, Spring AI, JPA, Validation, Liquibase, MapStruct, Lombok, springdoc-openapi, JUnit 5, Testcontainers
-- [ ] T005 Initialize `frontend/package.json` with React, TypeScript, Vite; set `strict: true` in `frontend/tsconfig.json`
-- [ ] T006 [P] Add Maven Wrapper files under `backend/` (`mvnw`, `.mvn/wrapper/`)
-- [ ] T007 [P] Add `docker-compose.yml` at repo root with PostgreSQL 16 + pgvector per [quickstart.md](./quickstart.md)
-- [ ] T008 [P] Add `backend/src/main/resources/application.yml` and `application-local.yml` skeleton (datasource placeholders, no secrets)
-- [ ] T009 [P] Add `frontend/.env.example` with `VITE_API_BASE_URL=http://localhost:8080`
+- [x] T003 Create `backend/` and `frontend/` directory tree per [plan.md](./plan.md) Project Structure section
+- [x] T004 Initialize `backend/pom.xml` with Java 25, Spring Boot 4.1.x BOM, Spring AI, JPA, Validation, Liquibase, MapStruct, Lombok, springdoc-openapi, JUnit 5, Testcontainers
+- [x] T005 Initialize `frontend/package.json` with React, TypeScript, Vite; set `strict: true` in `frontend/tsconfig.json`
+- [x] T006 [P] Add Maven Wrapper files under `backend/` (`mvnw`, `.mvn/wrapper/`)
+- [x] T007 [P] Add `docker-compose.yml` at repo root with PostgreSQL 16 + pgvector per [quickstart.md](./quickstart.md)
+- [x] T008 [P] Add `backend/src/main/resources/application.yml` and `application-local.yml` skeleton (datasource placeholders, no secrets)
+- [x] T009 [P] Add `frontend/.env.example` with `VITE_API_BASE_URL=http://localhost:8080`
 
 ---
 
@@ -48,16 +48,16 @@ description: "Task list for Support Ticket Management with Grounded Q&A"
 
 **⚠️ CRITICAL**: No user story work until this phase checkpoint passes
 
-- [ ] T010 Add Liquibase master `backend/src/main/resources/db/changelog/db.changelog-master.yaml`
-- [ ] T011 Add changeset enabling `vector` extension and `ticket_display_id_seq` in `backend/src/main/resources/db/changelog/001-extensions-and-sequences.yaml`
-- [ ] T012 Add `ticket` and `comment` tables per [data-model.md](./data-model.md) (`title` VARCHAR(200) NOT NULL, `assignee` VARCHAR(120) NOT NULL, `category` VARCHAR(80) NOT NULL default `''`, status/priority ENUMs) in `backend/src/main/resources/db/changelog/002-ticket-comment.yaml`
-- [ ] T013 Create `backend/src/main/java/com/atms/AtmsApplication.java` Spring Boot entrypoint
-- [ ] T014 [P] Implement RFC 9457 `ProblemDetail` handling in `backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java`
-- [ ] T015 [P] Configure springdoc OpenAPI from `specs/001-support-ticket-rag/contracts/openapi.yaml` alignment in `backend/src/main/java/com/atms/shared/config/OpenApiConfig.java`
-- [ ] T016 Define `TicketKnowledgeIndexPort` in `backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java` with `reindex(TicketSnapshot)` (or equivalent)
-- [ ] T017 Implement no-op `TicketKnowledgeIndexPort` in `backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java` until US4 replaces it
-- [ ] T018 [P] Add shared test helper `backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java` for PostgreSQL+pgvector image per [test-strategy.md](./test-strategy.md)
-- [ ] T019 [P] Create typed API client scaffold `frontend/src/api/client.ts` with base URL from env
+- [x] T010 Add Liquibase master `backend/src/main/resources/db/changelog/db.changelog-master.yaml`
+- [x] T011 Add changeset enabling `vector` extension and `ticket_display_id_seq` in `backend/src/main/resources/db/changelog/001-extensions-and-sequences.yaml`
+- [x] T012 Add `ticket` and `comment` tables per [data-model.md](./data-model.md) (`title` VARCHAR(200) NOT NULL, `assignee` VARCHAR(120) NOT NULL, `category` VARCHAR(80) NOT NULL default `''`, status/priority ENUMs) in `backend/src/main/resources/db/changelog/002-ticket-comment.yaml`
+- [x] T013 Create `backend/src/main/java/com/atms/AtmsApplication.java` Spring Boot entrypoint
+- [x] T014 [P] Implement RFC 9457 `ProblemDetail` handling in `backend/src/main/java/com/atms/shared/error/GlobalExceptionHandler.java`
+- [x] T015 [P] Configure springdoc OpenAPI from `specs/001-support-ticket-rag/contracts/openapi.yaml` alignment in `backend/src/main/java/com/atms/shared/config/OpenApiConfig.java`
+- [x] T016 Define `TicketKnowledgeIndexPort` in `backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java` with `reindex(TicketSnapshot)` (or equivalent)
+- [x] T017 Implement no-op `TicketKnowledgeIndexPort` in `backend/src/main/java/com/atms/ticket/infrastructure/NoOpTicketKnowledgeIndexAdapter.java` until US4 replaces it
+- [x] T018 [P] Add shared test helper `backend/src/test/java/com/atms/support/PostgresTestcontainerExtension.java` for PostgreSQL+pgvector image per [test-strategy.md](./test-strategy.md)
+- [x] T019 [P] Create typed API client scaffold `frontend/src/api/client.ts` with base URL from env
 
 **Checkpoint**: Application boots against local DB; migrations apply; no-op index port wired
 

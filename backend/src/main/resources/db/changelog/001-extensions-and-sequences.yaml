@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-enable-vector-extension
+      author: atms
+      changes:
+        - sql:
+            sql: CREATE EXTENSION IF NOT EXISTS vector;
+            dbms: postgresql
+  - changeSet:
+      id: 001-ticket-display-id-seq
+      author: atms
+      changes:
+        - createSequence:
+            sequenceName: ticket_display_id_seq
+            startValue: 1001
+            incrementBy: 1
