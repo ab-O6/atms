@@ -13,6 +13,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.JdbcType;
+import org.hibernate.dialect.PostgreSQLEnumJdbcType;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +43,7 @@ public class TicketEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, columnDefinition = "ticket_priority")
+    @JdbcType(PostgreSQLEnumJdbcType.class)
     private Priority priority;
 
     @Column(nullable = false, length = 120)
@@ -51,6 +54,7 @@ public class TicketEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, columnDefinition = "ticket_status")
+    @JdbcType(PostgreSQLEnumJdbcType.class)
     private TicketStatus status;
 
     @Column(name = "resolution_notes", columnDefinition = "TEXT")

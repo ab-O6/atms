@@ -1,5 +1,7 @@
 databaseChangeLog:
   - include:
       file: 001-extensions-and-sequences.yaml
+      relativeToChangelogFile: true
   - include:
       file: 002-ticket-comment.yaml
+      relativeToChangelogFile: true

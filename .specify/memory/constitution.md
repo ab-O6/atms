@@ -13,7 +13,7 @@ Sync Impact Report
 
 ### I. Framework-First Backend
 
-The backend MUST target Java 25 with idiomatic Spring Boot 4.1.x and a compatible
+The backend MUST target Java 21 with idiomatic Spring Boot 4.1.x and a compatible
 Spring AI release. Prefer declarative configuration (properties, auto-configuration,
 starter modules) and framework conventions; avoid custom wiring that fights Spring
 unless a spec-approved exception documents why.
@@ -62,7 +62,7 @@ protect the system and team velocity.
 | Layer | Requirement |
 |-------|-------------|
 | Persistence | PostgreSQL with PGVector for relational data and vector search |
-| Backend | Java 25, Spring Boot 4.1.x, Spring AI, MapStruct (versions compatible per dependency BOM) |
+| Backend | Java 21, Spring Boot 4.1.x, Spring AI, MapStruct (versions compatible per dependency BOM) |
 | Frontend | React with TypeScript; `strict` mode enabled in compiler options |
 
 Stack choices in this section MUST NOT be swapped without a constitution amendment.

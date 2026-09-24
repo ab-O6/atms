@@ -9,7 +9,7 @@ spring:
       chat:
         enabled: false
   datasource:
-    url: jdbc:postgresql://localhost:5432/atms
+    url: jdbc:postgresql://192.168.64.10:5432/atms
     username: atms
     password: atms
   jpa:
