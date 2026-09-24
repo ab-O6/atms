@@ -39,6 +39,15 @@
 - `@DynamicPropertySource` for JDBC URL.
 - Reuse container per test class where possible.
 
+### Remote Docker (`docker context` over SSH)
+
+Testcontainers uses **docker-java**, which supports `unix://` and `tcp://` only — not `ssh://` from the Docker CLI context. Options:
+
+1. **Tunnel** (see [quickstart.md](./quickstart.md) §6): `./scripts/backend-integration-test.sh` maps the remote daemon to `tcp://127.0.0.1:2375` and sets `DOCKER_API_VERSION=1.44` for current engines.
+2. **External JDBC**: set `ATMS_IT_JDBC_URL` (and optional `ATMS_IT_DB_USER` / `ATMS_IT_DB_PASSWORD`) to a reachable Postgres with pgvector; container startup is skipped (`PostgresTestcontainerExtension`).
+
+Integration tests compile to **Java 21 bytecode** (`testRelease` in `pom.xml`) while main code targets Java 25, so Spring Boot 3.4 can load `@SpringBootTest` classes on a JDK 25 runtime.
+
 ## What not to test in main CI
 
 - Live cloud LLM responses (use mock `ChatModel` except `rag-eval` profile).

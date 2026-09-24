@@ -57,8 +57,22 @@ export function formatApiError(error: unknown): string {
   return "Unexpected error";
 }
 
-export async function listTickets(): Promise<TicketSummary[]> {
-  return apiFetch<TicketSummary[]>("/api/tickets");
+export type ListTicketsParams = {
+  q?: string;
+  status?: TicketStatus | "";
+};
+
+export async function listTickets(params?: ListTicketsParams): Promise<TicketSummary[]> {
+  const search = new URLSearchParams();
+  const q = params?.q?.trim();
+  if (q) {
+    search.set("q", q);
+  }
+  if (params?.status) {
+    search.set("status", params.status);
+  }
+  const query = search.toString();
+  return apiFetch<TicketSummary[]>(`/api/tickets${query ? `?${query}` : ""}`);
 }
 
 export async function getTicket(displayId: string): Promise<TicketDetail> {
@@ -94,4 +108,34 @@ export async function addComment(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ body, author }),
   });
+}
+
+export async function transitionTicketStatus(
+  displayId: string,
+  status: TicketStatus,
+  resolutionNotes?: string,
+): Promise<TicketDetail> {
+  const payload: { status: TicketStatus; resolutionNotes?: string } = { status };
+  if (resolutionNotes !== undefined && resolutionNotes.trim() !== "") {
+    payload.resolutionNotes = resolutionNotes.trim();
+  }
+  return apiFetch<TicketDetail>(`/api/tickets/${encodeURIComponent(displayId)}/status`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+}
+
+export async function updateResolutionNotes(
+  displayId: string,
+  resolutionNotes: string,
+): Promise<TicketDetail> {
+  return apiFetch<TicketDetail>(
+    `/api/tickets/${encodeURIComponent(displayId)}/resolution-notes`,
+    {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ resolutionNotes }),
+    },
+  );
 }

@@ -67,6 +67,25 @@ cd backend
 
 Includes Testcontainers FSM and RAG integration tests per [test-strategy.md](./test-strategy.md).
 
+**Remote Docker (SSH context)** — the Java Testcontainers client does not support `DOCKER_HOST=ssh://…`. Either:
+
+1. From repo root, use the helper (opens a local TCP tunnel to the remote daemon when needed):
+
+   ```bash
+   ./scripts/backend-integration-test.sh -Dtest=TicketListSearchIntegrationTest
+   ```
+
+2. Or point tests at an existing Postgres (e.g. `docker compose` on the remote host with port `5432` published):
+
+   ```bash
+   export ATMS_IT_JDBC_URL=jdbc:postgresql://192.168.64.10:5432/atms
+   export ATMS_IT_DB_USER=atms
+   export ATMS_IT_DB_PASSWORD=atms
+   cd backend && ./mvnw test
+   ```
+
+   Prefer a dedicated test database if you share the instance with local dev.
+
 Optional:
 
 ```bash

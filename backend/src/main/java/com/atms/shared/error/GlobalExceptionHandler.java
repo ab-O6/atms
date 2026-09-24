@@ -11,6 +11,9 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import com.atms.ticket.application.InvalidTicketTransitionException;
+import com.atms.ticket.application.ResolutionNotesNotEditableException;
+import com.atms.ticket.application.ResolutionNotesRequiredException;
 import com.atms.ticket.application.TicketNotFoundException;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
 
@@ -20,6 +23,9 @@ public class GlobalExceptionHandler {
     private static final URI VALIDATION_TYPE = URI.create("about:blank#validation");
     private static final URI NOT_FOUND_TYPE = URI.create("about:blank#not-found");
     private static final URI CONFLICT_TYPE = URI.create("about:blank#conflict");
+    private static final URI INVALID_TRANSITION_TYPE = URI.create("ticket/invalid-transition");
+    private static final URI RESOLUTION_NOTES_REQUIRED_TYPE = URI.create("ticket/resolution-notes-required");
+    private static final URI RESOLUTION_NOTES_NOT_EDITABLE_TYPE = URI.create("ticket/resolution-notes-not-editable");
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ProblemDetail> handleValidation(
@@ -52,6 +58,36 @@ public class GlobalExceptionHandler {
         ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, ex.getMessage());
         problem.setTitle("Conflict");
         problem.setType(CONFLICT_TYPE);
+        problem.setInstance(URI.create(request.getRequestURI()));
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(problem);
+    }
+
+    @ExceptionHandler(InvalidTicketTransitionException.class)
+    public ResponseEntity<ProblemDetail> handleInvalidTransition(
+            InvalidTicketTransitionException ex, HttpServletRequest request) {
+        ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, ex.getMessage());
+        problem.setTitle("Invalid transition");
+        problem.setType(INVALID_TRANSITION_TYPE);
+        problem.setInstance(URI.create(request.getRequestURI()));
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(problem);
+    }
+
+    @ExceptionHandler(ResolutionNotesRequiredException.class)
+    public ResponseEntity<ProblemDetail> handleResolutionNotesRequired(
+            ResolutionNotesRequiredException ex, HttpServletRequest request) {
+        ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, ex.getMessage());
+        problem.setTitle("Resolution notes required");
+        problem.setType(RESOLUTION_NOTES_REQUIRED_TYPE);
+        problem.setInstance(URI.create(request.getRequestURI()));
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(problem);
+    }
+
+    @ExceptionHandler(ResolutionNotesNotEditableException.class)
+    public ResponseEntity<ProblemDetail> handleResolutionNotesNotEditable(
+            ResolutionNotesNotEditableException ex, HttpServletRequest request) {
+        ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, ex.getMessage());
+        problem.setTitle("Resolution notes not editable");
+        problem.setType(RESOLUTION_NOTES_NOT_EDITABLE_TYPE);
         problem.setInstance(URI.create(request.getRequestURI()));
         return ResponseEntity.status(HttpStatus.CONFLICT).body(problem);
     }

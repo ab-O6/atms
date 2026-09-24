@@ -100,14 +100,14 @@ description: "Task list for Support Ticket Management with Grounded Q&A"
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T034 [P] [US2] Add `TicketListSearchIntegrationTest` with Testcontainers in `backend/src/test/java/com/atms/ticket/integration/TicketListSearchIntegrationTest.java` (`q` matches title/description/display_id case-insensitive substring; excludes comments/resolution_notes/category; `status` filter; empty results)
+- [x] T034 [P] [US2] Add `TicketListSearchIntegrationTest` with Testcontainers in `backend/src/test/java/com/atms/ticket/integration/TicketListSearchIntegrationTest.java` (`q` matches title/description/display_id case-insensitive substring; excludes comments/resolution_notes/category; `status` filter; empty results)
 
 ### Implementation for User Story 2
 
-- [ ] T035 [US2] Extend `TicketRepository` with keyword + status query (`ILIKE` on title, description, display_id; exclude comments/resolution_notes/category from keyword) in `backend/src/main/java/com/atms/ticket/infrastructure/persistence/TicketRepository.java`
-- [ ] T036 [US2] Extend `TicketService.list` and `TicketController` `GET /api/tickets` with `q` and `status` parameters per `contracts/openapi.yaml:12-21`
-- [ ] T037 [P] [US2] Add search input and status filter controls to `frontend/src/features/tickets/TicketListPage.tsx`
-- [ ] T038 [US2] Update `frontend/src/api/tickets.ts` to pass `q` and `status` query params
+- [x] T035 [US2] Extend `TicketRepository` with keyword + status query (`ILIKE` on title, description, display_id; exclude comments/resolution_notes/category from keyword) in `backend/src/main/java/com/atms/ticket/infrastructure/persistence/TicketRepository.java`
+- [x] T036 [US2] Extend `TicketService.list` and `TicketController` `GET /api/tickets` with `q` and `status` parameters per `contracts/openapi.yaml:12-21`
+- [x] T037 [P] [US2] Add search input and status filter controls to `frontend/src/features/tickets/TicketListPage.tsx`
+- [x] T038 [US2] Update `frontend/src/api/tickets.ts` to pass `q` and `status` query params
 
 **Checkpoint**: `./mvnw test` includes list search integration suite; UI search/filter matches FR-006a
 
@@ -123,15 +123,15 @@ description: "Task list for Support Ticket Management with Grounded Q&A"
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T039 [P] [US3] Add `TicketStateMachineIntegrationTest` with Testcontainers in `backend/src/test/java/com/atms/ticket/integration/TicketStateMachineIntegrationTest.java` (allowed transitions succeed; forbidden → 409; resolve without notes → 409; resolution notes edit only in RESOLVED)
+- [x] T039 [P] [US3] Add `TicketStateMachineIntegrationTest` with Testcontainers in `backend/src/test/java/com/atms/ticket/integration/TicketStateMachineIntegrationTest.java` (allowed transitions succeed; forbidden → 409; resolve without notes → 409; resolution notes edit only in RESOLVED)
 
 ### Implementation for User Story 3
 
-- [ ] T040 [US3] Implement `TransitionService` as sole FSM authority per [state-machine.md](./state-machine.md) in `backend/src/main/java/com/atms/ticket/application/TransitionService.java`
-- [ ] T041 [US3] Add `PATCH /api/tickets/{displayId}/status` with `TransitionStatusRequest` (`resolutionNotes` required when status is `RESOLVED`) in `backend/src/main/java/com/atms/ticket/api/TicketController.java`
-- [ ] T042 [US3] Add `PATCH /api/tickets/{displayId}/resolution-notes` (`resolutionNotes` minLength 1; only when status `RESOLVED`) and invoke `TicketKnowledgeIndexPort.reindex` in same transaction as write per **FR-019a** in `backend/src/main/java/com/atms/ticket/application/ResolutionNotesService.java` (or equivalent) and controller
-- [ ] T043 [P] [US3] Add status transition and resolution-notes UI on `frontend/src/features/tickets/TicketDetailPage.tsx` with 409 error display
-- [ ] T044 [US3] Extend `frontend/src/api/tickets.ts` with status and resolution-notes patch methods
+- [x] T040 [US3] Implement `TransitionService` as sole FSM authority per [state-machine.md](./state-machine.md) in `backend/src/main/java/com/atms/ticket/application/TransitionService.java`
+- [x] T041 [US3] Add `PATCH /api/tickets/{displayId}/status` with `TransitionStatusRequest` (`resolutionNotes` required when status is `RESOLVED`) in `backend/src/main/java/com/atms/ticket/api/TicketController.java`
+- [x] T042 [US3] Add `PATCH /api/tickets/{displayId}/resolution-notes` (`resolutionNotes` minLength 1; only when status `RESOLVED`) and invoke `TicketKnowledgeIndexPort.reindex` in same transaction as write per **FR-019a** in `backend/src/main/java/com/atms/ticket/application/ResolutionNotesService.java` (or equivalent) and controller
+- [x] T043 [P] [US3] Add status transition and resolution-notes UI on `frontend/src/features/tickets/TicketDetailPage.tsx` with 409 error display
+- [x] T044 [US3] Extend `frontend/src/api/tickets.ts` with status and resolution-notes patch methods
 
 **Checkpoint**: `./mvnw test` passes FSM integration suite; UI can drive full happy-path lifecycle
 

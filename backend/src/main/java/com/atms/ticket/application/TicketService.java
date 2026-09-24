@@ -48,8 +48,9 @@ public class TicketService {
     }
 
     @Transactional(readOnly = true)
-    public List<TicketEntity> listAll() {
-        return ticketRepository.findAllOrderByUpdatedAtDesc();
+    public List<TicketEntity> list(String q, TicketStatus status) {
+        String keyword = q == null || q.isBlank() ? null : q.trim();
+        return ticketRepository.search(keyword, status);
     }
 
     @Transactional

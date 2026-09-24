@@ -1,17 +1,17 @@
 # Graph Report - atms  (2026-09-25)
 
 ## Corpus Check
-- 85 files · ~84,878 words
+- 110 files · ~92,569 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 17 file(s) not represented in the graph (top: .mdc 9, (none) 4, .toml 1)
+- Unclassified: 19 file(s) not represented in the graph (top: .mdc 9, (none) 4, .toml 1)
 
 ## Summary
-- 736 nodes · 820 edges · 69 communities (57 shown, 12 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 15 edges (avg confidence: 0.8)
+- 920 nodes · 1291 edges · 73 communities (60 shown, 13 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 63 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3caf16ef`
+- Built from commit: `6fdec7d2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,7 +19,6 @@
 - 2026-09-24 20:52:04Z
 - Product Requirements Document
 - common.sh
-- plan.md
 - Per-requirement record
 - package.json
 - Tasks: [FEATURE NAME]
@@ -41,19 +40,19 @@
 - mvnw
 - compilerOptions
 - Data Model: 001-support-ticket-rag
-- Research: 001-support-ticket-rag
+- TicketResponse
 - Implementation Plan: [FEATURE]
 - Implementation Plan: Support Ticket Management with Grounded Q&A
 - Quickstart: Validate 001-support-ticket-rag
 - Technology Requirements: Support Ticket Management with Grounded Q&A
-- Test Strategy
+- DisplayIdGenerator
 - Review code
 - speckit-checklist/SKILL.md
-- RAG Ingestion
+- Priority
 - speckit-clarify/SKILL.md
 - speckit-implement/SKILL.md
-- POST /api/ai/ask
-- State Machine: Ticket Lifecycle
+- TicketController.java
+- TicketStatus
 - Generate tests
 - Review RAG output
 - Review spec vs implementation
@@ -71,48 +70,52 @@
 - 2026-09-24_20-52-04Z-speckit-analyze.md
 - com.atms:atms-backend
 - OpenApiConfig.java
-- Phase 1 complete
-- PostgresTestcontainerExtension
-- TicketSnapshot
-- .reindex
-- client.ts
-- Specification Analysis Report
-- TicketKnowledgeIndexPort
-- Dependencies & Execution Order
-- Implementation Strategy
+- TicketListSearchIntegrationTest.java
+- Research: 001-support-ticket-rag
+- CommentRepository
+- TicketEntity
+- tickets.ts
+- Screens
+- spec.md
+- RAG Ingestion
+- POST /api/ai/ask
+- State Machine: Ticket Lifecycle
+- Evaluation Strategy (RAG)
+- API Contract (Tickets)
+- .update
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 17 edges
-2. `Product Requirements Document` - 15 edges
-3. `Specification Analysis Report` - 15 edges
-4. `Tasks: Support Ticket Management with Grounded Q&A` - 14 edges
-5. `Tasks: [FEATURE NAME]` - 13 edges
-6. `TicketKnowledgeIndexPort` - 11 edges
-7. `Implementation Readiness Checklist: Support Ticket Management with Grounded Q&A` - 11 edges
-8. `create-new-feature.sh script` - 10 edges
-9. `2026-09-24 20:52:04Z` - 10 edges
-10. `Research: 001-support-ticket-rag` - 10 edges
+1. `TicketEntity` - 28 edges
+2. `TicketListSearchIntegrationTest` - 21 edges
+3. `TicketStatus` - 19 edges
+4. `TicketKnowledgeIndexPort` - 17 edges
+5. `compilerOptions` - 17 edges
+6. `TicketService` - 15 edges
+7. `Priority` - 15 edges
+8. `Product Requirements Document` - 15 edges
+9. `Specification Analysis Report` - 15 edges
+10. `CommentEntity` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Layering (package-by-feature)` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
   specs/001-support-ticket-rag/architecture.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
-- `Findings` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
-  .specstory/history/2026-09-24_20-27-49Z-speckit-checklist-command.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
-- `Searchable knowledge & index (FR-017–FR-019, TR-001–TR-004, TR-013–TR-014)` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
-  .specstory/history/2026-09-24_20-27-49Z-speckit-checklist-command.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
 - `9. Module integration (ticket ↔ rag)` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
   specs/001-support-ticket-rag/research.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
 - `Phase 2: Foundational (Blocking Prerequisites)` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
   specs/001-support-ticket-rag/tasks.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
+- `Phase 7: Polish & Cross-Cutting Concerns` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
+  specs/001-support-ticket-rag/tasks.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
+- `Findings` --references--> `TicketKnowledgeIndexPort`  [INFERRED]
+  .specstory/history/2026-09-24_20-27-49Z-speckit-checklist-command.md → backend/src/main/java/com/atms/ticket/application/TicketKnowledgeIndexPort.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (69 total, 12 thin omitted)
+## Communities (73 total, 13 thin omitted)
 
 ### Community 0 - "2026-09-24 20:52:04Z"
-Cohesion: 0.05
-Nodes (38): 2026-09-24 20:52:04Z, Clarifications reflected, Clarify complete, Completion report, Constitution Alignment Issues, Constitution Alignment Issues, Constitution Alignment Issues, Coverage summary (+30 more)
+Cohesion: 0.04
+Nodes (45): 2026-09-24 20:52:04Z, Clarifications reflected, Clarify complete, Completion report, Constitution Alignment Issues, Constitution Alignment Issues, Constitution Alignment Issues, Constitution Alignment Issues (+37 more)
 
 ### Community 1 - "Product Requirements Document"
 Cohesion: 0.05
@@ -122,25 +125,21 @@ Nodes (36): 10. Traceability summary, 1.1 Product goal, 1.2 Primary assessment g
 Cohesion: 0.13
 Nodes (29): check-prerequisites.sh script, check_dir(), check_file(), find_specify_root(), format_speckit_command(), get_current_branch(), get_feature_paths(), get_invoke_separator() (+21 more)
 
-### Community 3 - "plan.md"
-Cohesion: 0.09
-Nodes (24): AI endpoint, API Contract (Tickets), DTO highlights, Error types (stable `type` slugs), Resources, Content Quality, Feature Readiness, Notes (+16 more)
-
 ### Community 4 - "Per-requirement record"
 Cohesion: 0.06
-Nodes (32): 2026-09-24 20:27:49Z, Completion report, Constitution alignment issues, Constitution & engineering, Counts by status, Coverage summary (selected), Defaults (no `/speckit-checklist` args), End-to-end & success criteria (+24 more)
+Nodes (31): 2026-09-24 20:27:49Z, Completion report, Constitution alignment issues, Constitution & engineering, Counts by status, Coverage summary (selected), Defaults (no `/speckit-checklist` args), End-to-end & success criteria (+23 more)
 
 ### Community 5 - "package.json"
 Cohesion: 0.08
-Nodes (25): dependencies, react, react-dom, devDependencies, @types/react, @types/react-dom, typescript, vite (+17 more)
+Nodes (23): dependencies, react, react-dom, react-router-dom, devDependencies, @types/react, @types/react-dom, typescript (+15 more)
 
 ### Community 6 - "Tasks: [FEATURE NAME]"
 Cohesion: 0.07
 Nodes (26): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 1, Implementation for User Story 2, Implementation for User Story 3, Implementation Strategy, Incremental Delivery, MVP First (User Story 1 Only) (+18 more)
 
 ### Community 7 - "Tasks: Support Ticket Management with Grounded Q&A"
-Cohesion: 0.17
-Nodes (12): Format: `[ID] [P?] [Story] Description`, Implementation for User Story 2, Implementation for User Story 4, Notes, Parallel Example: User Story 4, Path Conventions, Phase 1: Setup (Shared Infrastructure), Phase 4: User Story 2 - Find tickets by keyword and status (Priority: P2) (+4 more)
+Cohesion: 0.08
+Nodes (26): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 2, Implementation for User Story 3, Implementation for User Story 4, Implementation Strategy, Incremental Delivery, MVP First (User Story 1 Only) (+18 more)
 
 ### Community 8 - "speckit-analyze/SKILL.md"
 Cohesion: 0.08
@@ -210,9 +209,9 @@ Nodes (9): compilerOptions, lib, module, moduleResolution, noEmit, skipLibCheck,
 Cohesion: 0.20
 Nodes (10): Comment, Data Model: 001-support-ticket-rag, Entity-relationship overview, Enumerations, Liquibase, Priority, Ticket, TicketStatus (+2 more)
 
-### Community 25 - "Research: 001-support-ticket-rag"
-Cohesion: 0.22
-Nodes (9): 1. Embedding model and chat model, 2. Chunking strategy for ticket knowledge, 3. Canonical knowledge document, 4. Re-index reliability, 5. Knowledge-bearing mutation triggers, 6. Retrieval and grounding guard, 7. Display ticket id generation, 8. Integration testing approach (+1 more)
+### Community 25 - "TicketResponse"
+Cohesion: 0.16
+Nodes (12): AddCommentRequest, CommentResponse, TicketResponse, TicketMapper, comparator, org.mapstruct.Mapper, org.mapstruct.Mapping, org.springframework.web.bind.annotation.PostMapping (+4 more)
 
 ### Community 26 - "Implementation Plan: [FEATURE]"
 Cohesion: 0.22
@@ -230,9 +229,9 @@ Nodes (9): 1. Database (local), 2. Backend, 3. Frontend, 4. Manual smoke (ticket
 Cohesion: 0.22
 Nodes (9): API contract (prescribed), Grounding and guardrails (technical), Ingestion, RAG pipeline (prescribed flow), Retrieval configuration and documentation, Technology Requirements: Support Ticket Management with Grounded Q&A, Traceability to behavioral spec, Vector index acceptance (+1 more)
 
-### Community 30 - "Test Strategy"
-Cohesion: 0.22
-Nodes (9): Coverage expectations, Evidence, List search (mandatory gate, SC-002), Pyramid, Retrieval & ingestion (mandatory gate), State machine (mandatory gate, SC-003), Test Strategy, Testcontainers (+1 more)
+### Community 30 - "DisplayIdGenerator"
+Cohesion: 0.29
+Nodes (5): DisplayIdGenerator, Override, NoOpTicketKnowledgeIndexAdapter, org.springframework.jdbc.core.JdbcTemplate, org.springframework.stereotype.Component
 
 ### Community 31 - "Review code"
 Cohesion: 0.25
@@ -242,9 +241,9 @@ Nodes (7): React / TypeScript (when present), Report format, Review code, Scope,
 Cohesion: 0.25
 Nodes (7): Anti-Examples: What NOT To Do, Checklist Purpose: "Unit Tests for English", Example Checklist Types & Sample Items, Execution Steps, Post-Execution Checks, Pre-Execution Checks, User Input
 
-### Community 33 - "RAG Ingestion"
-Cohesion: 0.25
-Nodes (8): Canonical document content (embeddable), Chunking, Deletion, Failure handling, Metadata (per chunk, JSONB), Pipeline, RAG Ingestion, Triggers
+### Community 33 - "Priority"
+Cohesion: 0.16
+Nodes (10): CreateTicketRequest, Priority, CRITICAL, HIGH, LOW, MEDIUM, notblank, notnull (+2 more)
 
 ### Community 34 - "speckit-clarify/SKILL.md"
 Cohesion: 0.29
@@ -254,13 +253,13 @@ Nodes (6): Completion Report, Done When, Mandatory Post-Execution Hooks, Outline
 Cohesion: 0.29
 Nodes (6): Completion Report, Done When, Mandatory Post-Execution Hooks, Outline, Pre-Execution Checks, User Input
 
-### Community 36 - "POST /api/ai/ask"
-Cohesion: 0.29
-Nodes (7): Errors, Grounding guard (server), POST /api/ai/ask, RAG API Contract, Request, Response 200 (match), Response 200 (no relevant tickets)
+### Community 36 - "TicketController.java"
+Cohesion: 0.23
+Nodes (11): TicketController, CommentService, TicketKnowledgeIndexPort, TicketService, org.springframework.stereotype.Service, org.springframework.web.bind.annotation.RequestMapping, org.springframework.web.bind.annotation.RestController, pathvariable (+3 more)
 
-### Community 37 - "State Machine: Ticket Lifecycle"
-Cohesion: 0.29
-Nodes (7): Allowed transitions, Explicitly forbidden (examples), HTTP mapping, Side effects on transition, State Machine: Ticket Lifecycle, States, Test matrix
+### Community 37 - "TicketStatus"
+Cohesion: 0.16
+Nodes (10): TicketSummaryResponse, TicketStatus, CANCELLED, CLOSED, IN_PROGRESS, OPEN, RESOLVED, instant (+2 more)
 
 ### Community 38 - "Generate tests"
 Cohesion: 0.33
@@ -283,8 +282,8 @@ Cohesion: 0.33
 Nodes (5): Outline, Post-Execution Checks, Pre-Execution Checks, Scope Guard, User Input
 
 ### Community 43 - "GlobalExceptionHandler.java"
-Cohesion: 0.23
-Nodes (13): GlobalExceptionHandler, collectors, httpstatus, jakarta.servlet.http.HttpServletRequest, jakarta.validation.ConstraintViolationException, java.net.URI, org.springframework.http.ProblemDetail, org.springframework.http.ResponseEntity (+5 more)
+Cohesion: 0.19
+Nodes (14): GlobalExceptionHandler, TicketNotFoundException, collectors, httpstatus, jakarta.servlet.http.HttpServletRequest, jakarta.validation.ConstraintViolationException, java.net.URI, org.springframework.http.ProblemDetail (+6 more)
 
 ### Community 44 - "speckit-taskstoissues/SKILL.md"
 Cohesion: 0.40
@@ -299,64 +298,80 @@ Cohesion: 0.50
 Nodes (3): 2026-09-24 18:39:48Z, Constitution updated, How your principles were organized
 
 ### Community 59 - "OpenApiConfig.java"
-Cohesion: 0.21
-Nodes (11): OpenApiConfig, classpathresource, io.swagger.v3.oas.models.OpenAPI, ioexception, loggerfactory, openapiv3parser, org.slf4j.Logger, org.springframework.context.annotation.Bean (+3 more)
+Cohesion: 0.15
+Nodes (15): OpenApiConfig, Override, WebConfig, classpathresource, io.swagger.v3.oas.models.OpenAPI, ioexception, loggerfactory, openapiv3parser (+7 more)
 
-### Community 60 - "Phase 1 complete"
-Cohesion: 0.22
-Nodes (8): AtmsApplication, org.springframework.boot.autoconfigure.SpringBootApplication, Checklist gate (read-only), Important follow-up (T004 vs plan/constitution), Next, Phase 1 complete, Tasks marked done, springapplication
+### Community 60 - "TicketListSearchIntegrationTest.java"
+Cohesion: 0.05
+Nodes (42): assertthat, autowired, AtmsApplication, Override, PostgresTestcontainerExtension, TicketListSearchIntegrationTest, com.fasterxml.jackson.databind.JsonNode, com.fasterxml.jackson.databind.ObjectMapper (+34 more)
 
-### Community 61 - "PostgresTestcontainerExtension"
+### Community 61 - "Research: 001-support-ticket-rag"
+Cohesion: 0.20
+Nodes (10): 1. Embedding model and chat model, 2. Chunking strategy for ticket knowledge, 3. Canonical knowledge document, 4. Re-index reliability, 5. Knowledge-bearing mutation triggers, 6. Retrieval and grounding guard, 7. Display ticket id generation, 8. Integration testing approach (+2 more)
+
+### Community 62 - "CommentRepository"
+Cohesion: 0.28
+Nodes (6): CommentRepository, optional, org.springframework.data.jpa.repository.JpaRepository, org.springframework.data.jpa.repository.Query, param, uuid
+
+### Community 63 - "TicketEntity"
+Cohesion: 0.13
+Nodes (21): arraylist, CommentEntity, TicketEntity, TicketRepository, cascadetype, column, enumerated, enumtype (+13 more)
+
+### Community 64 - "tickets.ts"
+Cohesion: 0.11
+Nodes (32): ApiError, apiFetch(), getApiBaseUrl(), ProblemDetailBody, addComment(), Comment, createTicket(), CreateTicketPayload (+24 more)
+
+### Community 65 - "Screens"
+Cohesion: 0.25
+Nodes (8): 1. Ticket list, 2. Create ticket, 3. Ticket detail, 4. Ask (RAG), Citations display, Error UX, Screens, UI Flow
+
+### Community 66 - "spec.md"
+Cohesion: 0.28
+Nodes (5): Content Quality, Feature Readiness, Notes, Requirement Completeness, Specification Quality Checklist: Support Ticket Management with Grounded Q&A
+
+### Community 67 - "RAG Ingestion"
+Cohesion: 0.25
+Nodes (8): Canonical document content (embeddable), Chunking, Deletion, Failure handling, Metadata (per chunk, JSONB), Pipeline, RAG Ingestion, Triggers
+
+### Community 68 - "POST /api/ai/ask"
+Cohesion: 0.29
+Nodes (7): Errors, Grounding guard (server), POST /api/ai/ask, RAG API Contract, Request, Response 200 (match), Response 200 (no relevant tickets)
+
+### Community 69 - "State Machine: Ticket Lifecycle"
+Cohesion: 0.29
+Nodes (7): Allowed transitions, Explicitly forbidden (examples), HTTP mapping, Side effects on transition, State Machine: Ticket Lifecycle, States, Test matrix
+
+### Community 70 - "Evaluation Strategy (RAG)"
 Cohesion: 0.33
-Nodes (6): Override, PostgresTestcontainerExtension, org.junit.jupiter.api.extension.BeforeAllCallback, org.junit.jupiter.api.extension.ExtensionContext, org.testcontainers.containers.PostgreSQLContainer, org.testcontainers.utility.DockerImageName
+Nodes (6): Deterministic CI (gate), Evaluation Strategy (RAG), Goals, Hallucination / grounding review, Probabilistic eval (non-gating or soft gate), Regression
 
-### Community 62 - "TicketSnapshot"
-Cohesion: 0.32
-Nodes (5): TicketSnapshot, Override, NoOpTicketKnowledgeIndexAdapter, org.springframework.stereotype.Component, uuid
-
-### Community 63 - ".reindex"
-Cohesion: 0.33
-Nodes (5): Implementation for User Story 1, Implementation for User Story 3, Phase 3: User Story 1 - Manage support tickets (Priority: P1) 🎯 MVP, Phase 5: User Story 3 - Enforce ticket status lifecycle (Priority: P2), Tests for User Story 3 (write first, expect FAIL)
-
-### Community 64 - "client.ts"
-Cohesion: 0.47
-Nodes (4): ApiError, apiFetch(), getApiBaseUrl(), ProblemDetailBody
-
-### Community 65 - "Specification Analysis Report"
-Cohesion: 0.33
-Nodes (6): Constitution Alignment Issues, Coverage Summary Table, Metrics, Next Actions, Specification Analysis Report, Unmapped Tasks
-
-### Community 66 - "TicketKnowledgeIndexPort"
+### Community 71 - "API Contract (Tickets)"
 Cohesion: 0.40
-Nodes (4): TicketKnowledgeIndexPort, 9. Module integration (ticket ↔ rag), Phase 2: Foundational (Blocking Prerequisites), Phase 7: Polish & Cross-Cutting Concerns
+Nodes (5): AI endpoint, API Contract (Tickets), DTO highlights, Error types (stable `type` slugs), Resources
 
-### Community 67 - "Dependencies & Execution Order"
-Cohesion: 0.50
-Nodes (4): Dependencies & Execution Order, Parallel Opportunities, Phase Dependencies, User Story Dependencies
-
-### Community 68 - "Implementation Strategy"
-Cohesion: 0.50
-Nodes (4): Implementation Strategy, Incremental Delivery, MVP First (User Story 1 Only), Suggested MVP Scope
+### Community 72 - ".update"
+Cohesion: 0.22
+Nodes (4): UpdateTicketRequest, TicketSnapshot, TicketSnapshotMapper, org.springframework.web.bind.annotation.PatchMapping
 
 ## Knowledge Gaps
-- **457 isolated node(s):** `common.sh script`, `com.atms:atms-backend`, `name`, `private`, `version` (+452 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 498 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **471 isolated node(s):** `common.sh script`, `com.atms:atms-backend`, `LOW`, `MEDIUM`, `HIGH` (+466 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 538 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TicketKnowledgeIndexPort` connect `TicketKnowledgeIndexPort` to `Specification Analysis Report`, `Per-requirement record`, `Architecture: 001-support-ticket-rag`, `TicketSnapshot`, `.reindex`?**
-  _High betweenness centrality (0.090) - this node is a cross-community bridge._
-- **Why does `Tasks: Support Ticket Management with Grounded Q&A` connect `Tasks: Support Ticket Management with Grounded Q&A` to `TicketKnowledgeIndexPort`, `Dependencies & Execution Order`, `plan.md`, `Implementation Strategy`, `.reindex`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
-- **Why does `2026-09-24 20:52:04Z` connect `2026-09-24 20:52:04Z` to `Specification Analysis Report`, `Phase 1 complete`, `Specification Analysis Report`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
-- **What connects `common.sh script`, `com.atms:atms-backend`, `name` to the rest of the system?**
-  _457 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `TicketKnowledgeIndexPort` connect `TicketController.java` to `2026-09-24 20:52:04Z`, `tickets.ts`, `Per-requirement record`, `Tasks: Support Ticket Management with Grounded Q&A`, `.update`, `Architecture: 001-support-ticket-rag`, `Research: 001-support-ticket-rag`, `DisplayIdGenerator`?**
+  _High betweenness centrality (0.135) - this node is a cross-community bridge._
+- **Why does `Tasks **T010–T019** ✓` connect `tickets.ts` to `TicketController.java`, `.update`, `GlobalExceptionHandler.java`, `TicketResponse`, `OpenApiConfig.java`, `TicketListSearchIntegrationTest.java`, `DisplayIdGenerator`?**
+  _High betweenness centrality (0.097) - this node is a cross-community bridge._
+- **Why does `Tasks: Support Ticket Management with Grounded Q&A` connect `Tasks: Support Ticket Management with Grounded Q&A` to `plan.md`?**
+  _High betweenness centrality (0.093) - this node is a cross-community bridge._
+- **Are the 3 inferred relationships involving `TicketListSearchIntegrationTest` (e.g. with `Tests for User Story 2 (write first, expect FAIL)` and `List search (mandatory gate, SC-002)`) actually correct?**
+  _`TicketListSearchIntegrationTest` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 9 inferred relationships involving `TicketKnowledgeIndexPort` (e.g. with `Layering (package-by-feature)` and `9. Module integration (ticket ↔ rag)`) actually correct?**
+  _`TicketKnowledgeIndexPort` has 9 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `common.sh script`, `com.atms:atms-backend`, `LOW` to the rest of the system?**
+  _471 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `2026-09-24 20:52:04Z` be split into smaller, more focused modules?**
-  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
-- **Should `Product Requirements Document` be split into smaller, more focused modules?**
-  _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
-- **Should `common.sh` be split into smaller, more focused modules?**
-  _Cohesion score 0.12698412698412698 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._
